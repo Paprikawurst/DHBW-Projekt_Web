@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="other2">
+    <output-path>$PROJECT_DIR$/out/artifacts/other2</output-path>
+    <root id="root">
+      <element id="dir-copy" path="$PROJECT_DIR$/Projekt-WEB2/build/classes" />
+    </root>
+  </artifact>
+</component>
