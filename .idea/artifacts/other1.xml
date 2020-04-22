@@ -1,8 +1,0 @@
-<component name="ArtifactManager">
-  <artifact name="other1">
-    <output-path>$PROJECT_DIR$/out/artifacts/other1</output-path>
-    <root id="root">
-      <element id="dir-copy" path="$PROJECT_DIR$/Projekt-WEB2/src" />
-    </root>
-  </artifact>
-</component>
