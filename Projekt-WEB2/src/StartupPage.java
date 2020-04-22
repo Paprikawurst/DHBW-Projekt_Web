@@ -15,6 +15,7 @@ public class StartupPage extends HttpServlet {
           a.println("<html>");
           a.println("<head> <title> hallo </title> </head>");
           a.println("<body>");
+          a.println("<a href='JspTest.jsp'>JSP-Seite</a>");
           a.println("test1 <br>");
           a.println(new Date());
           a.println("</body>");
