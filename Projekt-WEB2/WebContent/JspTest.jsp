@@ -6,6 +6,10 @@
 <head>
 	<title>Home</title>
 	<link href="Design.css" rel="stylesheet" type="text/css">
+	<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+	<link rel="stylesheet2" href="https://www.w3schools.com/w3css/4/w3.css">
+	<!-- Scripte -->
+	<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 </head>
 <body>
     <div> <a class="logo" href="Menu.php">Home</a></div>
@@ -13,7 +17,7 @@
     <header>
     <nav>
       <ul>
-        <li><a href="Anzeigen.php">Anzeigen</a></li>
+        <li><a href="Account">Anzeigen</a></li>
         <li><a href="PWAnzeigen.php">PWAnzeigen</a></li>
         <li><a href="Aendern.php">Ändern</a></li>
         <li><a href="Eintragen.php">Eintragen</a></li>
@@ -26,6 +30,11 @@
     </nav>
     <div class="menu-toggle"><i class="fa fa-bars" aria-hidden="true"></i></div>
   </header>
+  <footer>
+		<a href="Impressum.html">Impressum &emsp;</<a>
+		<a href="Datenschutzerklärung.html">Datenschutzerklärung</a>
+  </footer>
+  </body>
   <!-- Script für Login,Register und Icon anklicken -->
   <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
   <script type="text/javascript">

@@ -131,6 +131,16 @@ header nav ul li a.active {
   display:none;
 }
 
+footer {
+	text-align:center;
+	bottom:0;
+	height:auto;
+	background-color:darkgrey;
+	width:100%;
+	position: fixed;
+	text-decoration:none;
+}
+
 @media (max-width: 1000px) {
 
   header{
