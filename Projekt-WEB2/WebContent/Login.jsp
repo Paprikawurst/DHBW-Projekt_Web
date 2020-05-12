@@ -18,15 +18,7 @@
     <header>
     <nav>
       <ul>
-        <li><a href="Account">Anzeigen</a></li>
-        <li><a href="PWAnzeigen.php">PWAnzeigen</a></li>
-        <li><a href="Aendern.php">Ändern</a></li>
-        <li><a href="Eintragen.php">Eintragen</a></li>
-        <li><a href="Suchen.php">Suchen</a></li>
-        <li><a href="Dir_Anzeigen.php">Directory</a></li>
-        <li><a href="Upload.php">Upload</a></li>
-        <li><a href="Download.php">Download</a></li>
-        <li><a href="Logout.php">Logout</a></li>
+        <li><a href="Login.jsp">Login</a></li>
       </ul>
     </nav>
     <div class="menu-toggle"><i class="fa fa-bars" aria-hidden="true"></i></div>
@@ -34,24 +26,14 @@
 <div class="login-page">
 	<div class="form">
 		<!-- Registrieren -->
-		<form class="register-form" action="Login_Register.php" method="post">
+		<form class="register-form" action="Register" method="post">
 			<input name="username" type="email" placeholder="username" required>
 			<input name="password" type="password" placeholder="password" required>
-			<p>
-				<a>Gebe das aktuelle Datum ein:</a>
-				<!-- Aktuelles Datum -->
-				<input type="text" name="result" value="" required />
-			</p>
-			<!-- Captcha -->
-			<img src="captcha.php?RELOAD=" alt="Captcha" title="Klicken, um das Captcha neu zu laden" onclick="this.src+=1;document.getElementById('captcha_code').value='';" width=140 height=40 />
-			<input type="text" name="captcha_code" id="captcha_code" size=10 />
-			<!-- Bot Test -->
-			<input type="hidden" name="bot">
 			<button>create</button>
 			<p class="message">Schon regestriert <a href="#">Log In</a></p>
 		</form>
 		<!-- Login -->
-		<form class="login-form" action="Login_Check.php" method="post">
+		<form class="login-form" action="Login" method="post">
 			<input name="username" type="email" placeholder="Username" required>
 			<input name="password" type="password" placeholder="password" required>
 			<button>login</button>
@@ -60,4 +42,23 @@
 	</div>
 </div>
 </body>
+  <!-- Script für Login,Register und Icon anklicken -->
+  <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function() {
+      $('.menu-toggle').click(function() {
+        $('nav').toggleClass('active')
+      })
+      $('ul li').click(function() {
+        $(this).siblings().removeClass('active');
+        $(this).toggleClass('active');
+      })
+      $('.message a').click(function() {
+        $('form').animate({
+          height: "toggle",
+          opacity: "toggle"
+        }, "slow");
+      });
+    })
+  </script>
 </html>
