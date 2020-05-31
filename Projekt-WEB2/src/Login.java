@@ -28,7 +28,7 @@ public class Login extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		response.getWriter().append("Served at: ").append(request.getContextPath());
+		
 	}
 
 	/**
@@ -36,8 +36,22 @@ public class Login extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
+		Login_RegisterBean loginBean = (Login_RegisterBean) request.getAttribute("registerBean");
 		
+		if (loginBean == null) {
+			loginBean = new Login_RegisterBean();
+			request.setAttribute("registerBeann", loginBean);
+		}
 		
+		loginBean.setEmail(request.getParameter("username"));
+		loginBean.setPasswort(request.getParameter("password"));
+		
+		if(loginBean.nutzerEinloggen()==true) {
+			System.out.println(true);
+		} else {
+			request.setAttribute("Message", "Kombination aus Nutzername und Passwort falsch!");
+            request.getRequestDispatcher("/Login.jsp").forward(request, response);
+		}		
 	}
 
 }
