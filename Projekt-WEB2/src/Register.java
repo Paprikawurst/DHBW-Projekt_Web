@@ -18,6 +18,8 @@ import javax.servlet.http.HttpServletResponse;
 
 
 
+
+
 /**
  * Servlet implementation class Register
  */
@@ -43,45 +45,26 @@ public class Register extends HttpServlet {
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		ArrayList <String> user = new ArrayList<String>();
-		File file = new File("user.txt");
-		PrintWriter pWriter = new PrintWriter(new FileWriter(file, true), true);				
-		BufferedReader bufferedReader = null;
-		String line;
-		String email=request.getParameter("username");
-		String passwort=request.getParameter("password");
-		passwort=BCrypt.hashpw(passwort);
-		if(file.exists()) {	
-			bufferedReader = new BufferedReader(new FileReader(file)); 
-		  while (null != (line = bufferedReader.readLine())) { 
-			  user.add(line.substring(0,line.indexOf('|')-1))	;		  
-		  }		  
-		  for(String us : user) {
-			  if(us.equals(email)) {
-				  RequestDispatcher dispatcher = request.getRequestDispatcher ( "Login.jsp" );
-			      dispatcher.forward ( request, response );
-			  }
-		  }
-	      pWriter.println(email + " || " + passwort);
-	      pWriter.flush();
-		  pWriter.close();			
+		
+		Login_RegisterBean registerBean = (Login_RegisterBean) request.getAttribute("registerBean");
+		
+		if (registerBean == null) {
+			registerBean = new Login_RegisterBean();
+			request.setAttribute("registerBeann", registerBean);
+		}
+		
+		registerBean.setEmail(request.getParameter("username"));
+		registerBean.setPasswort(request.getParameter("password"));
+		
+		Registrieren reg=new Registrieren(registerBean);
+		if(reg.registrieren()==true) {
+			request.setAttribute("Message", "Regestrieren erfolgreich!");
+			request.getRequestDispatcher("/Login.jsp").forward(request, response);
 		} else {
-			file.createNewFile();
-			if(file.exists()) {	
-			  while (null != (line = bufferedReader.readLine())) { 
-				  user.add(line.substring(0,line.indexOf('|')-1))	;		  
-			  }		  
-			  for(String us : user) {
-				  if(us.equals(email)) {
-					  RequestDispatcher dispatcher = request.getRequestDispatcher ( "Login.jsp" );
-				      dispatcher.forward ( request, response );
-				  }
-			  }
-		      pWriter.println(email + " || " + passwort);
-		      pWriter.flush();
-			  pWriter.close();	
-			}
-		}		
+			request.setAttribute("Message", "Nutzer schon vorhanden!");
+            request.getRequestDispatcher("/Login.jsp").forward(request, response);
+		}
+		
 	}
 
 }

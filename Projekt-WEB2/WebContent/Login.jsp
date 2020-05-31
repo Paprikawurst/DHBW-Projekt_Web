@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
-    <!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <!-- Metadaten -->
 <meta name="viewport" content="width=device-width, initial-scale=1.0" charset="utf-8" />
@@ -13,6 +13,7 @@
 	<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 </head>
 <body>
+<jsp:useBean id="registerBean" class="Login_Register.RegisterBean" scope="application"/>
     <div> <a class="logo" href="Menu.php">Home</a></div>
     <!-- Navigationsleiste -->
     <header>
@@ -26,9 +27,11 @@
 <div class="login-page">
 	<div class="form">
 		<!-- Registrieren -->
+		<span style="color:black"><%=(request.getAttribute("Message") == null) ? ""
+         : request.getAttribute("Message")%></span>
 		<form class="register-form" action="Register" method="post">
-			<input name="username" type="email" placeholder="username" required>
-			<input name="password" type="password" placeholder="password" required>
+			<input name="username" type="email" placeholder="username"  required>
+			<input name="password" type="password" placeholder="password"  required>
 			<button>create</button>
 			<p class="message">Schon regestriert <a href="#">Log In</a></p>
 		</form>
