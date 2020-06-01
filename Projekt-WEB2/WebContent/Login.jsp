@@ -13,7 +13,7 @@
 	<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 </head>
 <body>
-<jsp:useBean id="registerBean" class="Login_Register.Login_RegisterBean" scope="application"/>
+<jsp:useBean id="registerBean" class="Login_Register.Login_RegisterBean" scope="session"/>
     <div> <a class="logo" href="Menu.php">Home</a></div>
     <!-- Navigationsleiste -->
     <header>

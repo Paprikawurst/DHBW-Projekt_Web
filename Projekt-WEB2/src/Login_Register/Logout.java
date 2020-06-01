@@ -1,4 +1,4 @@
-
+package Login_Register;
 
 import java.io.IOException;
 import javax.servlet.ServletException;
@@ -6,19 +6,19 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-
+import javax.servlet.http.HttpSession;
 
 /**
- * Servlet implementation class Login
+ * Servlet implementation class Logout
  */
-@WebServlet("/Login")
-public class Login extends HttpServlet {
+@WebServlet("/Logout")
+public class Logout extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public Login() {
+    public Logout() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -35,23 +35,12 @@ public class Login extends HttpServlet {
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		
-		Login_RegisterBean loginBean = (Login_RegisterBean) request.getAttribute("registerBean");
-		
-		if (loginBean == null) {
-			loginBean = new Login_RegisterBean();
-			request.setAttribute("registerBeann", loginBean);
-		}
-		
-		loginBean.setEmail(request.getParameter("username"));
-		loginBean.setPasswort(request.getParameter("password"));
-		
-		if(loginBean.nutzerEinloggen()==true) {
-			System.out.println(true);
-		} else {
-			request.setAttribute("Message", "Kombination aus Nutzername und Passwort falsch!");
-            request.getRequestDispatcher("/Login.jsp").forward(request, response);
-		}		
+		// TODO Auto-generated method stub
+		HttpSession session = request.getSession(false);
+	      // session.setAttribute("email", null);
+	      session.removeAttribute("email");
+	      session.getMaxInactiveInterval();
+	      request.setAttribute("Message", "Erfolgreich ausgeloggt!");
+          request.getRequestDispatcher("/Login.jsp").forward(request, response);
 	}
-
 }
