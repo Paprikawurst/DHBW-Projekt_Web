@@ -5,7 +5,8 @@
 <!-- Metadaten -->
 <meta name="viewport" content="width=device-width, initial-scale=1.0" charset="utf-8" />
 <head>
-	<title>Home</title>
+	<title>Login</title>
+	<link href="Login.css" rel="stylesheet" type="text/css">
 	<link href="Login.css" rel="stylesheet" type="text/css">
 	<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 	<link rel="stylesheet2" href="https://www.w3schools.com/w3css/4/w3.css">
@@ -14,7 +15,7 @@
 </head>
 <body>
 <jsp:useBean id="registerBean" class="Login_Register.Login_RegisterBean" scope="session"/>
-    <div> <a class="logo" href="Menu.php">Home</a></div>
+    
     <!-- Navigationsleiste -->
     <header>
     <nav>

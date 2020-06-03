@@ -28,7 +28,12 @@ public class Logout extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		
+		HttpSession session = request.getSession(false);
+	    session.setAttribute("email", null);
+	    session.removeAttribute("email");
+	    session.getMaxInactiveInterval();
+	    request.setAttribute("Message", "Erfolgreich ausgeloggt!");
+        request.getRequestDispatcher("/Login.jsp").forward(request, response);
 	}
 
 	/**
@@ -36,11 +41,6 @@ public class Logout extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		HttpSession session = request.getSession(false);
-	      // session.setAttribute("email", null);
-	      session.removeAttribute("email");
-	      session.getMaxInactiveInterval();
-	      request.setAttribute("Message", "Erfolgreich ausgeloggt!");
-          request.getRequestDispatcher("/Login.jsp").forward(request, response);
+		
 	}
 }

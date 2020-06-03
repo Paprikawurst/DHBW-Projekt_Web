@@ -120,6 +120,5 @@ public class Login_RegisterBean implements Serializable {
         } else {
         	return false;
         }
-    }
-    
+    }    
 }
