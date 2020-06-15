@@ -1,4 +1,13 @@
-
+ <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+ <%
+        Login_Register.Login_RegisterBean log= new Login_Register.Login_RegisterBean();
+           boolean eingeloggt=log.eingeloggt(session,request,response);
+           if(eingeloggt==false) {
+               request.setAttribute("Message", "Nicht eingeloggt!");
+            request.getRequestDispatcher("/Login.jsp").forward(request, response);
+           }
+   %>
 <!DOCTYPE html>
 <html>
 <!-- Metadaten -->
