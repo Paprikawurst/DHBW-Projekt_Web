@@ -47,7 +47,7 @@ public class Login extends HttpServlet {
 		loginBean.setEmail(request.getParameter("username"));
 		loginBean.setPasswort(request.getParameter("password"));
 		
-		if(loginBean.nutzerEinloggen()==true) {
+		if(loginBean.logginUser()==true) {
 			HttpSession session = request.getSession(true); // reuse existing
             // session if exist
             // or create one

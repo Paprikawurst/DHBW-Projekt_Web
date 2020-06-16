@@ -56,7 +56,7 @@ public class Register extends HttpServlet {
 		registerBean.setEmail(request.getParameter("username"));
 		registerBean.setPasswort(request.getParameter("password"));
 		
-		if(registerBean.nutzerEintragen()==true) {
+		if(registerBean.insertUser()==true) {
 			request.setAttribute("Message", "Regestrieren erfolgreich!");
 			request.getRequestDispatcher("/Login.jsp").forward(request, response);
 		} else {

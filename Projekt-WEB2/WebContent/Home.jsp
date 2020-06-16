@@ -2,7 +2,7 @@
     pageEncoding="ISO-8859-1"%>
  <%
         Login_Register.Login_RegisterBean log= new Login_Register.Login_RegisterBean();
-           boolean eingeloggt=log.eingeloggt(session,request,response);
+           boolean eingeloggt=log.loggedIn(session,request,response);
            if(eingeloggt==false) {
                request.setAttribute("Message", "Nicht eingeloggt!");
             request.getRequestDispatcher("/Login.jsp").forward(request, response);

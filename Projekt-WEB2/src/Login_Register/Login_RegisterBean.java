@@ -52,7 +52,7 @@ public class Login_RegisterBean implements Serializable {
         return  BCrypt.hashpw(passwort);
     }
 
-    public void dateiExistiert(File file) throws IOException {
+    public void fileExists(File file) throws IOException {
         if (file.exists()) {
         } else {
             file.createNewFile();
@@ -60,14 +60,14 @@ public class Login_RegisterBean implements Serializable {
     }
 
     @SuppressWarnings("resource")
-	public ArrayList<String> nutzerEinlesen(int anfang) throws IOException {
+	public ArrayList<String>readUser(int start) throws IOException {
         ArrayList<String> user = new ArrayList<String>();
         File file = new File("user.txt");
         String line;
-        dateiExistiert(file);
+        fileExists(file);
         BufferedReader bufferedReader = new BufferedReader(new FileReader(file));
         while (null != (line = bufferedReader.readLine())) {
-        	if(anfang==0) {
+        	if(start==0) {
         		user.add((line.substring(0, line.indexOf('|') - 1)).trim());
         	} else {
         		user.add((line.substring(line.indexOf('|') + 2).trim()));
@@ -77,14 +77,14 @@ public class Login_RegisterBean implements Serializable {
     }
 
     @SuppressWarnings("resource")
-	public boolean nutzerEintragen() throws IOException {
-        ArrayList<String> user = nutzerEinlesen(0);
+	public boolean insertUser() throws IOException {
+        ArrayList<String> user = readUser(0);
         File file = new File("user.txt");
         PrintWriter pWriter = new PrintWriter(new FileWriter(file, true), true);
         if (user.contains(email)) {
             return false;
         } else {
-            dateiExistiert(file);
+        	fileExists(file);
             pWriter.println(email + " || " + this.hash());
             pWriter.flush();
             pWriter.close();
@@ -92,9 +92,9 @@ public class Login_RegisterBean implements Serializable {
         }
     }
     
-    public boolean nutzerEinloggen() throws IOException {    	
-    	ArrayList<String> user = nutzerEinlesen(0);
-    	ArrayList<String> hashes = nutzerEinlesen(1);
+    public boolean logginUser() throws IOException {    	
+    	ArrayList<String> user = readUser(0);
+    	ArrayList<String> hashes = readUser(1);
     	if (user.contains(email)) {
     		int index=user.indexOf(email);
     		String hash=hashes.get(index);
@@ -108,7 +108,7 @@ public class Login_RegisterBean implements Serializable {
         }
     }
     
-    public boolean eingeloggt(HttpSession session,HttpServletRequest request,HttpServletResponse response) throws IOException {   	
+    public boolean loggedIn(HttpSession session,HttpServletRequest request,HttpServletResponse response) throws IOException {   	
     	if (session != null) {
            if (session.getAttribute("email") != null) {
              return true;
