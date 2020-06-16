@@ -32,6 +32,27 @@
   </header>
    <div class="footer">
   		<div class="innerFooter">
+  			<div class="firstInnerFooterChild">
+  				<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Instagram_logo_2016.svg/1200px-Instagram_logo_2016.svg.png">
+  			</div>
+  			<div class="otherInnerFooterChild">
+  				<h2>Need Help?</h2>
+  				<a href="#" >Terms</a>
+  				<a href="#" >Terms</a>
+  				<a href="#" >Terms</a>
+  			</div>
+  			<div class="otherInnerFooterChild">
+  				<h2>Need Help?</h2>
+  				<a href="#" >Terms</a>
+  				<a href="#" >Terms</a>
+  				<a href="#" >Terms</a>
+  			</div>
+  			<div class="otherInnerFooterChild">
+  				<h2>Need Help?</h2>
+  				<a href="#" >Terms</a>
+  				<a href="#" >Terms</a>
+  				<a href="#" >Terms</a>
+  			</div>
   		</div>
 	</div>
 <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
