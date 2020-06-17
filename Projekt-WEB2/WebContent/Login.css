@@ -59,7 +59,9 @@ body {
     padding: 15px;
     color: #FFFFFF;
     font-size: 14px;
+    /*noinspection CssInvalidPropertyValue*/
     -webkit-transition: all 0.3 ease;
+    /*noinspection CssInvalidPropertyValue*/
     transition: all 0.3 ease;
     cursor: pointer;
 }

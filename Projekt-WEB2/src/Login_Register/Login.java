@@ -22,8 +22,6 @@ public class Login extends HttpServlet {
      */
     public Login() {
         super();
-        // TODO: Home.jsp Zeile 30 schauen und besprechen
-		// TODO: Login.css Zeile 62+63 ist bei mir error - besprechen
     }
 
 	/**

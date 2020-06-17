@@ -39,7 +39,7 @@ public class Login_RegisterBean implements Serializable {
         this.email = email;
     }
 
-    public String getPassword() { //TODO: wird nie benutzt?
+    public String getPassword() {
         return password;
     }
 
@@ -54,14 +54,14 @@ public class Login_RegisterBean implements Serializable {
     public void fileExists(File file) throws IOException {
         if (file.exists()) {
         } else {
-            file.createNewFile();       //TODO: result wird ignored
+            file.createNewFile();
         }
     }
 
     @SuppressWarnings("resource")
 	public ArrayList<String>readUser(int start) throws IOException {
         ArrayList<String> user = new ArrayList<String>();
-        File file = new File("Data.txt");
+        File file = new File("user.txt");
         String line;
         fileExists(file);
         BufferedReader bufferedReader = new BufferedReader(new FileReader(file));

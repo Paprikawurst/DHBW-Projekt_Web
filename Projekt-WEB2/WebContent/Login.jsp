@@ -10,7 +10,7 @@
     <link href="Login.css" rel="stylesheet" type="text/css">
     <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
     <link rel="stylesheet2" href="https://www.w3schools.com/w3css/4/w3.css">
-    <!-- Scripte -->
+    <!-- Skripte -->
     <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 </head>
 <body>

@@ -21,7 +21,7 @@ public class Register extends HttpServlet {
      */
     public Register() {
         super();
-        // TODO Auto-generated constructor stub
+
     }
 
 	/**
@@ -39,7 +39,7 @@ public class Register extends HttpServlet {
 		
 		if (registerBean == null) {
 			registerBean = new Login_RegisterBean();
-			request.setAttribute("registerBeann", registerBean);
+			request.setAttribute("registerBean", registerBean);
 		}
 		
 		registerBean.setEmail(request.getParameter("username"));

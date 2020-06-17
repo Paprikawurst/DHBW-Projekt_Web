@@ -28,6 +28,7 @@
     <nav>
       <ul>
         <li><a href="/Projekt-WEB2/Login_Register/Logout">Logout</a></li>
+	  </ul>
     </nav>
     <div class="menu-toggle"><i class="fa fa-bars" aria-hidden="true"></i></div>
   </header>
