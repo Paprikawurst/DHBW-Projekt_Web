@@ -149,9 +149,10 @@ header nav ul li a.active {
     box-sizing: border-box;
     background-color: black;
     bottom: 0;
-    padding:70px 0;
+    padding-right:70px 0;
+    padding-top:20px;
     position: absolute;
-    height:20%;
+    height:10%;
 }
 
 .innerFooter {
@@ -174,7 +175,7 @@ header nav ul li a.active {
 }
 
 .innerFooter .otherInnerFooterChild {
-	width:calc(21.6666666667% - 20px );
+	width:calc(16.25% - 20px );
     margin-right:10px;
     height: 100%;
     float:left;
@@ -199,7 +200,10 @@ header nav ul li a.active {
 	padding-bottom:5px;	
 }
 
-@media (max-width: 600px) {
+@media (max-width: 1580px) {
+	.footer {
+		height:auto;
+	}
 	.footer .innerFooter{
 		width:90%;
 	}	

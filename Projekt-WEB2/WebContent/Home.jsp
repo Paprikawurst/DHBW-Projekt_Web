@@ -8,7 +8,7 @@
                request.setAttribute("Message", "You are not logged in!");
             request.getRequestDispatcher("/Login.jsp").forward(request, response);
            }
-   %>
+%>
 
 <!DOCTYPE html>
 <html>
@@ -27,6 +27,20 @@
     <!-- Navigationsleiste -->
     <nav>
       <ul>
+      <li class="sub-menu"><a href="#">High-Scores</a>
+					<ul>
+						<li><a href="Snake.jsp">Snake</a></li>
+						<li><a href="Space-Invaders.jsp">Space-Invaders</a></li>
+					</ul>
+		</li>
+        <li class="sub-menu"><a href="#">Games</a>
+					<ul>
+						<li><a href="Snake.jsp">Snake</a></li>
+						<li><a href="Space-Invaders.jsp">Space-Invaders</a></li>
+					</ul>
+		</li>
+      	<li><a href="/Projekt-WEB2/Login_Register/Shop">Shop</a></li>
+      	<li><a href="/Projekt-WEB2/Login_Register/Logout">Settings</a></li>
         <li><a href="/Projekt-WEB2/Login_Register/Logout">Logout</a></li>
 	  </ul>
     </nav>
@@ -38,22 +52,20 @@
   				<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Instagram_logo_2016.svg/1200px-Instagram_logo_2016.svg.png">
   			</div>
   			<div class="otherInnerFooterChild">
-  				<h2>Need Help?</h2>
-  				<a href="#" >Terms</a>
-  				<a href="#" >Terms</a>
-  				<a href="#" >Terms</a>
+  				<h2>Terms of use?</h2>
+  				<a href="terms.jsp" >Terms of use</a>
   			</div>
   			<div class="otherInnerFooterChild">
-  				<h2>Need Help?</h2>
-  				<a href="#" >Terms</a>
-  				<a href="#" >Terms</a>
-  				<a href="#" >Terms</a>
+  				<h2>Data Protection</h2>
+  				<a href="Data Protection.jsp" >What happens to your data?</a>
   			</div>
   			<div class="otherInnerFooterChild">
-  				<h2>Need Help?</h2>
-  				<a href="#" >Terms</a>
-  				<a href="#" >Terms</a>
-  				<a href="#" >Terms</a>
+  				<h2>Any Questions?</h2>
+  				<a href="Contact.jsp" >Contact US</a>
+  			</div>
+  			<div class="otherInnerFooterChild">
+  				<h2>Who are we?</h2>
+  				<a href="Imprint.jsp" >Imprint</a>
   			</div>
   		</div>
 	</div>
