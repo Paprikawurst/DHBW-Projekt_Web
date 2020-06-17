@@ -1,6 +1,7 @@
 package Login_Register;
 
 import java.io.IOException;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -32,7 +33,7 @@ public class Logout extends HttpServlet {
 	    session.setAttribute("email", null);
 	    session.removeAttribute("email");
 	    session.getMaxInactiveInterval();
-	    request.setAttribute("Message", "Erfolgreich ausgeloggt!");
+	    request.setAttribute("Message", "Logout successful!");
         request.getRequestDispatcher("/Login.jsp").forward(request, response);
 	}
 

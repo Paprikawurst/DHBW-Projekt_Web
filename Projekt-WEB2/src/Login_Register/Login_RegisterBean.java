@@ -1,4 +1,5 @@
 package Login_Register;
+
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
@@ -13,19 +14,17 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 public class Login_RegisterBean implements Serializable {
-    /**
-     * 
-     */
+
     private static final long serialVersionUID = 1L;
     private String email;
-    private String passwort;
+    private String password;
 
     public Login_RegisterBean() {
     }
 
-    public Login_RegisterBean(String email, String passwort) {
+    public Login_RegisterBean(String email, String password) {
         this.email = email;
-        this.passwort = passwort;
+        this.password = password;
     }
 
     public void register() {
@@ -40,29 +39,29 @@ public class Login_RegisterBean implements Serializable {
         this.email = email;
     }
 
-    public String getPasswort() {
-        return passwort;
+    public String getPassword() { //TODO: wird nie benutzt?
+        return password;
     }
 
-    public void setPasswort(String passwort) {
-        this.passwort = passwort;
+    public void setPassword(String password) {
+        this.password = password;
     }
 
     public String hash() {
-        return  BCrypt.hashpw(passwort);
+        return  BCrypt.hashpw(password);
     }
 
     public void fileExists(File file) throws IOException {
         if (file.exists()) {
         } else {
-            file.createNewFile();
+            file.createNewFile();       //TODO: result wird ignored
         }
     }
 
     @SuppressWarnings("resource")
 	public ArrayList<String>readUser(int start) throws IOException {
         ArrayList<String> user = new ArrayList<String>();
-        File file = new File("user.txt");
+        File file = new File("Data.txt");
         String line;
         fileExists(file);
         BufferedReader bufferedReader = new BufferedReader(new FileReader(file));
@@ -92,13 +91,13 @@ public class Login_RegisterBean implements Serializable {
         }
     }
     
-    public boolean logginUser() throws IOException {    	
+    public boolean loginUser() throws IOException {
     	ArrayList<String> user = readUser(0);
     	ArrayList<String> hashes = readUser(1);
     	if (user.contains(email)) {
     		int index=user.indexOf(email);
     		String hash=hashes.get(index);
-            if(BCrypt.checkpw(passwort,hash)){
+            if(BCrypt.checkpw(password,hash)){
             	return true;
             } else {
             	return false;

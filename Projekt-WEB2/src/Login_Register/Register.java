@@ -1,24 +1,13 @@
 package Login_Register;
 
-import java.io.BufferedReader;
-import java.io.File;
-import java.io.FileReader;
-import java.io.FileWriter;
-import java.io.IOException;
-import java.io.PrintWriter;
-import java.util.ArrayList;
 
-import javax.servlet.RequestDispatcher;
+import java.io.IOException;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-
-
-
-
-
 
 /**
  * Servlet implementation class Register
@@ -54,13 +43,13 @@ public class Register extends HttpServlet {
 		}
 		
 		registerBean.setEmail(request.getParameter("username"));
-		registerBean.setPasswort(request.getParameter("password"));
+		registerBean.setPassword(request.getParameter("password"));
 		
-		if(registerBean.insertUser()==true) {
-			request.setAttribute("Message", "Regestrieren erfolgreich!");
+		if(registerBean.insertUser()) {
+			request.setAttribute("Message", "You successfully registered!");
 			request.getRequestDispatcher("/Login.jsp").forward(request, response);
 		} else {
-			request.setAttribute("Message", "Nutzer schon vorhanden!");
+			request.setAttribute("Message", "User already exists!");
             request.getRequestDispatcher("/Login.jsp").forward(request, response);
 		}
 		

@@ -7,7 +7,7 @@ body {
     -moz-osx-font-smoothing: grayscale;
 }
 
-.menuZeigen a {
+.showMenu a {
     border: 1px solid grey;
     margin-left: 10px;
     background-color: black;
@@ -16,7 +16,7 @@ body {
     text-decoration: none;
 }
 
-.menuZeigen a:hover {
+.showMenu a:hover {
     color: green;
 }
 

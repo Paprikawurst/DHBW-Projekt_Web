@@ -34,19 +34,20 @@
             <input name="username" type="email" placeholder="username" required>
             <input name="password" type="password" placeholder="password" required>
             <button>create</button>
-            <p class="message">Schon regestriert <a href="#">Log In</a></p>
+            <p class="message">Already registered? <a href="#">Log In</a></p>
         </form>
         <!-- Login -->
         <form class="login-form" action="Login" method="post">
             <input name="username" type="email" placeholder="Username" required>
             <input name="password" type="password" placeholder="password" required>
             <button>login</button>
-            <p class="message">Nicht regestriert? <a href="#">Erstelle einen Account</a></p>
+            <p class="message">Not registered yet? <a href="#">Create an account!</a></p>
         </form>
     </div>
 </div>
 </body>
-<!-- Script für Login,Register und Icon anklicken -->
+
+<!-- Skript für Login,Register und Icon anklicken -->
 <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
 <script type="text/javascript">
     $(document).ready(function () {
