@@ -151,6 +151,7 @@ header nav ul li a.active {
     bottom: 0;
     padding:70px 0;
     position: absolute;
+    height:20%;
 }
 
 .innerFooter {
