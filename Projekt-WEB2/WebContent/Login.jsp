@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
          pageEncoding="ISO-8859-1" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html>
 <html>
 <!-- Metadaten -->
@@ -28,8 +29,8 @@
 <div class="login-page">
     <div class="form">
         <!-- Registrieren -->
-        <span style="color:black"><%=(request.getAttribute("Message") == null) ? ""
-                : request.getAttribute("Message")%></span>
+        
+        <span style="color:black"><c:out value="${requestScope.Message}"/></span>
         <form class="register-form" action="Register" method="post">
             <input name="username" type="email" placeholder="username" required>
             <input name="password" type="password" placeholder="password" required>

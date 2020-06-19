@@ -105,17 +105,5 @@ public class Login_RegisterBean implements Serializable {
         } else {
         	return false;
         }
-    }
-    
-    public boolean loggedIn(HttpSession session,HttpServletRequest request,HttpServletResponse response) throws IOException {   	
-    	if (session != null) {
-           if (session.getAttribute("email") != null) {
-             return true;
-           } else {
-              return false;
-           }
-        } else {
-        	return false;
-        }
-    }    
+    }   
 }

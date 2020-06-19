@@ -1,14 +1,11 @@
  <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 
- <%
-        Login_Register.Login_RegisterBean log= new Login_Register.Login_RegisterBean();
-           boolean loggedIn =log.loggedIn(session,request,response);
-           if(!loggedIn) {
-               request.setAttribute("Message", "You are not logged in!");
-            request.getRequestDispatcher("/Login.jsp").forward(request, response);
-           }
-%>
+<c:if test="${empty sessionScope['email']}">
+	<c:set var="Message" scope="request" value="You are not logged in!"/>
+     <jsp:forward page="Login.jsp"></jsp:forward>
+</c:if>
 
 <!DOCTYPE html>
 <html>
@@ -41,11 +38,14 @@
 		</li>
       	<li><a href="/Projekt-WEB2/Login_Register/Shop">Shop</a></li>
       	<li><a href="/Projekt-WEB2/Login_Register/Logout">Settings</a></li>
-        <li><a href="/Projekt-WEB2/Login_Register/Logout">Logout</a></li>
+        <li><a href="/Projekt-WEB2/Logout">Logout</a></li>
 	  </ul>
     </nav>
     <div class="menu-toggle"><i class="fa fa-bars" aria-hidden="true"></i></div>
   </header>
+  <div class="mainpage">
+  <h2>Test</h2>
+  </div>
    <div class="footer">
   		<div class="innerFooter">
   			<div class="firstInnerFooterChild">
