@@ -49,9 +49,6 @@ public class Login extends HttpServlet {
 		
 		if(loginBean.loginUser()) {
 			HttpSession session = request.getSession(true);
-			// reuse existing session if exist or create one
-
-
 			session.setAttribute("email", loginBean.getEmail());
 			session.setMaxInactiveInterval(30); 
 			request.getRequestDispatcher("/Home.jsp").forward(request, response);

@@ -13,9 +13,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0" charset="utf-8" />
 <head>
 	<title>Home</title>
-  	<link href="Header.css" rel="stylesheet" type="text/css">
+  	<link href="Style.css" rel="stylesheet" type="text/css">
   	<link rel="stylesheet2" href="https://www.w3schools.com/w3css/4/w3.css">
   	<!-- Skripte -->
+  	<script src="Methods.js"></script>
   	<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 </head>
 <body>
@@ -44,7 +45,31 @@
     <div class="menu-toggle"><i class="fa fa-bars" aria-hidden="true"></i></div>
   </header>
   <div class="mainpage">
-  <h2>Test</h2>
+  <div class="tab">
+  	<button class="tablinks" id="Skill games2" onclick="openTab(event, 'Skill games')">Skill games</button>
+  	<button class="tablinks" id="HighScore-Games2" onclick="openTab(event, 'HighScore-Games')">HighScore-Games</button>
+  	<button class="tablinks" id="XXX2" onclick="openTab(event, 'XXX')">XXX</button>
+	<div class="search">
+      <input type="text" class="searchTerm" placeholder="What are you looking for?">
+      <button type="submit" class="searchButton">
+        <i class="fa fa-search"></i>
+     </button>
+   </div>
+  </div>
+  <!-- Tab content -->
+  <div id="Skill games" class="tabcontent">
+  	<h3>London</h3>
+ 	 <p>London is the capital city of England.</p>
+  </div>
+
+  <div id="HighScore-Games" class="tabcontent">
+ 	 <h3>Paris</h3>
+ 	 <p>Paris is the capital of France.</p>
+  </div>
+
+  <div id="XXX" class="tabcontent">
+	  <h3>Tokyo</h3>
+	  <p>Tokyo is the capital of Japan.</p>
   </div>
    <div class="footer">
   		<div class="innerFooter">
@@ -68,6 +93,7 @@
   				<a href="Imprint.jsp" >Imprint</a>
   			</div>
   		</div>
+	</div>
 	</div>
 <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
   <script type="text/javascript">
