@@ -11,10 +11,7 @@ html {
 
 body {
     font-family: "Open Sans", sans-serif;
-    font-size: 20px;
     line-height: 1.6;
-    background: #1E88E5;
-    color: black;
     margin: 0;
     padding: 0;
     list-style: none;
@@ -33,24 +30,6 @@ h1 {
     margin-bottom: 1.5em;
     letter-spacing: 3px;
     font-weight: 600;
-}
-
-form {
-    display: block;
-    position: absolute;
-    left: 50%;
-    -webkit-transform: translateX(-50%);
-    transform: translateX(-50%);
-    margin: 100px auto;
-}
-
-.cssdesign {
-    border: 1px solid #000;
-    font-size: .9em;
-}
-
-.cssdesign:hover {
-    background-color: #FFFFCC;
 }
 
 header {
@@ -149,13 +128,10 @@ header nav ul li a.active {
     padding-top: 5px;
 }
 
-
-
 .mainpage{
 	position: relative;
     min-height: 100vh;
 	margin-top:50px;
-	padding-bottom: 12%;
 	width:100%;
 }
 
@@ -192,9 +168,8 @@ header nav ul li a.active {
 
 /* Style the tab content */
 .tabcontent {
-  display: none;
-  padding: 6px 12px;
-  border: 1px solid #ccc;
+  display: none;  
+  padding-bottom:0;
   border-top: none;
   height:100vh;
 } 
@@ -236,6 +211,66 @@ header nav ul li a.active {
   width:20%;
 }
 
+#Skillgames{
+	height:100vh;
+	width:100%;
+	background-color:grey;
+	border:solid red 2px;	
+}
+
+.gamesWrapper {
+	height:100vh;
+	width:100%;
+	background-color:grey;
+	border:solid red 2px;
+	display:grid;	
+}
+
+#col1row1, #col1row2, #col1row3 {
+	border:solid red 2px;	
+	grid-row:1;	
+}
+
+#col2row1, #col2row2, #col2row3 {
+	border:solid red 2px;	
+	grid-row:2;	
+}
+
+#col3row1, #col3row2, #col3row3 {
+	border:solid red 2px;	
+	grid-row:3;	
+}
+
+#col1row1,#col2row1,#col3row1  {
+	grid-column:1;
+}
+
+#col1row2,#col2row2,#col3row2 {
+	grid-column:2;	
+}
+
+#col1row3,#col2row3,#col3row3 {
+	grid-column:3;	
+}
+
+.games{
+	display: -webkit-flex;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-align-items: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.gameContainer {
+	margin: 0 auto;
+	height:70%;
+	width:70%;
+	border:solid red 2px;
+}
+
 .footer {
     width: 100%;
     display: block;
@@ -245,11 +280,10 @@ header nav ul li a.active {
     bottom: 0;
     padding-right:70px;
     padding-left:70px;
-    padding-top:20px;
+    padding-top:30px;    
     padding-bottom:30px;
-    position: absolute;
-    height:14%;
-    
+    position: relative;
+    height:14%;    
 }
 
 .innerFooter {

@@ -19,7 +19,8 @@
   	<script src="Methods.js"></script>
   	<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 </head>
-<body>
+<body onload="onLoading()">
+
   <header>
     <div> <a class="logo" href="Home.jsp">Home</a></div>
     <!-- Navigationsleiste -->
@@ -46,7 +47,7 @@
   </header>
   <div class="mainpage">
   <div class="tab">
-  	<button class="tablinks" id="Skill games2" onclick="openTab(event, 'Skill games')">Skill games</button>
+  	<button class="tablinks" id="Skillgames2" onclick="openTab(event, 'Skillgames')">Skill games</button>
   	<button class="tablinks" id="HighScore-Games2" onclick="openTab(event, 'HighScore-Games')">HighScore-Games</button>
   	<button class="tablinks" id="XXX2" onclick="openTab(event, 'XXX')">XXX</button>
 	<div class="search">
@@ -57,19 +58,106 @@
    </div>
   </div>
   <!-- Tab content -->
-  <div id="Skill games" class="tabcontent">
-  	<h3>London</h3>
- 	 <p>London is the capital city of England.</p>
+  <div id="Skillgames" class="tabcontent">
+  	<div  class="gamesWrapper">
+  		<div id="col1row1" class=games>
+  			<div class="gameContainer"></div>
+  		</div>
+  		<div id="col1row2" class=games>
+  			<div class="gameContainer"></div>
+  		</div>
+  		<div id="col1row3" class=games>
+  			<div class="gameContainer"></div>
+  		</div>
+  		
+  		<div id="col2row1" class=games>
+  			<div class="gameContainer"></div>
+  		</div>
+  		<div id="col2row2" class=games>
+  			<div class="gameContainer"></div>
+  		</div>
+  		<div id="col2row3" class=games>
+  			<div class="gameContainer"></div>
+  		</div>
+  		
+  		<div id="col3row1" class=games>
+  			<div class="gameContainer"></div>
+  		</div>
+  		<div id="col3row2" class=games>
+  			<div class="gameContainer"></div>
+  		</div>
+  		<div id="col3row3" class=games>
+  			<div class="gameContainer"></div>
+  		</div>
+  	</div>
   </div>
 
   <div id="HighScore-Games" class="tabcontent">
- 	 <h3>Paris</h3>
- 	 <p>Paris is the capital of France.</p>
+ 	   	<div  class="gamesWrapper">
+  		<div id="col1row1" class=games>
+  			<div class="gameContainer"></div>
+  		</div>
+  		<div id="col1row2" class=games>
+  			<div class="gameContainer"></div>
+  		</div>
+  		<div id="col1row3" class=games>
+  			<div class="gameContainer"></div>
+  		</div>
+  		
+  		<div id="col2row1" class=games>
+  			<div class="gameContainer"></div>
+  		</div>
+  		<div id="col2row2" class=games>
+  			<div class="gameContainer"></div>
+  		</div>
+  		<div id="col2row3" class=games>
+  			<div class="gameContainer"></div>
+  		</div>
+  		
+  		<div id="col3row1" class=games>
+  			<div class="gameContainer"></div>
+  		</div>
+  		<div id="col3row2" class=games>
+  			<div class="gameContainer"></div>
+  		</div>
+  		<div id="col3row3" class=games>
+  			<div class="gameContainer"></div>
+  		</div>
+  	</div>
   </div>
 
   <div id="XXX" class="tabcontent">
-	  <h3>Tokyo</h3>
-	  <p>Tokyo is the capital of Japan.</p>
+	    <div  class="gamesWrapper">
+  		<div id="col1row1" class=games>
+  			<div class="gameContainer"></div>
+  		</div>
+  		<div id="col1row2" class=games>
+  			<div class="gameContainer"></div>
+  		</div>
+  		<div id="col1row3" class=games>
+  			<div class="gameContainer"></div>
+  		</div>
+  		
+  		<div id="col2row1" class=games>
+  			<div class="gameContainer"></div>
+  		</div>
+  		<div id="col2row2" class=games>
+  			<div class="gameContainer"></div>
+  		</div>
+  		<div id="col2row3" class=games>
+  			<div class="gameContainer"></div>
+  		</div>
+  		
+  		<div id="col3row1" class=games>
+  			<div class="gameContainer"></div>
+  		</div>
+  		<div id="col3row2" class=games>
+  			<div class="gameContainer"></div>
+  		</div>
+  		<div id="col3row3" class=games>
+  			<div class="gameContainer"></div>
+  		</div>
+  	</div>
   </div>
    <div class="footer">
   		<div class="innerFooter">
