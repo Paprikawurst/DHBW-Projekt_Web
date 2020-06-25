@@ -23,6 +23,14 @@
     box-shadow: 0 9px #999;
 }
 
+.button:hover {background-color: blue}
+
+.button:active {
+    background-color: dodgerblue;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+}
+
 .rightAlignedText {
     position:absolute;
     bottom:0;
