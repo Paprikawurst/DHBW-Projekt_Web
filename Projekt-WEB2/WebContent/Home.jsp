@@ -166,11 +166,11 @@
   			</div>
   			<div class="otherInnerFooterChild">
   				<h2>Terms of use?</h2>
-  				<a href="terms.jsp" >Terms of use</a>
+  				<a href="Terms.jsp" >Terms of use</a>
   			</div>
   			<div class="otherInnerFooterChild">
   				<h2>Data Protection</h2>
-  				<a href="Data Protection.jsp" >What happens to your data?</a>
+  				<a href="DataProtection.jsp" >What happens to your data?</a>
   			</div>
   			<div class="otherInnerFooterChild">
   				<h2>Any Questions?</h2>
