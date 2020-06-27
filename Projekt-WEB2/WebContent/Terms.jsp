@@ -13,7 +13,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0" charset="utf-8" />
 <head>
 	<title>Home</title>
-  	<link href="Style.css" rel="stylesheet" type="text/css">
+	<link href="Header_Footer.css" rel="stylesheet" type="text/css">
+  	<link href="Footer_JSP.css" rel="stylesheet" type="text/css">
   	<link rel="stylesheet2" href="https://www.w3schools.com/w3css/4/w3.css">
   	<!-- Skripte -->
   	<script src="Methods.js"></script>
