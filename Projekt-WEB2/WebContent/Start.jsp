@@ -19,7 +19,7 @@
 </div>
 
 
-<a href="Home.jsp"><button class="button"> Play </button></a>
+<a href="Games.jsp"><button class="button"> Play </button></a>
 
 
 <div class="rightAlignedText"> Von X Y Z </div>
