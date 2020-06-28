@@ -14,8 +14,6 @@
 <head>
 	<title>Imprint</title>
   	<link href="Footer_JSP.css" rel="stylesheet" type="text/css">
-</head>
-<body onload="onLoading()">
 <jsp:include page="Header.jsp"/>	
   <div class="footerSitesContainer">
   	<div class="footerContent">

@@ -14,13 +14,6 @@
 <head>
 	<title>Home</title>
   	<link href="Footer_JSP.css" rel="stylesheet" type="text/css">
-  	<link rel="stylesheet2" href="https://www.w3schools.com/w3css/4/w3.css">
-  	<!-- Skripte -->
-  	<script src="Methods.js"></script>
-  	<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-</head>
-<body onload="onLoading()">
-
 <jsp:include page="Header.jsp"/>	
   <div class="footerSitesContainer">
   	<div class="footerContent">

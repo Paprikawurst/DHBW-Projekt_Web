@@ -14,10 +14,8 @@
 <head>
 	<title>Games</title>  	
   	<link href="Games.css" rel="stylesheet" type="text/css">
-</head>
-<body onload="onLoading()">
-<jsp:include page="Header.jsp"/>	
-  <div class="mainpage">
+  	<jsp:include page="Header.jsp"/>	
+<div class="mainpage">
   <div class="tab">
   	<button class="tablinks" id="Skillgames2" onclick="openTab(event, 'Skillgames')">Skill games</button>
   	<button class="tablinks" id="HighScore-Games2" onclick="openTab(event, 'HighScore-Games')">HighScore-Games</button>
@@ -130,10 +128,9 @@
   			<div class="gameContainer"></div>
   		</div>
   	</div>
+  	<script>onLoading()</script> 
   </div>
 <jsp:include page="Footer.jsp"/>
 </div>
-
-
 </body>
 </html>

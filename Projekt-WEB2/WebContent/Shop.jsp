@@ -13,8 +13,7 @@
 <head>
 	<title>Shop</title>
   	<link href="Shop.css" rel="stylesheet" type="text/css">
-</head>
-<body onload="onLoading()">
+
 
 <jsp:include page="Header.jsp"/>	
   <div class="mainpage">
