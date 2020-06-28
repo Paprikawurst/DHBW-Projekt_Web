@@ -12,42 +12,13 @@
 <!-- Metadaten -->
 <meta name="viewport" content="width=device-width, initial-scale=1.0" charset="utf-8" />
 <head>
-	<title>Home</title>
-	<link href="Header_Footer.css" rel="stylesheet" type="text/css">
+	<title>Imprint</title>
   	<link href="Footer_JSP.css" rel="stylesheet" type="text/css">
-  	<link rel="stylesheet2" href="https://www.w3schools.com/w3css/4/w3.css">
-  	<!-- Skripte -->
-  	<script src="Methods.js"></script>
-  	<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 </head>
 <body onload="onLoading()">
-
-  <header>
-    <div> <a class="logo" href="Home.jsp">Home</a></div>
-    <!-- Navigationsleiste -->
-    <nav>
-      <ul>
-      <li class="sub-menu"><a href="#">High-Scores</a>
-					<ul>
-						<li><a href="Snake.jsp">Snake</a></li>
-						<li><a href="Space-Invaders.jsp">Space-Invaders</a></li>
-					</ul>
-		</li>
-        <li class="sub-menu"><a href="#">Games</a>
-					<ul>
-						<li><a href="Snake.jsp">Snake</a></li>
-						<li><a href="Space-Invaders.jsp">Space-Invaders</a></li>
-					</ul>
-		</li>
-      	<li><a href="/Projekt-WEB2/Login_Register/Shop">Shop</a></li>
-      	<li><a href="/Projekt-WEB2/Login_Register/Logout">Settings</a></li>
-        <li><a href="/Projekt-WEB2/Logout">Logout</a></li>
-	  </ul>
-    </nav>
-    <div class="menu-toggle"><i class="fa fa-bars" aria-hidden="true"></i></div>
-  </header>
-  <div id="imprint">
-  	<div class="imprint">
+<jsp:include page="Header.jsp"/>	
+  <div class="footerSitesContainer">
+  	<div class="footerContent">
   	<h1>Impressum</h1>
 				<hr />
 				<h2>Angaben gem&auml;&szlig; &sect; 5 TMG</h2>
@@ -66,51 +37,9 @@
 				<hr />
 				<h3>Urheberrecht</h3> <p>Die durch die Seitenbetreiber erstellten Inhalte und Werke auf diesen Seiten unterliegen dem deutschen Urheberrecht. Die Vervielf&auml;ltigung, Bearbeitung, Verbreitung und jede Art der Verwertung au&szlig;erhalb der Grenzen des Urheberrechtes bed&uuml;rfen der schriftlichen Zustimmung des jeweiligen Autors bzw. Erstellers. Downloads und Kopien dieser Seite sind nur f&uuml;r den privaten, nicht kommerziellen Gebrauch gestattet.</p> <p>Soweit die Inhalte auf dieser Seite nicht vom Betreiber erstellt wurden, werden die Urheberrechte Dritter beachtet. Insbesondere werden Inhalte Dritter als solche gekennzeichnet. Sollten Sie trotzdem auf eine Urheberrechtsverletzung aufmerksam werden, bitten wir um einen entsprechenden Hinweis. Bei Bekanntwerden von Rechtsverletzungen werden wir derartige Inhalte umgehend entfernen.</p>
 				<hr />
-				<p>Quelle: <a href="https://www.e-recht24.de">https://www.e-recht24.de</a></p>
-  	
+				<p>Quelle: <a href="https://www.e-recht24.de">https://www.e-recht24.de</a></p> 	
   	</div>
-   </div>
-   <div class="footer">
-  		<div class="innerFooter">
-  			<div class="firstInnerFooterChild">
-  				<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Instagram_logo_2016.svg/1200px-Instagram_logo_2016.svg.png">
-  			</div>
-  			<div class="otherInnerFooterChild">
-  				<h2>Terms of use?</h2>
-  				<a href="Terms.jsp" >Terms of use</a>
-  			</div>
-  			<div class="otherInnerFooterChild">
-  				<h2>Data Protection</h2>
-  				<a href="DataProtection.jsp" >What happens to your data?</a>
-  			</div>
-  			<div class="otherInnerFooterChild">
-  				<h2>Any Questions?</h2>
-  				<a href="Contact.jsp" >Contact US</a>
-  			</div>
-  			<div class="otherInnerFooterChild">
-  				<h2>Who are we?</h2>
-  				<a href="Imprint.jsp" >Imprint</a>
-  			</div>
-  		</div>
-	</div>
-
-<script src="https://code.jquery.com/jquery-3.3.1.js"></script>
-  <script type="text/javascript">
-    $(document).ready(function() {
-      $('.menu-toggle').click(function() {
-        $('nav').toggleClass('active')
-      })
-      $('ul li').click(function() {
-        $(this).siblings().removeClass('active');
-        $(this).toggleClass('active');
-      })
-      $('.message a').click(function() {
-        $('form').animate({
-          height: "toggle",
-          opacity: "toggle"
-        }, "slow");
-      });
-    })
-  </script>
+  </div>
+<jsp:include page="Footer.jsp"/>	
 </body>
 </html>

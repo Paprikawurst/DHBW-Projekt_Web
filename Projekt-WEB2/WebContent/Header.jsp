@@ -7,45 +7,39 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0" charset="utf-8"/>
 <head>
     <title>Login</title>
-    <link href="Login.css" rel="stylesheet" type="text/css">
     <link href="Header_Footer.css" rel="stylesheet" type="text/css">
     <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
     <link rel="stylesheet2" href="https://www.w3schools.com/w3css/4/w3.css">
     <!-- Skripte -->
+	<script src="Methods.js"></script>   
     <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 </head>
 <body>
-<jsp:useBean id="registerBean" class="Login_Register.Login_RegisterBean" scope="session"/>
-
-<!-- Navigationsleiste -->
-<!-- Navigationsleiste -->
-<header>
+  <header>
+    <div> <a class="logo" href="Start.jsp">Home</a></div>
+    <!-- Navigationsleiste -->
     <nav>
-        <ul>
-            <li><a href="Login.jsp">Login</a></li>
-        </ul>
+      <ul>
+      <li class="sub-menu"><a href="#">High-Scores</a>
+					<ul>
+						<li><a href="Snake.jsp">Snake</a></li>
+						<li><a href="Space-Invaders.jsp">Space-Invaders</a></li>
+					</ul>
+		</li>
+        <li class="sub-menu"><a href="#">Games</a>
+					<ul>
+						<li><a href="Snake.jsp">Snake</a></li>
+						<li><a href="Space-Invaders.jsp">Space-Invaders</a></li>
+					</ul>
+		</li>
+      	<li><a href="Shop.jsp">Shop</a></li>
+      	<li><a href="Settings.jsp">Settings</a></li>
+        <li><a href="/Projekt-WEB2/Logout">Logout</a></li>
+	  </ul>
     </nav>
     <div class="menu-toggle"><i class="fa fa-bars" aria-hidden="true"></i></div>
-</header>
-<div class="login-page">
-    <div class="form">
-        <!-- Registrieren -->        
-        <span style="color:black"><c:out value="${requestScope.Message}"/></span>
-        <form class="register-form" action="Register" method="post">
-            <input name="username" type="email" placeholder="username" required>
-            <input name="password" type="password" placeholder="password" required>
-            <button>create</button>
-            <p class="message">Already registered? <a href="#">Log In</a></p>
-        </form>
-        <!-- Login -->
-        <form class="login-form" action="Login" method="post">
-            <input name="username" type="email" placeholder="Username" required>
-            <input name="password" type="password" placeholder="password" required>
-            <button>login</button>
-            <p class="message">Not registered yet? <a href="#">Create an account!</a></p>
-        </form>
-    </div>
-</div>
+  </header>
+
 </body>
 
 <!-- Skript für Login,Register und Icon anklicken -->
