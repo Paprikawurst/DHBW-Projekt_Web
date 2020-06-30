@@ -11,20 +11,13 @@
     <!-- Navigationsleiste -->
     <nav>
       <ul>
-      <li class="sub-menu"><a href="#">High-Scores</a>
-					<ul>
-						<li><a href="Snake.jsp">Snake</a></li>
-						<li><a href="Space-Invaders.jsp">Space-Invaders</a></li>
-					</ul>
-		</li>
-        <li class="sub-menu"><a href="#">Games</a>
+        <li class="sub-menu"><a href="Games.jsp">Games</a>
 					<ul>
 						<li><a href="Snake.jsp">Snake</a></li>
 						<li><a href="Space-Invaders.jsp">Space-Invaders</a></li>
 					</ul>
 		</li>
       	<li><a href="Shop.jsp">Shop</a></li>
-      	<li><a href="Settings.jsp">Settings</a></li>
         <li><a href="/Projekt-WEB2/Logout">Logout</a></li>
 	  </ul>
     </nav>

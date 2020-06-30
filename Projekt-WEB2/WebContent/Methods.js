@@ -50,6 +50,6 @@ function onLoading() {
 }
 
 function onLoading2() {	
-	document.getElementById("exchange2").style.display = "block";
+	document.getElementById("exchange").style.display = "block";
 	document.getElementById("exchange2").className += " active";
 }

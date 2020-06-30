@@ -92,6 +92,7 @@ h1 {
   height:100vh;
   margin-left:200px;  
   border:green solid 5px;
+  display:none;
 }
 
 
