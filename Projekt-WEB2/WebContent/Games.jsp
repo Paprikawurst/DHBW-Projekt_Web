@@ -32,50 +32,34 @@
   	<div  class="gamesWrapper">
   		<div id="col1row1" class=games>
   			<div class="gameContainer">
-  				<a href="CatchBlock.jsp"><img src="images/unknown.png" alt="CatchBlock" width="100%" height="100%"/></a>
+  				<a href="CatchBlock.jsp"><img src="images/unknown.png" alt="Girl in a jacket" width="100%" height="100%"/></a>
   			</div>
   		</div>
   		<div id="col1row2" class=games>
-  			<div class="gameContainer">
-  				<a href="#"><img src="images/coming.jpg" alt="CatchBlock" width="100%" height="100%"/></a>
-  			</div>
+  			<div class="gameContainer"></div>
   		</div>
   		<div id="col1row3" class=games>
-  			<div class="gameContainer">
-  				<a href="#"><img src="images/coming.jpg" alt="CatchBlock" width="100%" height="100%"/></a>	
-  			</div>
+  			<div class="gameContainer"></div>
   		</div>
   		
   		<div id="col2row1" class=games>
-  			<div class="gameContainer">
-  				<a href="#"><img src="images/coming.jpg" alt="CatchBlock" width="100%" height="100%"/></a>
-  			</div>
+  			<div class="gameContainer"></div>
   		</div>
   		<div id="col2row2" class=games>
-  			<div class="gameContainer">
-  				<a href="#"><img src="images/coming.jpg" alt="CatchBlock" width="100%" height="100%"/></a>
-  			</div>
+  			<div class="gameContainer"></div>
   		</div>
   		<div id="col2row3" class=games>
-  			<div class="gameContainer">
-  				<a href="#"><img src="images/coming.jpg" alt="CatchBlock" width="100%" height="100%"/></a>
-  			</div>
+  			<div class="gameContainer"></div>
   		</div>
   		
   		<div id="col3row1" class=games>
-  			<div class="gameContainer">
-  				<a href="#"><img src="images/coming.jpg" alt="CatchBlock" width="100%" height="100%"/></a>
-  			</div>
+  			<div class="gameContainer"></div>
   		</div>
   		<div id="col3row2" class=games>
-  			<div class="gameContainer">
-  				<a href="#"><img src="images/coming.jpg" alt="CatchBlock" width="100%" height="100%"/></a>
-  			</div>
+  			<div class="gameContainer"></div>
   		</div>
   		<div id="col3row3" class=games>
-  			<div class="gameContainer">
-  				<a href="#"><img src="images/coming.jpg" alt="CatchBlock" width="100%" height="100%"/></a>
-  			</div>
+  			<div class="gameContainer"></div>
   		</div>
   	</div>
   </div>
@@ -83,50 +67,33 @@
   <div id="HighScore-Games" class="tabcontent">
  	   	<div  class="gamesWrapper">
   		<div id="col1row1" class=games>
-  			<div class="gameContainer">
-  				<a href="#"><img src="images/coming.jpg" alt="CatchBlock" width="100%" height="100%"/></a>
-  			</div>
+  			<div class="gameContainer"></div>
   		</div>
   		<div id="col1row2" class=games>
-  			<div class="gameContainer">
-  				<a href="#"><img src="images/coming.jpg" alt="CatchBlock" width="100%" height="100%"/></a>
-  			</div>
+  			<div class="gameContainer"></div>
   		</div>
   		<div id="col1row3" class=games>
-  			<div class="gameContainer">
-  				<a href="#"><img src="images/coming.jpg" alt="CatchBlock" width="100%" height="100%"/></a>
-  			</div>
+  			<div class="gameContainer"></div>
   		</div>
   		
   		<div id="col2row1" class=games>
-  			<div class="gameContainer">
-  				<a href="#"><img src="images/coming.jpg" alt="CatchBlock" width="100%" height="100%"/></a>
-  			</div>
+  			<div class="gameContainer"></div>
   		</div>
   		<div id="col2row2" class=games>
-  			<div class="gameContainer">
-  				<a href="#"><img src="images/coming.jpg" alt="CatchBlock" width="100%" height="100%"/></a>
-  			</div>
+  			<div class="gameContainer"></div>
   		</div>
   		<div id="col2row3" class=games>
-  			<div class="gameContainer">
-  				<a href="#"><img src="images/coming.jpg" alt="CatchBlock" width="100%" height="100%"/></a>
-  			</div>
-  		</div>  		
+  			<div class="gameContainer"></div>
+  		</div>
+  		
   		<div id="col3row1" class=games>
-  			<div class="gameContainer">
-  				<a href="#"><img src="images/coming.jpg" alt="CatchBlock" width="100%" height="100%"/></a>
-  			</div>
+  			<div class="gameContainer"></div>
   		</div>
   		<div id="col3row2" class=games>
-  			<div class="gameContainer">
-  				<a href="#"><img src="images/coming.jpg" alt="CatchBlock" width="100%" height="100%"/></a>
-  			</div>
+  			<div class="gameContainer"></div>
   		</div>
   		<div id="col3row3" class=games>
-  			<div class="gameContainer">
-  				<a href="#"><img src="images/coming.jpg" alt="CatchBlock" width="100%" height="100%"/></a>
-  			</div>
+  			<div class="gameContainer"></div>
   		</div>
   	</div>
   </div>
@@ -134,49 +101,33 @@
   <div id="XXX" class="tabcontent">
 	    <div  class="gamesWrapper">
   		<div id="col1row1" class=games>
-  			<div class="gameContainer">
-  				<a href="#"><img src="images/coming.jpg" alt="CatchBlock" width="100%" height="100%"/></a>
-  			</div>
+  			<div class="gameContainer"></div>
   		</div>
   		<div id="col1row2" class=games>
-  			<div class="gameContainer">
-  				<a href="#"><img src="images/coming.jpg" alt="CatchBlock" width="100%" height="100%"/></a>
-  			</div>
+  			<div class="gameContainer"></div>
   		</div>
   		<div id="col1row3" class=games>
-  			<div class="gameContainer">
-  				<a href="#"><img src="images/coming.jpg" alt="CatchBlock" width="100%" height="100%"/></a>
-  			</div>
-  		</div> 		
+  			<div class="gameContainer"></div>
+  		</div>
+  		
   		<div id="col2row1" class=games>
-  			<div class="gameContainer">
-  				<a href="#"><img src="images/coming.jpg" alt="CatchBlock" width="100%" height="100%"/></a>
-  			</div>
+  			<div class="gameContainer"></div>
   		</div>
   		<div id="col2row2" class=games>
-  			<div class="gameContainer">
-  				<a href="#"><img src="images/coming.jpg" alt="CatchBlock" width="100%" height="100%"/></a>
-  			</div>
+  			<div class="gameContainer"></div>
   		</div>
   		<div id="col2row3" class=games>
-  			<div class="gameContainer">
-  				<a href="#"><img src="images/coming.jpg" alt="CatchBlock" width="100%" height="100%"/></a>
-  			</div>
-  		</div>		
+  			<div class="gameContainer"></div>
+  		</div>
+  		
   		<div id="col3row1" class=games>
-  			<div class="gameContainer">
-  				<a href="#"><img src="images/coming.jpg" alt="CatchBlock" width="100%" height="100%"/></a>
-  			</div>
+  			<div class="gameContainer"></div>
   		</div>
   		<div id="col3row2" class=games>
-  			<div class="gameContainer">
-  				<a href="#"><img src="images/coming.jpg" alt="CatchBlock" width="100%" height="100%"/></a>
-  			</div>
+  			<div class="gameContainer"></div>
   		</div>
   		<div id="col3row3" class=games>
-  			<div class="gameContainer">
-  				<a href="#"><img src="images/coming.jpg" alt="CatchBlock" width="100%" height="100%"/></a>
-  			</div>
+  			<div class="gameContainer"></div>
   		</div>
   	</div>
   	<script>onLoading()</script> 
