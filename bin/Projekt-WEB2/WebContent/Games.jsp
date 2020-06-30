@@ -31,9 +31,7 @@
   <div id="Skillgames" class="tabcontent">
   	<div  class="gamesWrapper">
   		<div id="col1row1" class=games>
-  			<div class="gameContainer">
-  				<a href="CatchBlock.jsp"><img src="images/unknown.png" alt="Girl in a jacket" width="100%" height="100%"/></a>
-  			</div>
+  			<div class="gameContainer"></div>
   		</div>
   		<div id="col1row2" class=games>
   			<div class="gameContainer"></div>
