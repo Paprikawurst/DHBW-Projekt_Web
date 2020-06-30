@@ -14,9 +14,8 @@
     <img src="./images/welcome.png" alt=" Welcome...">
 </div>
 
-
-<a href="Games.jsp">
-    <button class="button"> Play</button>
+<a href="Games.jsp" >
+    <img src="./images/Play.png" alt="Play" class="button">
 </a>
 
 <%--<div class="button">--%>
