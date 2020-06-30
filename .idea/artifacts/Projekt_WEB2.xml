@@ -1,0 +1,16 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="Projekt-WEB2">
+    <output-path>$PROJECT_DIR$/out/artifacts/Projekt_WEB2</output-path>
+    <root id="root">
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="Projekt-WEB2" />
+        </element>
+        <element id="directory" name="lib">
+          <element id="library" level="project" name="javax.servlet:jstl:1.2" />
+        </element>
+      </element>
+      <element id="javaee-facet-resources" facet="Projekt-WEB2/web/Web" />
+    </root>
+  </artifact>
+</component>
