@@ -50,7 +50,7 @@ public class Login extends HttpServlet {
 		if(loginBean.loginUser()) {
 			HttpSession session = request.getSession(true);
 			session.setAttribute("email", loginBean.getEmail());
-			session.setMaxInactiveInterval(30); 
+			session.setMaxInactiveInterval(300); 
 			request.getRequestDispatcher("/Games.jsp").forward(request, response);
 		} else {
 			request.setAttribute("Message", "Wrong Username or Password!");
