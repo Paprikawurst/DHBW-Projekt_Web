@@ -15,14 +15,8 @@
 </div>
 
 <a href="Games.jsp" >
-    <img src="./images/Play.png" alt="Play" class="button">
+    <button class="button"> Play </button>
 </a>
-
-<%--<div class="button">--%>
-<%--    <form action="next">--%>
-<%--        Play<input type="image" name="submit" src="./images/" style="width: 50px;"/>--%>
-<%--    </form>--%>
-<%--</div>--%>
 
 <div class="rightAlignedText">
     <img src="./images/by.png" alt="By...">

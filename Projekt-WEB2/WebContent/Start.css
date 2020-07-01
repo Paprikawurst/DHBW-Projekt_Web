@@ -12,26 +12,27 @@
     left: 50%;
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
-    font-size: 24px;
     text-align: center;
     cursor: pointer;
     outline: none;
     color: #fff;
     background-color: darkblue;
-    border: none;
+    border: 1px solid darkblue;
     border-radius: 15px;
-    box-shadow: 0 9px #999;
-    width: 100px;
-    height: 75px;
+    width: 250px;
+    height: 125px;
+    padding: 10px 30px;
 }
-
 .button:hover {background-color: blue}
 
 .button:active {
-    background-color: dodgerblue;
-    box-shadow: 0 5px #666;
-    transform: translateY(4px);
+    background: dodgerblue;
+    -webkit-box-shadow: inset 0 0 5px #c1c1c1;
+    -moz-box-shadow: inset 0 0 5px #c1c1c1;
+    box-shadow: inset 0 0 5px #c1c1c1;
+    outline: none;
 }
+
 
 .rightAlignedText {
     position:absolute;
