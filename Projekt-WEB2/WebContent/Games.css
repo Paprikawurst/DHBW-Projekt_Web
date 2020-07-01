@@ -118,38 +118,16 @@ h1 {
 	height:100%;
 	width:100%;
 	background-color:grey;
-	border:solid red 2px;
 	display:grid;
 	grid-template-columns: 1fr 1fr 1fr;
 	grid-template-rows: 1fr 1fr 1fr;	
 }
 
-#col1row1, #col1row2, #col1row3 {
-	border:solid red 2px;	
-	grid-row:1;	
-}
-
-#col2row1, #col2row2, #col2row3 {
-	border:solid red 2px;	
-	grid-row:2;	
-}
-
-#col3row1, #col3row2, #col3row3 {
-	border:solid red 2px;	
-	grid-row:3;	
-}
-
-#col1row1,#col2row1,#col3row1  {
-	grid-column:1;
-}
-
-#col1row2,#col2row2,#col3row2 {
-	grid-column:2;	
-}
-
-#col1row3,#col2row3,#col3row3 {
-	grid-column:3;	
-}
+.other {
+	background-color: 
+	#e7e7e7; color: 
+	black;
+} /* Gray */
 
 .games{
     display: flex;
@@ -160,5 +138,4 @@ h1 {
 	margin: 0 auto;
 	height:70%;
 	width:70%;
-	border:solid red 2px;
 }
