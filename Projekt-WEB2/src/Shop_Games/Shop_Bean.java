@@ -4,21 +4,18 @@ import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.HashMap;
 
 public class Shop_Bean {
 	private int points;
-	private HashMap<String, String> purchases;
 	
 	public Shop_Bean() throws IOException {
-		setPurchases(new HashMap<String, String>());
-		setPurchases(readPurchases());
+		
 	}	
 		
 	public Shop_Bean(int points) throws IOException {
 		this.points = points;
-		setPurchases(new HashMap<String, String>());
-		setPurchases(readPurchases());
 	}
 
 	public int getPoints() {
@@ -35,23 +32,32 @@ public class Shop_Bean {
         }
     }
     
-    public HashMap<String, String> readPurchases() throws IOException{
-    	HashMap<String, String> buys = new HashMap<String, String>();
+    public ArrayList<String> readPurchases() throws IOException{
+    	ArrayList<String> buys = new ArrayList<String>();
          File file = new File("purchases.txt");
          String line;
          fileExists(file);
          BufferedReader bufferedReader = new BufferedReader(new FileReader(file));
          while (null != (line = bufferedReader.readLine())) {
-         		buys.put((line.substring(0, line.indexOf('|') - 1)).trim(),(line.substring(line.indexOf('|') + 2).trim()));
+         		buys.add((line.substring(0, line.indexOf('|') - 1)).trim()+"||"+(line.substring(line.indexOf('|') + 2).trim()));
          }
 		return buys;   	
     }
+    
+    public HashMap<String, String> myPurchases(String username) throws IOException{
+    	ArrayList<String> buys = readPurchases();    	
+    	HashMap<String, String> myBuys = new HashMap<String, String>();
+    	int i=0;
+    	for(String line: buys) {
+    		String user=line.substring(0, line.indexOf('|')).trim();
+    		String game=line.substring(line.indexOf('|') + 2).trim();
+    		if(user.contentEquals(username)) {
+    			myBuys.put("Kauf" + i + ": " + user, game);
+    			i++;
+    		}	
+    	}
+        
+		return myBuys;   	
+    }
 
-	public HashMap<String, String> getPurchases() {
-		return purchases;
-	}
-
-	public void setPurchases(HashMap<String, String> purchases) {
-		this.purchases = purchases;
-	}
 }

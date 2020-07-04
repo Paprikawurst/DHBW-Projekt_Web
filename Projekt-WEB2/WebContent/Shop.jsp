@@ -32,15 +32,15 @@
   <div id="purchases" class="tabcontent">
  	<h1>Purchases:</h1>  
  		<c:choose>
- 		<c:when test="${empty shopBean.getPurchases()}">
+ 		<c:when test="${empty shopBean.myPurchases(sessionScope['email'])}">
  			<div class="print"> 
  				<p>No purchases yet!</p>
  			</div>	
 		</c:when>
 		<c:otherwise>
 			<div class="print"> 
-				<c:forEach var="entry" items="${shopBean.getPurchases()}">
- 					User <c:out value="${entry.key}"/> bought the game <c:out value="${entry.value}"/>
+				<c:forEach var="entry" items="${shopBean.myPurchases(sessionScope['email'])}">
+ 					 <c:out value="${entry.key}"/> bought the game <c:out value="${entry.value}"/><br>
 				</c:forEach>
 			</div>	
 		</c:otherwise>
