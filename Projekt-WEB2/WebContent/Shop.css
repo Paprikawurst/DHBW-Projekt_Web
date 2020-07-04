@@ -13,6 +13,7 @@ body {
     list-style: none;
     text-decoration: none;    
     min-height: 100vh;
+    background-color:grey;
 }
 
 h1 {
@@ -20,8 +21,6 @@ h1 {
     padding-left: 15px;
     padding-bottom: 5px;
     padding-right: 30px;
-    border-left: 3px solid #fff;
-    border-bottom: 3px solid #fff;
     text-transform: uppercase;
     margin-bottom: 1.5em;
     letter-spacing: 3px;
@@ -40,7 +39,7 @@ h1 {
   margin: 0;
   padding: 0;
   width: 200px;
-  background-color: grey;
+  background-color: #f1f1f1;
   height: 100vh;
   float:left;
 }
@@ -51,6 +50,7 @@ h1 {
   color: black;
   padding: 16px;
   text-decoration: none;
+  
 }
 
 /* Active/current link */
@@ -88,12 +88,32 @@ h1 {
 
 .tabcontent {  
   padding-bottom:0;
-  border-top: none;
   height:100vh;
   margin-left:200px;  
-  border:green solid 5px;
   display:none;
 }
 
+#points{
+	height:auto;
+	margin-right:0;
+	margin-top:0;	
+	float:right;
+	border:black solid 1px;
+	border-top:none;
+	background-color:grey;	
+}
+
+#exchange h1 {
+	float:left;
+}
+
+#purchases {
+	border:black solid 1px;
+}
+
+.print {
+	margin:10%;
+	background-color:white;
+}
 
 

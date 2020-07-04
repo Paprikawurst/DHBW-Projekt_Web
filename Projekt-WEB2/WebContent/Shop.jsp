@@ -4,7 +4,7 @@
 
 <c:if test="${empty sessionScope['email']}">
 	<c:set var="Message" scope="request" value="You are not logged in!"/>
-     <jsp:forward page="Login.jsp"></jsp:forward>
+    <jsp:forward page="Login.jsp"></jsp:forward>
 </c:if>
 <!DOCTYPE html>
 <html>
@@ -15,7 +15,7 @@
   	<link href="Shop.css" rel="stylesheet" type="text/css">
     <jsp:include page="Header.jsp"/>	
   
-
+<jsp:useBean id="shopBean" class="Shop_Games.Shop_Bean" scope="session"/>
 <div class="mainpage">
 <div class="sidebar">
   		<a  id="exchange2" onclick="openSide(event, 'exchange')" class="tablinks" >Exchange</a>
@@ -24,11 +24,28 @@
 </div>
 
 <div id="exchange" class="tabcontent">
-  	<p>XDDDDDDDDDDDD</p>
+<h1>Exchange:</h1>
+  	<p id="points">Welcome <c:out value="${sessionScope['email']}"/>. You have <c:out value="${shopBean.getPoints()}"/> points!</p>
+  	
   </div>
 
   <div id="purchases" class="tabcontent">
- 	   	
+ 	<h1>Purchases:</h1>  
+ 		<c:choose>
+ 		<c:when test="${empty shopBean.getPurchases()}">
+ 			<div class="print"> 
+ 				<p>No purchases yet!</p>
+ 			</div>	
+		</c:when>
+		<c:otherwise>
+			<div class="print"> 
+				<c:forEach var="entry" items="${shopBean.getPurchases()}">
+ 					User <c:out value="${entry.key}"/> bought the game <c:out value="${entry.value}"/>
+				</c:forEach>
+			</div>	
+		</c:otherwise>
+		</c:choose>
+	
   </div>
 
   <div id="change" class="tabcontent">

@@ -8,6 +8,7 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.io.Serializable;
 import java.util.ArrayList;
+import java.util.HashMap;
 
 
 public class Login_RegisterBean implements Serializable {
@@ -56,28 +57,25 @@ public class Login_RegisterBean implements Serializable {
     }
 
     @SuppressWarnings("resource")
-	public ArrayList<String>readUser(int start) throws IOException {
-        ArrayList<String> user = new ArrayList<String>();
+	public HashMap<String, String> readUser() throws IOException {
+    	HashMap<String, String> user = new HashMap<String, String>();
         File file = new File("user.txt");
         String line;
         fileExists(file);
         BufferedReader bufferedReader = new BufferedReader(new FileReader(file));
         while (null != (line = bufferedReader.readLine())) {
-        	if(start==0) {
-        		user.add((line.substring(0, line.indexOf('|') - 1)).trim());
-        	} else {
-        		user.add((line.substring(line.indexOf('|') + 2).trim()));
-        	}     	
+        		user.put((line.substring(0, line.indexOf('|') - 1)).trim(),(line.substring(line.indexOf('|') + 2).trim()));  	
         }
+        
         return user;
     }
 
     @SuppressWarnings("resource")
 	public boolean insertUser() throws IOException {
-        ArrayList<String> user = readUser(0);
+    	HashMap<String, String> user = readUser();
         File file = new File("user.txt");
         PrintWriter pWriter = new PrintWriter(new FileWriter(file, true), true);
-        if (user.contains(email)) {
+        if (user.containsKey(email)) {
             return false;
         } else {
         	fileExists(file);
@@ -89,11 +87,9 @@ public class Login_RegisterBean implements Serializable {
     }
     
     public boolean loginUser() throws IOException {
-    	ArrayList<String> user = readUser(0);
-    	ArrayList<String> hashes = readUser(1);
-    	if (user.contains(email)) {
-    		int index=user.indexOf(email);
-    		String hash=hashes.get(index);
+    	HashMap<String, String> user = readUser();
+    	if (user.containsKey(email)) {
+    		String hash=user.get(email);
             if(BCrypt.checkpw(password,hash)){
             	return true;
             } else {
