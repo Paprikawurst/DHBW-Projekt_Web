@@ -1,4 +1,4 @@
-package Shop_Games;
+package Shop_Skins;
 
 import java.io.BufferedReader;
 import java.io.File;
@@ -39,25 +39,44 @@ public class Shop_Bean {
          fileExists(file);
          BufferedReader bufferedReader = new BufferedReader(new FileReader(file));
          while (null != (line = bufferedReader.readLine())) {
-         		buys.add((line.substring(0, line.indexOf('|') - 1)).trim()+"||"+(line.substring(line.indexOf('|') + 2).trim()));
+         		buys.add((line.substring(0, line.indexOf('|') - 1)).trim()+" || "+(line.substring(line.indexOf('|') + 2).trim()));
          }
 		return buys;   	
     }
     
-    public HashMap<String, String> myPurchases(String username) throws IOException{
-    	ArrayList<String> buys = readPurchases();    	
-    	HashMap<String, String> myBuys = new HashMap<String, String>();
+    public ArrayList<String> myPurchases(String username) throws IOException{
+    	ArrayList<String> buys = readPurchases();    
+    	ArrayList<String> myBuys = new ArrayList<String>();
     	int i=0;
     	for(String line: buys) {
-    		String user=line.substring(0, line.indexOf('|')).trim();
-    		String game=line.substring(line.indexOf('|') + 2).trim();
+    		String user=line.substring(0, line.indexOf('|')-1).trim();
+    		String skin=line.substring(line.indexOf('|') + 2).trim();
     		if(user.contentEquals(username)) {
-    			myBuys.put("Kauf" + i + ": " + user, game);
-    			i++;
+    			String entry="User: " + user + " bought the skin|| " + skin;
+    			if(!myBuys.contains("User: " + user + " bought the skin||: " + skin)) {
+    				myBuys.add(entry);
+    			}
     		}	
     	}
         
 		return myBuys;   	
+    }
+    
+    public ArrayList<String> ubSkins(String username) throws IOException{
+    	ArrayList<String>  myBuys = myPurchases(username);
+    	ArrayList<String>  skins = new ArrayList<String>();
+    	String skin=" ";
+    	for(String line:  myBuys) {
+    		skin=line.substring((line.indexOf('|')+2)).trim();
+    		if(skin.equals("Game0")) {
+    			skins.add("Game0");
+    		}
+    		
+    		if(skin.equals("Game1")) {
+    			skins.add("Game1");
+    		}
+    	}
+    	return skins;
     }
 
 }

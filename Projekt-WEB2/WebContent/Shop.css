@@ -71,7 +71,7 @@ h1 {
 @media screen and (max-width: 700px) {
   .sidebar {
     width: 100%;
-    height: auto;
+    height: 100vh;
     position: relative;
   }
   .sidebar a {float: left;}
@@ -88,7 +88,7 @@ h1 {
 
 .tabcontent {  
   padding-bottom:0;
-  height:100vh;
+  height:100%;
   margin-left:200px;  
   display:none;
 }
@@ -107,12 +107,73 @@ h1 {
 	float:left;
 }
 
+.skinsWrapper {
+	height:100%;
+	width:100%;
+	background-color:grey;
+	display:grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-template-rows: 1fr 1fr 1fr;	
+}
+
+.other {
+	background-color: 
+	#e7e7e7; color: 
+	black;
+} /* Gray */
+
+.skins{
+    display: flex;
+    align-items: center;
+}
+
+.skinContainer {
+	margin: 0 auto;
+	height:50%;
+	width:50%;
+}
+
+#formContainer{
+	background-color:white;
+	position:relative;
+	left:0;
+	margin-top:125px;
+}
+
+
+#formContainer input[type=submit] {
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px 20px;
+  padding-left:20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+#formContainer input[type=text], select, textarea {
+  width: 100%; 
+  padding: 12px; 
+  border: 1px solid #ccc; 
+  border-radius: 4px; 
+  box-sizing: border-box; 
+  margin-top: 6px; 
+  margin-bottom: 16px; 
+  resize: vertical 
+}
+
+#formContainer input[type=submit]:hover {
+  background-color: #45a049;
+}
+
 #purchases {
-	border:black solid 1px;
+	width:100%;
+	margin:0;
+	top:0;
 }
 
 .print {
-	margin:10%;
+	font-size:30px;
 	background-color:white;
 }
 

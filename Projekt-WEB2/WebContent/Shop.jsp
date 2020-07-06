@@ -15,7 +15,7 @@
   	<link href="Shop.css" rel="stylesheet" type="text/css">
     <jsp:include page="Header.jsp"/>	
   
-<jsp:useBean id="shopBean" class="Shop_Games.Shop_Bean" scope="session"/>
+<jsp:useBean id="shopBean" class="Shop_Skins.Shop_Bean" scope="session"/>
 <div class="mainpage">
 <div class="sidebar">
   		<a  id="exchange2" onclick="openSide(event, 'exchange')" class="tablinks" >Exchange</a>
@@ -26,8 +26,75 @@
 <div id="exchange" class="tabcontent">
 <h1>Exchange:</h1>
   	<p id="points">Welcome <c:out value="${sessionScope['email']}"/>. You have <c:out value="${shopBean.getPoints()}"/> points!</p>
-  	
+  	<div  class="skinsWrapper">
+  		<div id="col1row1" class=skins>
+  			<div class="skinContainer">
+  				<img src="images/unknown.png" alt="Skin" width="100%" height="100%"/>
+  				<label class="other"> Skin</label>
+  			</div>
+  		</div>
+  		<div id="col1row2" class=skins>
+  			<div class="skinContainer">
+  				<img src="images/coming.jpg" alt="Skin" width="100%" height="100%"/>
+  				<label class="other"> Coming Soon</label>
+  			</div>
+  		</div>
+  		<div id="col1row3" class=skins>
+  			<div class="skinContainer">
+  				<img src="images/coming.jpg" alt="Skin" width="100%" height="100%"/>	
+  				<label class="other"> Coming Soon</label>
+  			</div>
+  		</div>  		
+  		<div id="col2row1" class=skins>
+  			<div class="skinContainer">
+  				<img src="images/coming.jpg" alt="Skin" width="100%" height="100%"/>
+  				<label class="other"> Coming Soon</label>
+  			</div>
+  		</div>
+  		<div id="col2row2" class=skins>
+  			<div class="skinContainer">
+  				<img src="images/coming.jpg" alt="Skin" width="100%" height="100%"/>
+  				<label class="other"> Coming Soon</label>
+  			</div>
+  		</div>
+  		<div id="col2row3" class=skins>
+  			<div class="skinContainer">
+  				<img src="images/coming.jpg" alt="Skin" width="100%" height="100%"/>
+  				<label class="other"> Coming Soon</label>
+  			</div>
+  		</div>  		
+  		<div id="col3row1" class=skins>
+  			<div class="skinContainer">
+  				<img src="images/coming.jpg" alt="Skin" width="100%" height="100%"/>
+  				<label class="other"> Coming Soon</label>
+  			</div>
+  		</div>
+  		<div id="col3row2" class=skins>
+  			<div class="skinContainer">
+  				<img src="images/coming.jpg" alt="Skin" width="100%" height="100%"/>
+  				<label class="other"> Coming Soon</label>
+  			</div>
+  		</div>
+  		<div id="col3row3" class=skins>
+  			<div class="skinContainer">
+  				<img src="images/coming.jpg" alt="Skin" width="100%" height="100%"/>
+  				<label class="other"> Coming Soon</label>
+  			</div>
+  		</div>
+  	</div>
+  		<div id="formContainer">
+  		<h1>Choose a Skin to buy</h1>
+  		<form action="/Shop">
+		<select name="unboughtSkins" id="skins">
+			<c:forEach var="entry" items="${shopBean.ubSkins(sessionScope['email'])}">
+ 					 <option value="${entry}"><c:out value="${entry}"/></option>
+			</c:forEach>
+		</select> 
+  		<input type="submit" value="Submit">
+	</form>
+	
   </div>
+</div>
 
   <div id="purchases" class="tabcontent">
  	<h1>Purchases:</h1>  
@@ -40,7 +107,7 @@
 		<c:otherwise>
 			<div class="print"> 
 				<c:forEach var="entry" items="${shopBean.myPurchases(sessionScope['email'])}">
- 					 <c:out value="${entry.key}"/> bought the game <c:out value="${entry.value}"/><br>
+ 					 <c:out value="${entry}"/><br>
 				</c:forEach>
 			</div>	
 		</c:otherwise>
