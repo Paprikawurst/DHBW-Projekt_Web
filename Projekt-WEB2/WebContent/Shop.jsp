@@ -84,12 +84,14 @@
   	</div>
   		<div id="formContainer">
   		<h1>Choose a Skin to buy</h1>
-  		<form action="/Shop">
+  		<span style="color:black"><c:out value="${requestScope.Message}"/></span>
+  		<form action="Shop" method="post">
 		<select name="unboughtSkins" id="skins">
-			<c:forEach var="entry" items="${shopBean.ubSkins(sessionScope['email'])}">
+			<c:forEach var="entry" items="${shopBean.notBoughtSkins(sessionScope['email'])}">
  					 <option value="${entry}"><c:out value="${entry}"/></option>
 			</c:forEach>
 		</select> 
+		<input name="user" hidden="true" value="${sessionScope['email']}"/>
   		<input type="submit" value="Submit">
 	</form>
 	
