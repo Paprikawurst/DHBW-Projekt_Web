@@ -25,7 +25,7 @@
 
 <div id="exchange" class="tabcontent">
 <h1>Exchange:</h1>
-  	<p id="points">Welcome <c:out value="${sessionScope['email']}"/>. You have <c:out value="${shopBean.getPoints()}"/> points!</p>
+  	<p id="points">Welcome <c:out value="${sessionScope['email']}"/> You have <c:out value="${shopBean.myPoints(sessionScope['email'])}"/> points!</p>
   	<div  class="skinsWrapper">
   		<div id="col1row1" class=skins>
   			<div class="skinContainer">
@@ -84,7 +84,7 @@
   	</div>
   		<div id="formContainer">
   		<h1>Choose a Skin to buy</h1>
-  		<span style="color:black"><c:out value="${requestScope.Message}"/></span>
+  		<span style="color:red"><h1><c:out value="${requestScope.Message}"/></h1></span>
   		<form action="Shop" method="post">
 		<select name="unboughtSkins" id="skins">
 			<c:forEach var="entry" items="${shopBean.notBoughtSkins(sessionScope['email'])}">
@@ -118,7 +118,33 @@
   </div>
 
   <div id="change" class="tabcontent">
-	   
+  		<div id="formContainer">
+  		<h1>Choose a Skin to play with for Snake</h1>
+  		<form action="Skins" method="post">
+		<select name="activeSkin" id="skins">
+			<c:forEach var="entry" items="${shopBean.chooseSkins(sessionScope['email'])}">
+ 					 <option value="${entry}"><c:out value="${entry}"/></option>
+			</c:forEach>
+		</select> 
+		<input name="game" hidden="true" value="Snake"/>
+		<input name="user" hidden="true" value="${sessionScope['email']}"/>
+  		<input type="submit" value="Submit">
+	</form>	
+  </div>  
+  
+  <div id="formContainer">
+  		<h1>Choose a Skin to play with for CatchBlock</h1>
+  		<form action="Skins" method="post">
+		<select name="activeSkin" id="skins">
+			<c:forEach var="entry" items="${shopBean.chooseSkins(sessionScope['email'])}">
+ 					 <option value="${entry}"><c:out value="${entry}"/></option>
+			</c:forEach>
+		</select> 
+		<input name="game" hidden="true" value="CatchBlock"/>
+		<input name="user" hidden="true" value="${sessionScope['email']}"/>
+  		<input type="submit" value="Submit">
+	</form>	
+  </div> 
    	
   </div>
   <script>onLoading2()</script> 

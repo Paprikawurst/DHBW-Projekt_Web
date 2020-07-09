@@ -40,7 +40,7 @@ h1 {
   padding: 0;
   width: 200px;
   background-color: #f1f1f1;
-  height: 100vh;
+  height: 101vh;
   float:left;
 }
 
@@ -137,7 +137,6 @@ h1 {
 	background-color:white;
 	position:relative;
 	left:0;
-	margin-top:125px;
 }
 
 

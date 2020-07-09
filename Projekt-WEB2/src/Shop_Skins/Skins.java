@@ -8,23 +8,26 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 /**
- * Servlet implementation class Shop
+ * Servlet implementation class Skins
  */
-@WebServlet("/Shop")
-public class Shop extends HttpServlet {
+@WebServlet("/Skins")
+public class Skins extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public Shop() {
+    public Skins() {
         super();
+        // TODO Auto-generated constructor stub
     }
 
 	/**
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		// TODO Auto-generated method stub
+		response.getWriter().append("Served at: ").append(request.getContextPath());
 	}
 
 	/**
@@ -39,14 +42,9 @@ public class Shop extends HttpServlet {
 		}
 		shopBean.setUser(request.getParameter("user"));
 		shopBean.myPoints(request.getParameter("user"));
-		if(shopBean.buySkin(request.getParameter("user"),request.getParameter("unboughtSkins")).equals("Erfolgreich eingetragen!")) {
-			request.setAttribute("Message", "Kauf erfolgreich!");
-			request.getRequestDispatcher("/Shop.jsp").forward(request, response);
-		} else {
-			request.setAttribute("Message", "Zu wenige Punkte!");
-            request.getRequestDispatcher("/Shop.jsp").forward(request, response);
-		}
 		
+		shopBean.setSkin(request.getParameter("user"),request.getParameter("game"),request.getParameter("activeSkin"));
+		response.sendRedirect("Shop.jsp");
 	}
 
 }

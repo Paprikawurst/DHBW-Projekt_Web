@@ -64,7 +64,7 @@ public class Login_RegisterBean implements Serializable {
 	        BufferedReader bufferedReader;
 			bufferedReader = new BufferedReader(new FileReader(file));
 	        while (null != (line = bufferedReader.readLine())) {
-        		user.put((line.substring(0, line.indexOf('|') - 1)).trim(),(line.substring(line.indexOf('|') + 2).trim()));  	
+        		user.put((line.substring(0, line.indexOf('|'))).trim(),(line.substring(line.indexOf('|') + 2).trim()));  	
 	        }
 	        bufferedReader.close();        
 		} catch (FileNotFoundException e) {	
@@ -89,9 +89,28 @@ public class Login_RegisterBean implements Serializable {
 	            return false;
 	        } else {
 	        	fileExists(file);
-	            pWriter.println(email + " || " + this.hash());
+	            pWriter.println(email + "||" + this.hash());
 	            pWriter.flush();
 	            pWriter.close();
+	            File file2 = new File("points.txt");
+	            fileExists(file2);
+		        PrintWriter pWriter2 = new PrintWriter(new FileWriter(file2, true), true);
+		        pWriter2.println(email + "||0");
+	            pWriter2.flush();
+	            pWriter2.close();
+	            File file3= new File("activeskins.txt");
+	            fileExists(file3);
+		        PrintWriter pWriter3 = new PrintWriter(new FileWriter(file3, true), true);
+		        pWriter3.println(email + "||Snake/Default");
+		        pWriter3.println(email + "||CatchBlock/Default");
+		        pWriter3.flush();
+	            pWriter3.close();
+	            File file4= new File("purchases.txt");
+	            fileExists(file4);
+		        PrintWriter pWriter4 = new PrintWriter(new FileWriter(file4, true), true);
+		        pWriter4.println(email + "||Default");
+		        pWriter4.flush();
+	            pWriter4.close();
 	            return true;
 	        }
 		} catch (IOException e) {
