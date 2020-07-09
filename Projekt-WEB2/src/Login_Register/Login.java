@@ -53,7 +53,7 @@ public class Login extends HttpServlet {
 			session.setMaxInactiveInterval(300); 
 			response.sendRedirect("Games.jsp");
 		} else {
-			request.setAttribute("Message", "Wrong Username or Password!");
+			request.setAttribute("MessageLogin", "Wrong Username or Password!");
             request.getRequestDispatcher("/Login.jsp").forward(request, response);
 		}		
 	}

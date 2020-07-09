@@ -20,6 +20,7 @@
 <!-- Navigationsleiste -->
 <!-- Navigationsleiste -->
 <header>
+<div> <a class="logo" href="Start.jsp">Home</a></div>
     <nav>
         <ul>
             <li><a href="Login.jsp">Login</a></li>
@@ -30,7 +31,7 @@
 <div class="login-page">
     <div class="form">
         <!-- Registrieren -->        
-        <span style="color:black"><c:out value="${requestScope.Message}"/></span>
+        <span style="color:red"><c:out value="${requestScope.MessageLogin}"/></span>
         <form class="register-form" action="Register" method="post">
             <input name="username" type="email" placeholder="username" required>
             <input name="password" type="password" placeholder="password" required>

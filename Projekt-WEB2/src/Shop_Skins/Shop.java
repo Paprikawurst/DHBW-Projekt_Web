@@ -39,11 +39,12 @@ public class Shop extends HttpServlet {
 		}
 		shopBean.setUser(request.getParameter("user"));
 		shopBean.myPoints(request.getParameter("user"));
+		
 		if(shopBean.buySkin(request.getParameter("user"),request.getParameter("unboughtSkins")).equals("Erfolgreich eingetragen!")) {
-			request.setAttribute("Message", "Kauf erfolgreich!");
+			request.setAttribute("MessageShop", "Kauf erfolgreich!");
 			request.getRequestDispatcher("/Shop.jsp").forward(request, response);
 		} else {
-			request.setAttribute("Message", "Zu wenige Punkte!");
+			request.setAttribute("MessageShop", "Zu wenige Punkte!");
             request.getRequestDispatcher("/Shop.jsp").forward(request, response);
 		}
 		

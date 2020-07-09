@@ -1,0 +1,31 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+
+html {
+	height: 100vh;
+	width:100%;
+}
+
+body {
+    font-family: "Open Sans", sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;    
+    min-height: 100%;
+}
+
+.mainpage{
+	position: relative;
+    min-height: 100%;
+	margin-top:50px;
+	width:100%;
+}
+
+#snake,#gameDiv{
+	display: flex;
+	align-items: center;
+	margin-left:30%;
+	margin-bottom:0;
+	padding-bottom:0;
+}

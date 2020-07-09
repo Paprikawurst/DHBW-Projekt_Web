@@ -1,12 +1,6 @@
  <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
-
-<c:if test="${empty sessionScope['email']}">
-	<c:set var="Message" scope="request" value="You are not logged in!"/>
-     <jsp:forward page="Login.jsp"></jsp:forward>
-</c:if>
-
 <!DOCTYPE html>
 <html>
 <!-- Metadaten -->
@@ -14,7 +8,9 @@
 <head>
 	<title>Games</title>  	
   	<link href="Games.css" rel="stylesheet" type="text/css">
-  	<jsp:include page="Header.jsp"/>	
+  	<jsp:include page="Header.jsp"/>
+
+  		
 <div class="mainpage">
   <div class="tab">
   	<button class="tablinks" id="Skillgames2" onclick="openTab(event, 'Skillgames')">Skill games</button>
@@ -38,8 +34,8 @@
   		</div>
   		<div id="col1row2" class=games>
   			<div class="gameContainer">
-  				<a href="#"><img src="images/coming.jpg" alt="CatchBlock" width="100%" height="100%"/></a>
-  				<label class="other"> Coming Soon</label>
+  				<a href="Snake.jsp"><img src="images/Snake/ground.png" alt="Snkae" width="100%" height="100%"/></a>
+  				<label class="other"> Snake</label>
   			</div>
   		</div>
   		<div id="col1row3" class=games>
