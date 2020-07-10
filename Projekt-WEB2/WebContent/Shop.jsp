@@ -8,10 +8,9 @@
 </c:if>
 <!DOCTYPE html>
 <html>
-<!-- Metadaten -->
+<head>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"
 	charset="utf-8" />
-<head>
 <title>Shop</title>
 <link href="Shop.css" rel="stylesheet" type="text/css">
 <jsp:include page="Header.jsp" />

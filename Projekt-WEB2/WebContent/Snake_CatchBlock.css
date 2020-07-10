@@ -1,7 +1,7 @@
 @import url(https://fonts.googleapis.com/css?family=Open+Sans);
 
 html {
-	height: 100vh;
+	height: 84%;
 	width:100%;
 }
 
@@ -12,20 +12,74 @@ body {
     padding: 0;
     list-style: none;
     text-decoration: none;    
-    min-height: 100%;
+    height: 100%;
 }
 
-.mainpage{
+#mainpage{
 	position: relative;
-    min-height: 100%;
+    height: 100%;
 	margin-top:50px;
 	width:100%;
+	background-color:blue;
+	display:flex;
+    align-items: center;
 }
 
-#snake,#gameDiv{
-	display: flex;
-	align-items: center;
+#gameDiv {
+	position: absolute;
+	top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);	 
+}
+
+#GamesSitesContainer {
+	display:flex;
+	width:100vw;
+	height:100%;
+	background-color:grey;
+	margin-top:50px;
+	bottom:0;
+}
+
+#GamesContent{
+	width:40%;
+	height:auto;
+	background-color:white;
+	float:right;
 	margin-left:30%;
-	margin-bottom:0;
-	padding-bottom:0;
+	margin-right:30%;
+	padding-left:20px;
+}
+
+#games{
+	height:100vh;
+	padding-right:10px;
+}
+
+.startGame {
+	box-shadow:inset 2px 4px 0px 0px #899599;
+	background:linear-gradient(to bottom, #ededed 5%, #bab1ba 100%);
+	background-color:#ededed;
+	border-radius:15px;
+	border:1px solid #d6bcd6;
+	display:inline-block;
+	cursor:pointer;
+	color:#3a8a9e;
+	font-family:Arial;
+	font-size:23px;
+	font-weight:bold;
+	padding:15px 76px;
+	text-decoration:none;
+	text-shadow:0px 0px 0px #e1e2ed;
+	width:98%;
+	text-align:center;
+	margin-right:15px;
+}
+.startGame:hover {
+	background:linear-gradient(to bottom, #bab1ba 5%, #ededed 100%);
+	background-color:#bab1ba;
+}
+.startGame:active {
+	position:relative;
+	top:1px;
 }

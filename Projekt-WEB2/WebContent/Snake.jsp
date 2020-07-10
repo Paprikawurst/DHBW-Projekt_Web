@@ -10,9 +10,12 @@
   	<link href="Snake_CatchBlock.css" rel="stylesheet" type="text/css">
   	<jsp:include page="Header.jsp"/>
 <div class="mainpage">
-    <canvas id ="snake" width="608" height="608"></canvas>
-    <script src="js/snake.js"></script>
-   <jsp:include page="Footer.jsp"/>	
-</div>
+ 	<div id="gameDiv">
+    	<canvas id ="snake" width="608px" height="608px"></canvas>
+    	<script src="js/snake.js"></script>
+    </div>
+</div>    
+ <jsp:include page="Footer.jsp"/>	
+
 </body>
 </html>

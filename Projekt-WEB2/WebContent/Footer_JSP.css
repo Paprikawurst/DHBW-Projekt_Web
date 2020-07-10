@@ -9,8 +9,8 @@ body {
     margin: 0;
     padding: 0;
     list-style: none;
-    text-decoration: none;    
-    min-height: 100vh;
+    text-decoration: none;  
+    height: auto;  
 }
 
 h1 {
@@ -26,37 +26,31 @@ h1 {
     font-weight: 600;
 }
 
-.mainpage{
-	position: relative;
-    min-height: 100vh;
-	margin-top:50px;
-	width:100%;
-}
-
-.footerSitesContainer {
+#footerSitesContainer {
 	display:flex;
 	width:100vw;
-	height:100%;
+	height:auto;
 	background-color:grey;
 	margin-top:50px;
+	bottom:0;
 }
 
-.footerContent{
+#footerSitesContainer .contact {
+	height:100vh;
+	padding-right:10px;
+}
+
+#footerContent{
 	width:40%;
-	height:auto;
 	background-color:white;
 	float:right;
 	margin-left:30%;
 	margin-right:30%;
 	padding-left:20px;
+	
 }
 
-#contact {
-	height:100vh;
-	padding-right:10px;
-}
-
-.footerContent input[type=text], select, textarea {
+#footerContent input[type=text], select, textarea {
   width: 100%; 
   padding: 12px; 
   border: 1px solid #ccc; 
@@ -67,7 +61,7 @@ h1 {
   resize: vertical 
 }
 
-.footerContent input[type=submit] {
+#footerContent input[type=submit] {
   background-color: #4CAF50;
   color: white;
   padding: 12px 20px;
@@ -77,6 +71,8 @@ h1 {
   cursor: pointer;
 }
 
-.footerContent input[type=submit]:hover {
+#footerContent input[type=submit]:hover {
   background-color: #45a049;
 }
+
+        

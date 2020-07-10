@@ -7,19 +7,16 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0" charset="utf-8" />
 <head>
     <title>Contact Us</title>
-    <link href="Footer_JSP.css" rel="stylesheet" type="text/css">
+    <link href="Snake_CatchBlock.css" rel="stylesheet" type="text/css">
     <jsp:include page="Header.jsp"/>
 </head>
-    <div class="footerSitesContainer">
-        <div class="footerContent" id="contact">
+    <div class="GamesSitesContainer" id="games">
+        <div class="GamesContent" >
             <h1>Snake</h1>
-
             <hr/>
             <h2>Screenshots:<br>
-
                 <img src="images/Snake/SnakeScreenshot1.png">
-
-                <hr/>
+                <hr>
                 Beschreibung:
                 Snake ist ein Computerspielklassiker,
                 bei dem eine sich gerade oder rechtwinklig bewegende Schlange durch ein Spielfeld gesteuert wird.
@@ -27,14 +24,12 @@
                 einschließlich des eigenen Schlangenkörpers,sowie des Spielfeldrandes auszuweichen.
                 Während die Schlange mit jedem Happen wächst,
                 wird das Manövrieren bei zunehmend vollerem Spielfeld immer schwieriger.
-                <hr/>
+                Pro Happen bekommt der Spieler Punkte, die er im Shop gegen Skins eintauschen kann!
+                <hr>
                 Steuerung:
                 Gesteuert wird mit WASD
-                <hr>
-
-                <a href="Snake.jsp">
-                <button class="button"> Play </button>
-                </a>
+                <hr>                
+                <a href="Snake.jsp" class="startGame">Play</a>
             </h2>
         </div>
     </div>
