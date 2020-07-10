@@ -9,7 +9,7 @@
 	<title>Games</title>  	
   	<link href="Games.css" rel="stylesheet" type="text/css">
   	<jsp:include page="Header.jsp"/>
-
+</head>
   		
 <div class="mainpage">
   <div class="tab">
@@ -34,7 +34,7 @@
   		</div>
   		<div id="col1row2" class=games>
   			<div class="gameContainer">
-  				<a href="Snake.jsp"><img src="images/Snake/ground.png" alt="Snkae" width="100%" height="100%"/></a>
+  				<a href="SnakePreScreen.jsp"><img src="images/Snake/ground.png" alt="Snake" width="100%" height="100%"/></a>
   				<label class="other"> Snake</label>
   			</div>
   		</div>
