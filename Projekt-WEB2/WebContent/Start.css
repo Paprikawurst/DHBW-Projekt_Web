@@ -1,11 +1,11 @@
 
-.leftAlignedText {
+#leftAlignedText {
     position:absolute;
     top:0;
     left:0;
 }
 
-.button {
+#button {
     margin: 0;
     position: absolute;
     top: 50%;
@@ -23,9 +23,11 @@
     height: 125px;
     padding: 10px 30px;
 }
-.button:hover {background-color: blue}
+#button:hover {
+	background-color: blue
+}
 
-.button:active {
+#button:active {
     background: dodgerblue;
     -webkit-box-shadow: inset 0 0 5px #c1c1c1;
     -moz-box-shadow: inset 0 0 5px #c1c1c1;
@@ -34,7 +36,7 @@
 }
 
 
-.rightAlignedText {
+#rightAlignedText {
     position:absolute;
     bottom:0;
     right:0;

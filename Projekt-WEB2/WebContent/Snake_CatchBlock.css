@@ -1,7 +1,7 @@
 @import url(https://fonts.googleapis.com/css?family=Open+Sans);
 
 html {
-	height: 84%;
+	height: 100vh;
 	width:100%;
 }
 
@@ -17,7 +17,7 @@ body {
 
 #mainpage{
 	position: relative;
-    height: 100%;
+    height: auto;
 	margin-top:50px;
 	width:100%;
 	background-color:blue;
@@ -56,7 +56,7 @@ body {
 	padding-right:10px;
 }
 
-.startGame {
+#startGame {
 	box-shadow:inset 2px 4px 0px 0px #899599;
 	background:linear-gradient(to bottom, #ededed 5%, #bab1ba 100%);
 	background-color:#ededed;
@@ -75,11 +75,11 @@ body {
 	text-align:center;
 	margin-right:15px;
 }
-.startGame:hover {
+#startGame:hover {
 	background:linear-gradient(to bottom, #bab1ba 5%, #ededed 100%);
 	background-color:#bab1ba;
 }
-.startGame:active {
+#startGame:active {
 	position:relative;
 	top:1px;
 }

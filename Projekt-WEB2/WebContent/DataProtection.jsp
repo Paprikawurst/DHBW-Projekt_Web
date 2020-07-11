@@ -1,20 +1,26 @@
+<!-- JSP  -->
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
-
 <!DOCTYPE html>
 <html>
 <head>
+<!-- Metadaten  -->
 <meta name="viewport" content="width=device-width, initial-scale=1.0"
 	charset="utf-8" />
+<!-- Titel  -->
 <title>DataProtection</title>
+<!-- CSS  -->
 <link href="Footer_JSP.css" rel="stylesheet" type="text/css">
+<!-- Header  -->
 <jsp:include page="Header.jsp" />
+<!-- Inhaltscontainer unter der Nav-Leiste  -->
 <div id="footerSitesContainer">
+	<!-- Container mit dem Inhalt der Datenschutzerklärung -->
 	<div id="footerContent">
 		<h1>Datenschutzerkl&auml;rung</h1>
-		<hr />
+		<hr>
 		<h2>1. Datenschutz auf einen Blick</h2>
-		<hr />
+		<hr>
 		<h3>Allgemeine Hinweise</h3>
 		<p>Die folgenden Hinweise geben einen einfachen &Uuml;berblick
 			dar&uuml;ber, was mit Ihren personenbezogenen Daten passiert, wenn
@@ -23,7 +29,7 @@
 			Ausf&uuml;hrliche Informationen zum Thema Datenschutz entnehmen Sie
 			unserer unter diesem Text aufgef&uuml;hrten
 			Datenschutzerkl&auml;rung.</p>
-		<hr />
+		<hr>
 		<h3>Datenerfassung auf unserer Website</h3>
 		<p>
 			<strong>Wer ist verantwortlich f&uuml;r die Datenerfassung
@@ -65,9 +71,9 @@
 			personenbezogenen Daten zu verlangen. Details hierzu entnehmen Sie
 			der Datenschutzerkl&auml;rung unter &bdquo;Recht auf
 			Einschr&auml;nkung der Verarbeitung&ldquo;.</p>
-		<hr />
+		<hr>
 		<h2>2. Allgemeine Hinweise und Pflichtinformationen</h2>
-		<hr />
+		<hr>
 		<h3>Datenschutz</h3>
 		<p>Die Betreiber dieser Seiten nehmen den Schutz Ihrer
 			pers&ouml;nlichen Daten sehr ernst. Wir behandeln Ihre
@@ -83,14 +89,14 @@
 			Internet (z.&nbsp;B. bei der Kommunikation per E-Mail)
 			Sicherheitsl&uuml;cken aufweisen kann. Ein l&uuml;ckenloser Schutz
 			der Daten vor dem Zugriff durch Dritte ist nicht m&ouml;glich.</p>
-		<hr />
+		<hr>
 		<h3>Hinweis zur verantwortlichen Stelle</h3>
 		<p>Die verantwortliche Stelle f&uuml;r die Datenverarbeitung auf
 			dieser Website ist:</p>
 		<p>
 			Joel Koch<br />
 		</p>
-		<hr />
+		<hr>
 		Landr&uuml;ckenstra&szlig;e 29<br /> 36148 Kalbacg<br>
 		<p>
 			Telefon: 09742/1600<br /> E-Mail: joel_koch@gmx.net
@@ -106,7 +112,7 @@
 			formlose Mitteilung per E-Mail an uns. Die Rechtm&auml;&szlig;igkeit
 			der bis zum Widerruf erfolgten Datenverarbeitung bleibt vom Widerruf
 			unber&uuml;hrt.</p>
-		<hr />
+		<hr>
 		<h3>Widerspruchsrecht gegen die Datenerhebung in besonderen
 			F&auml;llen sowie gegen Direktwerbung (Art. 21 DSGVO)</h3>
 		<p>
@@ -136,7 +142,7 @@
 				Zwecke der Direktwerbung verwendet (Widerspruch nach Art. 21 Abs. 2
 				DSGVO).</strong>
 		</p>
-		<hr />
+		<hr>
 		<h3>Beschwerderecht bei der zust&auml;ndigen
 			Aufsichtsbeh&ouml;rde</h3>
 		<p>Im Falle von Verst&ouml;&szlig;en gegen die DSGVO steht den
@@ -146,7 +152,7 @@
 			mutma&szlig;lichen Versto&szlig;es zu. Das Beschwerderecht besteht
 			unbeschadet anderweitiger verwaltungsrechtlicher oder gerichtlicher
 			Rechtsbehelfe.</p>
-		<hr />
+		<hr>
 		<h3>Recht auf Daten&uuml;bertragbarkeit</h3>
 		<p>Sie haben das Recht, Daten, die wir auf Grundlage Ihrer
 			Einwilligung oder in Erf&uuml;llung eines Vertrags automatisiert
@@ -154,7 +160,7 @@
 			maschinenlesbaren Format aush&auml;ndigen zu lassen. Sofern Sie die
 			direkte &Uuml;bertragung der Daten an einen anderen Verantwortlichen
 			verlangen, erfolgt dies nur, soweit es technisch machbar ist.</p>
-		<hr />
+		<hr>
 		<h3>Auskunft, Sperrung, L&ouml;schung und Berichtigung</h3>
 		<p>Sie haben im Rahmen der geltenden gesetzlichen Bestimmungen
 			jederzeit das Recht auf unentgeltliche Auskunft &uuml;ber Ihre
@@ -164,7 +170,7 @@
 			sowie zu weiteren Fragen zum Thema personenbezogene Daten k&ouml;nnen
 			Sie sich jederzeit unter der im Impressum angegebenen Adresse an uns
 			wenden.</p>
-		<hr />
+		<hr>
 		<h3>Recht auf Einschr&auml;nkung der Verarbeitung</h3>
 		<p>Sie haben das Recht, die Einschr&auml;nkung der Verarbeitung
 			Ihrer personenbezogenen Daten zu verlangen. Hierzu k&ouml;nnen Sie
@@ -201,7 +207,7 @@
 			nat&uuml;rlichen oder juristischen Person oder aus Gr&uuml;nden eines
 			wichtigen &ouml;ffentlichen Interesses der Europ&auml;ischen Union
 			oder eines Mitgliedstaats verarbeitet werden.</p>
-		<hr />
+		<hr>
 		<h3>Widerspruch gegen Werbe-E-Mails</h3>
 		<p>Der Nutzung von im Rahmen der Impressumspflicht
 			ver&ouml;ffentlichten Kontaktdaten zur &Uuml;bersendung von nicht
@@ -209,9 +215,9 @@
 			wird hiermit widersprochen. Die Betreiber der Seiten behalten sich
 			ausdr&uuml;cklich rechtliche Schritte im Falle der unverlangten
 			Zusendung von Werbeinformationen, etwa durch Spam-E-Mails, vor.</p>
-		<hr />
+		<hr>
 		<h2>3. Datenerfassung auf unserer Website</h2>
-		<hr />
+		<hr>
 		<h3>Kontaktformular</h3>
 		<p>Wenn Sie uns per Kontaktformular Anfragen zukommen lassen,
 			werden Ihre Angaben aus dem Anfrageformular inklusive der von Ihnen
@@ -231,7 +237,7 @@
 			Bearbeitung Ihrer Anfrage). Zwingende gesetzliche Bestimmungen
 			&ndash; insbesondere Aufbewahrungsfristen &ndash; bleiben
 			unber&uuml;hrt.</p>
-		<hr />
+		<hr>
 		<h3>Anfrage per E-Mail, Telefon oder Telefax</h3>
 		<p>Wenn Sie uns per E-Mail, Telefon oder Telefax kontaktieren,
 			wird Ihre Anfrage inklusive aller daraus hervorgehenden
@@ -254,12 +260,14 @@
 			Bearbeitung Ihres Anliegens). Zwingende gesetzliche Bestimmungen
 			&ndash; insbesondere gesetzliche Aufbewahrungsfristen &ndash; bleiben
 			unber&uuml;hrt.</p>
-		<hr />
+		<hr>
 		<p>
-			Quelle: <a href="https://www.e-recht24.de/muster-datenschutzerklaerung.html">https://www.e-recht24.de/muster-datenschutzerklaerung.html</a>
+			Quelle: <a
+				href="https://www.e-recht24.de/muster-datenschutzerklaerung.html">https://www.e-recht24.de/muster-datenschutzerklaerung.html</a>
 		</p>
 	</div>
 </div>
+<!-- Footer -->
 <jsp:include page="Footer.jsp" />
 </body>
 </html>

@@ -1,31 +1,36 @@
-
+<!-- JSP -->
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <!DOCTYPE html>
 <html>
 <head>
+<!-- Metadaten  -->
 <meta name="viewport" content="width=device-width, initial-scale=1.0"
 	charset="utf-8" />
+<!-- Titel  -->
 <title>Imprint</title>
+<!-- CSS  -->
 <link href="Footer_JSP.css" rel="stylesheet" type="text/css">
+<!-- Header  -->
 <jsp:include page="Header.jsp" />
+<!-- Inhaltscontainer unter der Nav-Leiste  -->
 <div id="footerSitesContainer">
+	<!-- Container mit dem Inhalt des Impressums -->
 	<div id="footerContent">
 		<h1>Impressum</h1>
-		<hr />
+		<hr>
 		<h2>Angaben gem&auml;&szlig; &sect; 5 TMG</h2>
-		<hr />
+		<hr>
 		<p>
 			Max Mustermann<br /> Irgendwasstraße 29<br /> 32588 Irgendwo
 		</p>
 		<h2>Kontakt</h2>
-		<hr />
+		<hr>
 		<p>
 			Telefon: 0934/1232<br /> E-Mail: max_mustermann@gmx.net
 		</p>
 		<h3>Haftung f&uuml;r Inhalte</h3>
-		<hr />
+		<hr>
 		<p>Als Diensteanbieter sind wir gem&auml;&szlig; &sect; 7 Abs.1
 			TMG f&uuml;r eigene Inhalte auf diesen Seiten nach den allgemeinen
 			Gesetzen verantwortlich. Nach &sect;&sect; 8 bis 10 TMG sind wir als
@@ -53,7 +58,7 @@
 			jedoch ohne konkrete Anhaltspunkte einer Rechtsverletzung nicht
 			zumutbar. Bei Bekanntwerden von Rechtsverletzungen werden wir
 			derartige Links umgehend entfernen.</p>
-		<hr />
+		<hr>
 		<h3>Urheberrecht</h3>
 		<p>Die durch die Seitenbetreiber erstellten Inhalte und Werke auf
 			diesen Seiten unterliegen dem deutschen Urheberrecht. Die
@@ -69,12 +74,13 @@
 			werden, bitten wir um einen entsprechenden Hinweis. Bei Bekanntwerden
 			von Rechtsverletzungen werden wir derartige Inhalte umgehend
 			entfernen.</p>
-		<hr />
+		<hr>
 		<p>
 			Quelle: <a href="https://www.e-recht24.de">https://www.e-recht24.de</a>
 		</p>
 	</div>
 </div>
+<!-- Footer -->
 <jsp:include page="Footer.jsp" />
 </body>
 </html>

@@ -27,7 +27,7 @@ h1 {
 	font-weight: 600;
 }
 
-.mainpage {
+#mainpage {
 	position: relative;
 	min-height: 100vh;
 	margin-top: 50px;

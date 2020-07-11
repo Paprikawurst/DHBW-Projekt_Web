@@ -176,14 +176,14 @@ header nav ul li a.active {
 	height:auto;	
 }
 
-#innerFooter #otherInnerFooterChild {
+#innerFooter .otherInnerFooterChild {
 	width:calc(16.25% - 20px );
     margin-right:10px;
     height: 100%;
     float:left;
 }
 
-#innerFooter #otherInnerFooterChild h2{
+#innerFooter .otherInnerFooterChild h2{
 	font-family:'arial';
 	font-size:22px;
 	color:white;
@@ -192,7 +192,7 @@ header nav ul li a.active {
 	margin-bottom:20px;
 }
 
-#innerFooter #otherInnerFooterChild a{
+#innerFooter .otherInnerFooterChild a{
 	font-family:'arial';
 	font-size:18px;
 	color:white;
@@ -212,7 +212,7 @@ header nav ul li a.active {
 	}	
 	
 	#innerFooter #firstInnerFooterChild,
-	#innerFooter #otherInnerFooterChild{
+	#innerFooter .otherInnerFooterChild{
 		width:100%;
 		margin-bottom:30px;
 	}

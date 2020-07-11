@@ -1,22 +1,30 @@
+<!-- JSP -->
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
+<!-- JSTL -->
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
-
+<!-- Test ob eingeloggt, wenn nicht weiterleitung an Login -->
 <c:if test="${empty sessionScope['email']}">
 	<c:set var="Message" scope="request" value="You are not logged in!" />
-	<jsp:forward page="Login.jsp"></jsp:forward>
+	<jsp:forward page="Login.jsp" />
 </c:if>
 <!DOCTYPE html>
 <html>
 <head>
+<!-- Metadaten  -->
 <meta name="viewport" content="width=device-width, initial-scale=1.0"
 	charset="utf-8" />
+<!-- Titel  -->
 <title>Shop</title>
+<!-- CSS  -->
 <link href="Shop.css" rel="stylesheet" type="text/css">
+<!-- Header  -->
 <jsp:include page="Header.jsp" />
-
+<!-- Bean festlegen  -->
 <jsp:useBean id="shopBean" class="Shop_Skins.Shop_Bean" scope="session" />
-<div class="mainpage">
+<!-- Container Hauptseite unter der Navigation-Leiste  -->
+<div id="mainpage">
+	<!-- Container Sidebar  -->
 	<div class="sidebar">
 		<a id="exchange2" onclick="openSide(event, 'exchange')"
 			class="tablinks">Exchange</a> <a id="purchases2"
@@ -24,95 +32,134 @@
 		<a id="change2" onclick="openSide(event, 'change')" class="tablinks">Change
 			Skin</a>
 	</div>
-
+	<!-- Tab Inhalt Exchange-->
 	<div id="exchange" class="tabcontent">
 		<h1>Exchange:</h1>
+		<!-- Punkteausgabe -->
 		<p id="points">
 			Welcome
+			<!-- JSTL Ausgabe -->
 			<c:out value="${sessionScope['email']}" />
 			You have
+			<!-- JSTL Ausgabe -->
 			<c:out value="${shopBean.myPoints(sessionScope['email'])}" />
 			points!
 		</p>
+		<!-- Wrapper Skinanzeige-->
 		<div class="skinsWrapper">
-			<div id="col1row1" class=skins>
+			<!-- Zelle1 -->
+			<div id="col1row1" class="skins">
+				<!-- Container der Skins -->
 				<div class="skinContainer">
+					<!-- Skin austellen -->
 					<img src="images/unknown.png" alt="Skin" width="100%" height="100%" />
 					<label class="other"> Skin</label>
 				</div>
 			</div>
-			<div id="col1row2" class=skins>
+			<!-- Zelle2 -->
+			<div id="col1row2" class="skins">
+				<!-- Container der Skins -->
 				<div class="skinContainer">
+					<!-- Skin austellen -->
 					<img src="images/coming.jpg" alt="Skin" width="100%" height="100%" />
 					<label class="other"> Coming Soon</label>
 				</div>
 			</div>
-			<div id="col1row3" class=skins>
+			<!-- Zelle3 -->
+			<div id="col1row3" class="skins">
+				<!-- Container der Skins -->
 				<div class="skinContainer">
+					<!-- Skin austellen -->
 					<img src="images/coming.jpg" alt="Skin" width="100%" height="100%" />
 					<label class="other"> Coming Soon</label>
 				</div>
 			</div>
-			<div id="col2row1" class=skins>
+			<!-- Zelle4 -->
+			<div id="col2row1" class="skins">
+				<!-- Container der Skins -->
 				<div class="skinContainer">
+					<!-- Skin austellen -->
 					<img src="images/coming.jpg" alt="Skin" width="100%" height="100%" />
 					<label class="other"> Coming Soon</label>
 				</div>
 			</div>
-			<div id="col2row2" class=skins>
+			<!-- Zelle5 -->
+			<div id="col2row2" class="skins">
+				<!-- Container der Skins -->
 				<div class="skinContainer">
+					<!-- Skin austellen -->
 					<img src="images/coming.jpg" alt="Skin" width="100%" height="100%" />
 					<label class="other"> Coming Soon</label>
 				</div>
 			</div>
-			<div id="col2row3" class=skins>
+			<!-- Zelle6 -->
+			<div id="col2row3" class="skins">
+				<!-- Container der Skins -->
 				<div class="skinContainer">
+					<!-- Skin austellen -->
 					<img src="images/coming.jpg" alt="Skin" width="100%" height="100%" />
 					<label class="other"> Coming Soon</label>
 				</div>
 			</div>
-			<div id="col3row1" class=skins>
+			<!-- Zelle7 -->
+			<div id="col3row1" class="skins">
+				<!-- Container der Skins -->
 				<div class="skinContainer">
+					<!-- Skin austellen -->
 					<img src="images/coming.jpg" alt="Skin" width="100%" height="100%" />
 					<label class="other"> Coming Soon</label>
 				</div>
 			</div>
-			<div id="col3row2" class=skins>
+			<!-- Zelle8 -->
+			<div id="col3row2" class="skins">
+				<!-- Container der Skins -->
 				<div class="skinContainer">
+					<!-- Skin austellen -->
 					<img src="images/coming.jpg" alt="Skin" width="100%" height="100%" />
 					<label class="other"> Coming Soon</label>
 				</div>
 			</div>
-			<div id="col3row3" class=skins>
+			<!-- Zelle9 -->
+			<div id="col3row3" class="skins">
+				<!-- Container der Skins -->
 				<div class="skinContainer">
+					<!-- Skin austellen -->
 					<img src="images/coming.jpg" alt="Skin" width="100%" height="100%" />
 					<label class="other"> Coming Soon</label>
 				</div>
 			</div>
 		</div>
+		<!-- Container Kaufformular Skin -->
 		<div id="formContainer">
 			<h1>Choose a Skin to buy</h1>
 			<h1>
 				<span style="color: red"><c:out
 						value="${requestScope.MessageShop}" /></span>
 			</h1>
+			<!-- Kaufformular -->
 			<form action="Shop" method="post">
 				<select name="unboughtSkins" id="skins">
+					<!-- JSTL Schleife mit Auswahlliste -->
 					<c:forEach var="entry"
 						items="${shopBean.notBoughtSkins(sessionScope['email'])}">
-						<option value="${entry}"><c:out value="${entry}" /></option>
+						<option value="${entry}">
+							<!-- JSTL Ausgabe -->
+							<c:out value="${entry}" /></option>
 					</c:forEach>
-				</select> <input name="user" hidden="true" value="${sessionScope['email']}" />
+				</select>
+				<!-- Leeres Feld zur Informationsweitergabe ans Servlet -->
+				<input name="user" hidden="true" value="${sessionScope['email']}" />
 				<input type="submit" value="Submit">
 			</form>
-
 		</div>
 	</div>
-
+	<!-- Tab Inhalt Purchases-->
 	<div id="purchases" class="tabcontent">
 		<h1>Purchases:</h1>
+		<!-- JSTL IF-ELSE Ausgabe der Käufe -->
 		<c:choose>
 			<c:when test="${empty shopBean.myPurchases(sessionScope['email'])}">
+				<!-- Container Ausgabe Käufe -->
 				<div class="print">
 					<p>No purchases yet!</p>
 				</div>
@@ -127,51 +174,60 @@
 				</div>
 			</c:otherwise>
 		</c:choose>
-
 	</div>
-
+	<!-- Tab Inhalt Change-->
 	<div id="change" class="tabcontent">
+		<!-- Container Formular -->
 		<div id="formContainer">
 			<h1>Choose a Skin to play with for Snake</h1>
 			<h1>
-				<span style="color: red"><c:out
+				<span style="color: red"> <!-- JSTL Ausgabe --> <c:out
 						value="${requestScope.MessageSnake}" /></span>
 			</h1>
 			<form action="Skins" method="post">
 				<select name="activeSkin" id="skins">
+					<!-- JSTL Schleife mit Auswahlliste -->
 					<c:forEach var="entry"
 						items="${shopBean.chooseSkins(sessionScope['email'])}">
 						<option value="${entry}"><c:out value="${entry}" /></option>
 					</c:forEach>
-				</select> <input name="game" hidden="true" value="Snake" /> <input
+				</select>
+				<!-- Leeres Feld zur Informationsweitergabe ans Servlet -->
+				<input name="game" hidden="true" value="Snake" /> <input
 					name="user" hidden="true" value="${sessionScope['email']}" /> <input
 					type="submit" value="Submit">
 			</form>
 		</div>
-
+		<!-- Container Formular -->
 		<div id="formContainer">
 			<h1>Choose a Skin to play with for CatchBlock</h1>
 			<h1>
-				<span style="color: red"><c:out
-						value="${requestScope.MessageCatchBlock}" /></span>
+				<span style="color: red"> <!-- JSTL Ausgabe --> <c:out
+						value="${requestScope.MessageCatchBlock}" />
+				</span>
 			</h1>
 			<form action="Skins" method="post">
 				<select name="activeSkin" id="skins">
+					<!-- JSTL Schleife mit Auswahlliste -->
 					<c:forEach var="entry"
 						items="${shopBean.chooseSkins(sessionScope['email'])}">
 						<option value="${entry}"><c:out value="${entry}" /></option>
 					</c:forEach>
-				</select> <input name="game" hidden="true" value="CatchBlock" /> <input
+				</select>
+				<!-- Leeres Feld zur Informationsweitergabe ans Servlet -->
+				<input name="game" hidden="true" value="CatchBlock" /> <input
 					name="user" hidden="true" value="${sessionScope['email']}" /> <input
 					type="submit" value="Submit">
 			</form>
 		</div>
 
 	</div>
-	<script>
+	<!-- Skript um den ersten Tab zu laden siehe methods.js -->
+	<script type="text/javascript">
 		onLoading2()
 	</script>
 </div>
+<!-- Footer -->
 <jsp:include page="Footer.jsp" />
 </body>
 </html>
