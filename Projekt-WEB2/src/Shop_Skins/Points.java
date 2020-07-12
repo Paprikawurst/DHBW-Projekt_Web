@@ -46,10 +46,10 @@ public class Points extends HttpServlet {
 		}
 		//Parameter Bean setzen
 		name=(request.getParameter("User"));
-		points=shopBean.myPoints(name)+Integer.parseInt(request.getParameter("Points"));
-		System.out.println(points);
+		//points=shopBean.myPoints(name)+Integer.parseInt(request.getParameter("Points"));
+		System.out.println(name);
 		game=(request.getParameter("Game"));
-		
+		points=0;
 		shopBean.addPoints(name, game, points);
 		response.sendRedirect("CatchBlock.jsp");
 	}

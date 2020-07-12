@@ -148,7 +148,6 @@ public class Shop_Bean {
 			file.delete();
 			fileExists(file); 
 			for(String line:point) {
-				System.out.println(line);
 				if(line.substring(0, line.indexOf('|')).trim().equals(username)) {
 					pWriter.println(username + "||" + points);
 					
