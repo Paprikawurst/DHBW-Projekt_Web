@@ -9,7 +9,7 @@
 	<title>Snake</title>
   	<link href="Snake_CatchBlock.css" rel="stylesheet" type="text/css">
   	<jsp:include page="Header.jsp"/>
-<div class="mainpage">
+<div id="mainpage">
  	<div id="gameDiv">
     	<canvas id ="snake" width="608px" height="608px"></canvas>
     	<script src="js/snake.js"></script>

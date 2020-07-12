@@ -25,7 +25,7 @@
 <body>
 	<!-- Container linker Text oben -->
 	<div id="leftAlignedText">
-		<img src="/images/JSP_Elemente/welcome.png" alt=" Welcome...">
+		<img src="./images/JSP_Elemente/welcome.png" alt=" Welcome...">
 	</div>
 	<!-- Button Weiterleitung -->
 	<a href="Games.jsp">
