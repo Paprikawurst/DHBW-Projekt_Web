@@ -8,7 +8,7 @@
 	charset="utf-8" />
 <head>
 <!-- Titel -->
-<title>Contact Us</title>
+<title>Play Snake!</title>
 <!-- CSS -->
 <link href="PreScreen.css" rel="stylesheet" type="text/css">
 <!-- Header -->
@@ -20,7 +20,7 @@
 	<div id="GamesContent">
 		<h1>Snake</h1>
 		<hr>
-		Screenshots:<br> <img src="images/Snake/SnakeScreenshot1.png"
+		Screenshot:<br> <img  src="images/Snake/SnakeScreenshot1.png"
 			alt="">
 		<hr>
 		Beschreibung: Snake ist ein Computerspielklassiker, bei dem eine sich
@@ -38,7 +38,7 @@
 		<!-- Weiterleitung zum Spiel  -->
 		<a href="Snake.jsp" id="startGame">Play</a>
 	</div>
-	
+
 </div>
 <!-- Footer  -->
 <jsp:include page="Footer.jsp" />
