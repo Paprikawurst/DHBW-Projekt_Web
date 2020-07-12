@@ -16,6 +16,8 @@
 	charset="utf-8" />
 <!-- Titel  -->
 <title>Shop</title>
+<!-- Skripte  -->
+<script src="js/Methods.js" type="text/javascript"></script>
 <!-- CSS  -->
 <link href="Shop.css" rel="stylesheet" type="text/css">
 <!-- Header  -->

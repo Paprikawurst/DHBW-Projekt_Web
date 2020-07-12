@@ -1,4 +1,4 @@
-           let app, player;
+            let app, player;
             let data;
             let lives = 3;
             let objekts = [];
