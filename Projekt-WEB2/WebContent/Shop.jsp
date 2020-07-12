@@ -50,83 +50,83 @@
 		<!-- Wrapper Skinanzeige-->
 		<div class="skinsWrapper">
 			<!-- Zelle1 -->
-			<div id="col1row1" class="skins">
+			<div  class="skins">
 				<!-- Container der Skins -->
 				<div class="skinContainer">
 					<!-- Skin austellen -->
-					<img src="images/unknown.png" alt="Skin" width="100%" height="100%" />
+					<img src="images/CatchBlock/unknown.png" alt="Skin" width="100%" height="100%" />
 					<label class="other"> Skin</label>
 				</div>
 			</div>
 			<!-- Zelle2 -->
-			<div id="col1row2" class="skins">
+			<div  class="skins">
 				<!-- Container der Skins -->
 				<div class="skinContainer">
 					<!-- Skin austellen -->
-					<img src="images/coming.jpg" alt="Skin" width="100%" height="100%" />
+					<img src="images/JSP_Elemente/coming.jpg" alt="Skin" width="100%" height="100%" />
 					<label class="other"> Coming Soon</label>
 				</div>
 			</div>
 			<!-- Zelle3 -->
-			<div id="col1row3" class="skins">
+			<div  class="skins">
 				<!-- Container der Skins -->
 				<div class="skinContainer">
 					<!-- Skin austellen -->
-					<img src="images/coming.jpg" alt="Skin" width="100%" height="100%" />
+					<img src="images/JSP_Elemente/coming.jpg" alt="Skin" width="100%" height="100%" />
 					<label class="other"> Coming Soon</label>
 				</div>
 			</div>
 			<!-- Zelle4 -->
-			<div id="col2row1" class="skins">
+			<div  class="skins">
 				<!-- Container der Skins -->
 				<div class="skinContainer">
 					<!-- Skin austellen -->
-					<img src="images/coming.jpg" alt="Skin" width="100%" height="100%" />
+					<img src="images/JSP_Elemente/coming.jpg" alt="Skin" width="100%" height="100%" />
 					<label class="other"> Coming Soon</label>
 				</div>
 			</div>
 			<!-- Zelle5 -->
-			<div id="col2row2" class="skins">
+			<div  class="skins">
 				<!-- Container der Skins -->
 				<div class="skinContainer">
 					<!-- Skin austellen -->
-					<img src="images/coming.jpg" alt="Skin" width="100%" height="100%" />
+					<img src="images/JSP_Elemente/coming.jpg" alt="Skin" width="100%" height="100%" />
 					<label class="other"> Coming Soon</label>
 				</div>
 			</div>
 			<!-- Zelle6 -->
-			<div id="col2row3" class="skins">
+			<div  class="skins">
 				<!-- Container der Skins -->
 				<div class="skinContainer">
 					<!-- Skin austellen -->
-					<img src="images/coming.jpg" alt="Skin" width="100%" height="100%" />
+					<img src="images/JSP_Elemente/coming.jpg" alt="Skin" width="100%" height="100%" />
 					<label class="other"> Coming Soon</label>
 				</div>
 			</div>
 			<!-- Zelle7 -->
-			<div id="col3row1" class="skins">
+			<div  class="skins">
 				<!-- Container der Skins -->
 				<div class="skinContainer">
 					<!-- Skin austellen -->
-					<img src="images/coming.jpg" alt="Skin" width="100%" height="100%" />
+					<img src="images/JSP_Elemente/coming.jpg" alt="Skin" width="100%" height="100%" />
 					<label class="other"> Coming Soon</label>
 				</div>
 			</div>
 			<!-- Zelle8 -->
-			<div id="col3row2" class="skins">
+			<div  class="skins">
 				<!-- Container der Skins -->
 				<div class="skinContainer">
 					<!-- Skin austellen -->
-					<img src="images/coming.jpg" alt="Skin" width="100%" height="100%" />
+					<img src="images/JSP_Elemente/coming.jpg" alt="Skin" width="100%" height="100%" />
 					<label class="other"> Coming Soon</label>
 				</div>
 			</div>
 			<!-- Zelle9 -->
-			<div id="col3row3" class="skins">
+			<div  class="skins">
 				<!-- Container der Skins -->
 				<div class="skinContainer">
 					<!-- Skin austellen -->
-					<img src="images/coming.jpg" alt="Skin" width="100%" height="100%" />
+					<img src="images/JSP_Elemente/coming.jpg" alt="Skin" width="100%" height="100%" />
 					<label class="other"> Coming Soon</label>
 				</div>
 			</div>

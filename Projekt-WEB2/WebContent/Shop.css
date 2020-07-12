@@ -34,6 +34,7 @@ h1 {
     min-height: 100vh;
 	margin-top:50px;
 	width:100%;
+	background-color:grey;
 }
 
 .sidebar {
