@@ -135,26 +135,29 @@
 	<div id="HighScore-Games" class="tabcontent">
 		<!-- Wrapper der Spiele -->
 		<div class="gamesWrapper">
-			<!-- Zelle1 -->
+						<!-- Zelle1 -->
 			<div  class="games">
+				<!-- Zellen Inhalt Container -->
 				<div class="gameContainer">
 					<!-- Weiterleitung ans Spiel -->
-					<a href="#"><img src="images/JSP_Elemente/coming.jpg"
-						alt="CatchBlock" width="100%" height="100%" /></a> <label
-						class="other"> Coming Soon</label>
+					<a href="CatchBlockPreScreen.jsp"><img
+						src="images/CatchBlock/unknown.png" alt="CatchBlock" width="100%"
+						height="100%" /></a> <label class="other"> CatchBlock</label>
 				</div>
 			</div>
 			<!-- Zelle2 -->
 			<div  class="games">
+				<!-- Zellen Inhalt Container -->
 				<div class="gameContainer">
 					<!-- Weiterleitung ans Spiel -->
-					<a href="#"><img src="images/JSP_Elemente/coming.jpg"
-						alt="CatchBlock" width="100%" height="100%" /></a> <label
-						class="other"> Coming Soon</label>
+					<a href="SnakePreScreen.jsp"><img src="images/Snake/ground.png"
+						alt="Snake" width="100%" height="100%" /></a> <label class="other">
+						Snake</label>
 				</div>
 			</div>
 			<!-- Zelle3 -->
 			<div  class="games">
+				<!-- Zellen Inhalt Container -->
 				<div class="gameContainer">
 					<!-- Weiterleitung ans Spiel -->
 					<a href="#"><img src="images/JSP_Elemente/coming.jpg"
@@ -164,6 +167,7 @@
 			</div>
 			<!-- Zelle4 -->
 			<div  class="games">
+				<!-- Zellen Inhalt Container -->
 				<div class="gameContainer">
 					<!-- Weiterleitung ans Spiel -->
 					<a href="#"><img src="images/JSP_Elemente/coming.jpg"
@@ -173,6 +177,7 @@
 			</div>
 			<!-- Zelle5 -->
 			<div  class="games">
+				<!-- Zellen Inhalt Container -->
 				<div class="gameContainer">
 					<!-- Weiterleitung ans Spiel -->
 					<a href="#"><img src="images/JSP_Elemente/coming.jpg"
@@ -182,6 +187,7 @@
 			</div>
 			<!-- Zelle6 -->
 			<div  class="games">
+				<!-- Zellen Inhalt Container -->
 				<div class="gameContainer">
 					<!-- Weiterleitung ans Spiel -->
 					<a href="#"><img src="images/JSP_Elemente/coming.jpg"
@@ -191,6 +197,7 @@
 			</div>
 			<!-- Zelle7 -->
 			<div  class="games">
+				<!-- Zellen Inhalt Container -->
 				<div class="gameContainer">
 					<!-- Weiterleitung ans Spiel -->
 					<a href="#"><img src="images/JSP_Elemente/coming.jpg"
@@ -200,6 +207,7 @@
 			</div>
 			<!-- Zelle8 -->
 			<div  class="games">
+				<!-- Zellen Inhalt Container -->
 				<div class="gameContainer">
 					<!-- Weiterleitung ans Spiel -->
 					<a href="#"><img src="images/JSP_Elemente/coming.jpg"
@@ -209,6 +217,7 @@
 			</div>
 			<!-- Zelle9 -->
 			<div  class="games">
+				<!-- Zellen Inhalt Container -->
 				<div class="gameContainer">
 					<!-- Weiterleitung ans Spiel -->
 					<a href="#"><img src="images/JSP_Elemente/coming.jpg"
@@ -222,26 +231,29 @@
 	<div id="XXX" class="tabcontent">
 		<!-- Wrapper der Spiele -->
 		<div class="gamesWrapper">
-			<!-- Zelle1 -->
+						<!-- Zelle1 -->
 			<div  class="games">
+				<!-- Zellen Inhalt Container -->
 				<div class="gameContainer">
 					<!-- Weiterleitung ans Spiel -->
-					<a href="#"><img src="images/JSP_Elemente/coming.jpg"
-						alt="CatchBlock" width="100%" height="100%" /></a> <label
-						class="other"> Coming Soon</label>
+					<a href="CatchBlockPreScreen.jsp"><img
+						src="images/CatchBlock/unknown.png" alt="CatchBlock" width="100%"
+						height="100%" /></a> <label class="other"> CatchBlock</label>
 				</div>
 			</div>
 			<!-- Zelle2 -->
 			<div  class="games">
+				<!-- Zellen Inhalt Container -->
 				<div class="gameContainer">
 					<!-- Weiterleitung ans Spiel -->
-					<a href="#"><img src="images/JSP_Elemente/coming.jpg"
-						alt="CatchBlock" width="100%" height="100%" /></a> <label
-						class="other"> Coming Soon</label>
+					<a href="SnakePreScreen.jsp"><img src="images/Snake/ground.png"
+						alt="Snake" width="100%" height="100%" /></a> <label class="other">
+						Snake</label>
 				</div>
 			</div>
 			<!-- Zelle3 -->
 			<div  class="games">
+				<!-- Zellen Inhalt Container -->
 				<div class="gameContainer">
 					<!-- Weiterleitung ans Spiel -->
 					<a href="#"><img src="images/JSP_Elemente/coming.jpg"
@@ -251,6 +263,7 @@
 			</div>
 			<!-- Zelle4 -->
 			<div  class="games">
+				<!-- Zellen Inhalt Container -->
 				<div class="gameContainer">
 					<!-- Weiterleitung ans Spiel -->
 					<a href="#"><img src="images/JSP_Elemente/coming.jpg"
@@ -260,6 +273,7 @@
 			</div>
 			<!-- Zelle5 -->
 			<div  class="games">
+				<!-- Zellen Inhalt Container -->
 				<div class="gameContainer">
 					<!-- Weiterleitung ans Spiel -->
 					<a href="#"><img src="images/JSP_Elemente/coming.jpg"
@@ -269,6 +283,7 @@
 			</div>
 			<!-- Zelle6 -->
 			<div  class="games">
+				<!-- Zellen Inhalt Container -->
 				<div class="gameContainer">
 					<!-- Weiterleitung ans Spiel -->
 					<a href="#"><img src="images/JSP_Elemente/coming.jpg"
@@ -278,6 +293,7 @@
 			</div>
 			<!-- Zelle7 -->
 			<div  class="games">
+				<!-- Zellen Inhalt Container -->
 				<div class="gameContainer">
 					<!-- Weiterleitung ans Spiel -->
 					<a href="#"><img src="images/JSP_Elemente/coming.jpg"
@@ -287,6 +303,7 @@
 			</div>
 			<!-- Zelle8 -->
 			<div  class="games">
+				<!-- Zellen Inhalt Container -->
 				<div class="gameContainer">
 					<!-- Weiterleitung ans Spiel -->
 					<a href="#"><img src="images/JSP_Elemente/coming.jpg"
@@ -296,6 +313,7 @@
 			</div>
 			<!-- Zelle9 -->
 			<div  class="games">
+				<!-- Zellen Inhalt Container -->
 				<div class="gameContainer">
 					<!-- Weiterleitung ans Spiel -->
 					<a href="#"><img src="images/JSP_Elemente/coming.jpg"
