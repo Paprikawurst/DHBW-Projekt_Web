@@ -28,13 +28,14 @@ public class Logout extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-
-		HttpSession session = request.getSession(false);
+		//Session holen und Werte setzen
+		HttpSession session = request.getSession(true);
 	    session.setAttribute("email", null);
 	    session.removeAttribute("email");
 	    session.getMaxInactiveInterval();
+	    //Mit Message zurück zur Games Seite
 	    request.setAttribute("Message", "Logout successful!");
-        request.getRequestDispatcher("/Login.jsp").forward(request, response);
+        request.getRequestDispatcher("/Start.jsp").forward(request, response);
 	}
 
 	/**

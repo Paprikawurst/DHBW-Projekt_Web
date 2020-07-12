@@ -42,13 +42,16 @@ public class Login_RegisterBean implements Serializable {
 	}
 	
 	public String hash() {
+		//Nutzer Passwort hashen
 		return  BCrypt.hashpw(password);
 	}
 	
 	public void fileExists(File file)  {
 		try {
+			//Testen ob Datei existiert
 			if (file.exists()) {
 			} else {
+				//File neu Anlegen
 				file.createNewFile();
 			}
 		} catch (IOException e) {
@@ -63,6 +66,7 @@ public class Login_RegisterBean implements Serializable {
 			String line="";
 			fileExists(file);
 			BufferedReader bufferedReader= new BufferedReader(new FileReader(file));
+			//Zeilen anlegen und in HashMap legen
 			while (null != (line = bufferedReader.readLine())) {
 				user.put((line.substring(0, line.indexOf('|'))).trim(),(line.substring(line.indexOf('|') + 2).trim()));  	
 			}
@@ -78,13 +82,16 @@ public class Login_RegisterBean implements Serializable {
 	public boolean insertUser()  {
 		HashMap<String, String> user;
 		try {
+			//Alle Nutzer in HashMap legen
 			user = readUser();
 			File file = new File("user.txt");
-			PrintWriter pWriter = new PrintWriter(new FileWriter(file, true), true);       
+			PrintWriter pWriter = new PrintWriter(new FileWriter(file, true), true);  
+			//Testen ob nutzer in der Hashmap ist
 			if (user.containsKey(email)) {
 				pWriter.close();
 				return false;
 			} else {
+				//wenn nicht Nutzer regestrieren und Dateien vorbereiteb
 				File file2 = new File("points.txt");
 				PrintWriter pWriter2 = new PrintWriter(new FileWriter(file2, true), true);
 				File file3= new File("activeskins.txt");
@@ -92,6 +99,7 @@ public class Login_RegisterBean implements Serializable {
 				File file4= new File("purchases.txt");
 				PrintWriter pWriter4 = new PrintWriter(new FileWriter(file4, true), true);	 
 				fileExists(file);
+				//Nutzer hashen und Einügen
 				pWriter.println(email + "||" + this.hash());
 				pWriter.flush();
 				pWriter.close();	            
@@ -119,9 +127,13 @@ public class Login_RegisterBean implements Serializable {
 	
 	public boolean loginUser()  {
 		HashMap<String, String> user;
+		//Alle Nutzer in HashMap legen
 		user = readUser();
+		//Schauen, ob Nutzer existiert
 		if (user.containsKey(email)) {
+			//Hash des Nutzers auslesen
 			String hash=user.get(email);
+			//Vergleichen Eingabe und Hash
 			if(BCrypt.checkpw(password,hash)){
 				return true;
 			} else {

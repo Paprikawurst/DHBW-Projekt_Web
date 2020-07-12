@@ -203,6 +203,7 @@ header nav ul li a.active {
 	text-decoration:none;
 }
 
+/*Mediaquery Footer */
 @media (max-width: 1580px) {
 	#footer {
 		height:auto;

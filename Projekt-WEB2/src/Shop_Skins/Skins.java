@@ -34,17 +34,19 @@ public class Skins extends HttpServlet {
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		//ShopBean anlegen 
 		Shop_Bean shopBean = (Shop_Bean) request.getAttribute("shopBean");
-		
+		//Testen ob leer wenn nicht neu anlegen
 		if (shopBean == null) {
 			shopBean = new Shop_Bean();
 			request.setAttribute("registerBean", shopBean);
 		}
+		//Parameter Bean setzen
 		shopBean.setUser(request.getParameter("user"));
 		shopBean.myPoints(request.getParameter("user"));
 		
-		shopBean.setSkin(request.getParameter("user"),request.getParameter("game"),request.getParameter("activeSkin"));
-		request.setAttribute("Message"+request.getParameter("game"),"Skin geändert!");
+		//Weiterleiten zurück zum Shop mit Message 
+		request.setAttribute("Message"+request.getParameter("game"),shopBean.setSkin(request.getParameter("user"),request.getParameter("game"),request.getParameter("activeSkin")));
 		request.getRequestDispatcher("/Shop.jsp").forward(request, response);
 	}
 

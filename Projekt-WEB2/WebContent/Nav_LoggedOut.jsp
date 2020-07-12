@@ -5,7 +5,7 @@
 	<!-- Navigationsleiste -->
 	<nav>
 		<ul>
-			<li class="sub-menu"><a href="Games.jsp">Games</a>
+			<li class="sub-menu"><a href="Start.jsp">Games</a>
 				<ul>
 					<li><a href="SnakePreScreen.jsp">Snake</a></li>
 					<li><a href="CatchBlockPreScreen.jsp">CatchBlock</a></li>

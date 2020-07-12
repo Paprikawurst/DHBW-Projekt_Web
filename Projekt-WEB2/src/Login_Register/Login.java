@@ -36,23 +36,26 @@ public class Login extends HttpServlet {
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		
+		//LoginRegisterBean anlegen 
 		Login_RegisterBean loginBean = (Login_RegisterBean) request.getAttribute("registerBean");
-		
+		//Testen ob leer wenn nicht neu anlegen
 		if (loginBean == null) {
 			loginBean = new Login_RegisterBean();
 			request.setAttribute("registerBean", loginBean);
 		}
-		
+		//Parameter Bean setzen
 		loginBean.setEmail(request.getParameter("username"));
 		loginBean.setPassword(request.getParameter("password"));
-		
+		//Sser Einloggen
 		if(loginBean.loginUser()) {
+			//Wenn Erfolg Session setzen
 			HttpSession session = request.getSession(true);
 			session.setAttribute("email", loginBean.getEmail());
 			session.setMaxInactiveInterval(300); 
+			//Weiterleiten an neue Seite
 			response.sendRedirect("Games.jsp");
 		} else {
+			//Bei Fehler mti Meldung an Login zurück
 			request.setAttribute("MessageLogin", "Wrong Username or Password!");
             request.getRequestDispatcher("/Login.jsp").forward(request, response);
 		}		

@@ -36,10 +36,12 @@ public class Shop_Bean {
 		this.user = user;
 	}
 
-	public void fileExists(File file) {
+	public void fileExists(File file)  {
 		try {
+			//Testen ob Datei existiert
 			if (file.exists()) {
 			} else {
+				//File neu Anlegen
 				file.createNewFile();
 			}
 		} catch (IOException e) {
@@ -56,10 +58,14 @@ public class Shop_Bean {
 			String line;
 			fileExists(file);
 			BufferedReader bufferedReader = new BufferedReader(new FileReader(file));
-			while ((line = bufferedReader.readLine())!=null) {       
-				if(line.indexOf("|") != -1) { 
+			//Datei Einlesen
+			while ((line = bufferedReader.readLine())!=null) {   
+				//Testen ob Zeile gültig
+				if(line.indexOf("|") != -1) {
+					//Wenn ja user und purchase einlesen
 					username=line.substring(0,line.indexOf("|")).trim();
 					purch=line.substring(line.indexOf("|")+2).trim();
+					//Zu Liste hinzufügen
 					buys.add(username + " || "  + purch);
 				}
 			}      
@@ -73,15 +79,22 @@ public class Shop_Bean {
 	}
 
 	public ArrayList<String> myPurchases(String username) {
+		//Alles Purchases reinlegen
 		ArrayList<String> buys = readPurchases();
 		ArrayList<String> myBuys = new ArrayList<String>();
 		String buyer;
+		//Durch je Zeilen der Purchases gehen
 		for (String line : buys) {
+			//Käufer und Skin festlegen
 			buyer=line.substring(0,line.indexOf("|")).trim();
 			String skin = line.substring(line.indexOf('|') + 2).trim();
+			//Testen ob useranem = Käufer ist und es sich nicht um den Default Skin handelt
 			if (buyer.equals(username)&&skin.equals("Default")==false) {
+				//Eintrag für die Liste
 				String entry = "User: " + buyer + " bought the skin||" + skin;
+				//Testen ob es schon in der Liste ist
 				if (!myBuys.contains(entry)) {
+					//Entry in Liste packen
 					myBuys.add(entry);
 				}
 			}
@@ -97,6 +110,7 @@ public class Shop_Bean {
 			fileExists(file);
 			BufferedReader bufferedReader;
 			bufferedReader = new BufferedReader(new FileReader(file));
+			//Zeilen aus der Datei einlesen und in die Liste legen
 			while (null != (line = bufferedReader.readLine())) {
 				points.add(line);
 			}
@@ -110,9 +124,13 @@ public class Shop_Bean {
 	}
 
 	public int myPoints(String username) {
+		//Alle Punkte aus Liste holen
 		ArrayList<String> point = readallPoints();
+		//Durch alle Punkte gehen
 		for (String line : point) {
+			//Wenn Eintrag = username
 			if(line.substring(0, line.indexOf('|')).trim().equals(username)) {
+				//Punkte festlegen
 				points=Integer.parseInt(line.substring(line.indexOf('|') + 2).trim());
 			} 
 		} 
@@ -120,10 +138,14 @@ public class Shop_Bean {
 	}
 
 	public ArrayList<String> notBoughtSkins(String username)  {
+		//Käufe aus Liste holen
 		ArrayList<String> myBuys = myPurchases(username);
 		ArrayList<String> skins = new ArrayList<String>();
+		//Vorgebene Liste von Skins
 		String existingSkins []= {"Corona","Maske","LOL"};
+		//Durch vorgebene Skins gehen
 		for (String skin : existingSkins ) {
+			//Wenn noch nicht vorhanden und noch nicht gekauft in Liste hinzufügen
 			if((myBuys.contains(("User: " + user + " bought the skin||") + skin))==false && (skins.contains(skin))==false) {
 				skins.add(skin); 
 			}
@@ -133,6 +155,7 @@ public class Shop_Bean {
 
 	public String buySkin(String username, String skin)  {           
 		try {
+			//Nur ausführen, wenn man 1000 Punkte oder mehr hat
 			if (points >= 1000) {
 				ArrayList<String> point = readallPoints();  
 				File file = new File("purchases.txt");
@@ -142,9 +165,12 @@ public class Shop_Bean {
 				PrintWriter pWriter2 = new PrintWriter(new FileWriter(file2, true), true);
 				pWriter.println(username + "||" + skin);
 				file2.delete();
-				fileExists(file2);      
+				fileExists(file2); 
+				//Durch Punkte interieren
 				for (String line : point) {
+					//Username aus Datei mit username abgleichen
 					if(line.substring(0, line.indexOf('|')).trim().equals(username)) {
+						//Punkte abziehen und wieder reinschreiben
 						points=points-1000;
 						pWriter2.println(username + "||" + points);
 					} else {      
@@ -175,6 +201,7 @@ public class Shop_Bean {
 			String line;
 			fileExists(file);
 			BufferedReader bufferedReader = new BufferedReader(new FileReader(file));
+			//Zeilen der Datei einlsen und in die Liste legen
 			while (null != (line = bufferedReader.readLine())) {
 				skins.add(line);
 			}
@@ -188,34 +215,49 @@ public class Shop_Bean {
 	}
 
 	public ArrayList<String> chooseSkins(String username)  {
+		//Alle Einäufe aus Liste holen
 		ArrayList<String> myBuys = myPurchases(username);
 		ArrayList<String> skins = new ArrayList<String>();
+		//Default Skin zur Auswahl in die Liste legen
 		myBuys.add("User: " + user + " bought the skin||Default");
+		//Durch alle Einkäufe durchgehen
 		for (String skin : myBuys ) {
+			//Skins herausfiltern und in die Liste legen
 			skins.add(skin.substring(skin.indexOf('|') + 2).trim()); 
 		}
 		return skins;
 	}
 
-	public void setSkin(String username,String game,String skin) {
+	public String setSkin(String username,String game,String skin) {
+		//Alle Skins aus Liste holen
 		ArrayList<String> skins = readallchossenSkins();
+		String back="";
 		try {
 			File file = new File("activeskins.txt");
+			//Löschen zum neu reinschreiben
 			file.delete();
+			//Neu anlegen
 			fileExists(file);
 			PrintWriter pWriter = new PrintWriter(new FileWriter(file, true), true);
+			//Durch Liste aller Skins gehen
 			for(String activeskins: skins) {
+				//Wenn username aus Datei = username neuen gesetzen Skins setzen
 				if(activeskins.substring(0, activeskins.indexOf("|")).trim().equals(username)) {
 					pWriter.write(username + "||" + game + "/" + skin);
+					back="Erfolgreich geändert!";
 				} else {
+					//Wenn nicht einfach wieder in Datei schreiben
 					pWriter.write(activeskins);
 				}
 				pWriter.close();
 			}  
 		} catch (FileNotFoundException e) { 
 			System.out.println("Es ist ein Fehler mit der Datei aufgetreten!");
+			back="Ändern nicht möglich!";
 		} catch (IOException e) {
 			System.out.println(e.getStackTrace());
+			back="Ändern nicht möglich!";
 		}
+		return back;
 	}
 }

@@ -2,39 +2,40 @@
 
 html {
 	height: 100vh;
-	width: 100%;
+	width:100%;
 }
 
 body {
-	font-family: "Open Sans", sans-serif;
-	line-height: 1.6;
+	height: auto;
 	margin: 0;
-	padding: 0;
-	list-style: none;
-	text-decoration: none;
-	min-height: 100vh;
-	background-color: grey;
+    padding: 0;  
+    font-family: "Open Sans", sans-serif;
+    line-height: 1.6;
+    list-style: none;
+    text-decoration: none;  
+    
 }
 
 h1 {
-	font-size: 1.2em;
-	padding-left: 15px;
-	padding-bottom: 5px;
-	padding-right: 30px;
-	text-transform: uppercase;
 	margin-bottom: 1.5em;
-	letter-spacing: 3px;
-	font-weight: 600;
-}
+    padding-left: 15px;
+    padding-bottom: 5px;
+    padding-right: 30px;
+    border-left: 3px solid #fff;
+    border-bottom: 3px solid #fff;
+    font-size: 1.2em;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 3px;    
+} 
 
-#mainpage {
+#mainpage{
 	position: relative;
-	min-height: 100vh;
-	margin-top: 50px;
-	width: 100%;
+    min-height: 100vh;
+	margin-top:50px;
+	width:100%;
 }
 
-/* The side navigation menu */
 .sidebar {
 	margin: 0;
 	padding: 0;
@@ -44,7 +45,6 @@ h1 {
 	float: left;
 }
 
-/* Sidebar links */
 .sidebar a {
 	display: block;
 	color: black;
@@ -52,19 +52,16 @@ h1 {
 	text-decoration: none;
 }
 
-/* Active/current link */
 .sidebar .tablinks.active {
 	background-color: #4CAF50;
 	color: white;
 }
 
-/* Links on mouse-over */
 .sidebar a:hover:not (.active ) {
 	background-color: #555;
 	color: white;
 }
 
-/* On screens that are less than 700px wide, make the sidebar into a topbar */
 @media screen and (max-width: 700px) {
 	.sidebar {
 		width: 100%;
@@ -79,7 +76,6 @@ h1 {
 	}
 }
 
-/* On screens that are less than 400px, display the bar vertically, instead of horizontally */
 @media screen and (max-width: 400px) {
 	.sidebar a {
 		text-align: center;

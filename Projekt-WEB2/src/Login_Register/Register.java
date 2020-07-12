@@ -34,21 +34,23 @@ public class Register extends HttpServlet {
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		
+		//LoginRegisterBean anlegen 
 		Login_RegisterBean registerBean = (Login_RegisterBean) request.getAttribute("registerBean");
-		
+		//Testen ob leer wenn nicht neu anlegen
 		if (registerBean == null) {
 			registerBean = new Login_RegisterBean();
 			request.setAttribute("registerBean", registerBean);
 		}
-		
+		//Testen ob leer wenn nicht neu anlegen
 		registerBean.setEmail(request.getParameter("username"));
 		registerBean.setPassword(request.getParameter("password"));
-		
+		//User regestrieren
 		if(registerBean.insertUser()) {
+			//Weiterleiten an Login mit Message Erfolg
 			request.setAttribute("Message", "You successfully registered!");
 			request.getRequestDispatcher("/Login.jsp").forward(request, response);
 		} else {
+			//Weiterleiten an Login mit Message Fehlschlag
 			request.setAttribute("Message", "User already exists!");
             request.getRequestDispatcher("/Login.jsp").forward(request, response);
 		}
