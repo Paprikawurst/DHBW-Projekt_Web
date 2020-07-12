@@ -10,7 +10,7 @@
 <!-- Titel -->
 <title>Catch Block</title>
 <!-- CSS  -->
-<link href="Snake_CatchBlock.css" rel="stylesheet" type="text/css">
+<link href="PreScreen.css" rel="stylesheet" type="text/css">
 <!-- Header  -->
 <jsp:include page="Header.jsp" />
 <!-- Inhaltscontainer unter der Nav-Leiste  -->
@@ -19,7 +19,7 @@
 	<div id="GamesContent">
 		<h1>CatchBlock</h1>
 		<hr>
-		Screenshots:<br> <img src="images/CatchBlock/unknown.png" alt="">
+		Screenshots:<br> <img src="images/CatchBlock/unknown.png" alt="" width="auto">
 		<hr>
 		Beschreibung: "Catch the Blocks" ist ein Computerspielklassiker, bei dem eine Figur
 		gesteuert wird um die fallenden Objekte einzusammeln. <b>Ziel des

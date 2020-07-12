@@ -66,7 +66,7 @@ public class Login_RegisterBean implements Serializable {
 			String line="";
 			fileExists(file);
 			BufferedReader bufferedReader= new BufferedReader(new FileReader(file));
-			//Zeilen anlegen und in HashMap legen
+			//Zeilen anlegen und in HashMap legen. Der linke Teil ist der Nutzer und der rechte Teil das gehashte Passwort
 			while (null != (line = bufferedReader.readLine())) {
 				user.put((line.substring(0, line.indexOf('|'))).trim(),(line.substring(line.indexOf('|') + 2).trim()));  	
 			}
@@ -102,9 +102,10 @@ public class Login_RegisterBean implements Serializable {
 				//Nutzer hashen und Einügen
 				pWriter.println(email + "||" + this.hash());
 				pWriter.flush();
-				pWriter.close();	            
+				pWriter.close();	
+				//Diese schonmal erzeugen für den Shop und die Spiele
 				fileExists(file2);		        
-				pWriter2.println(email + "||0");
+				pWriter2.println(email + "||1000");
 				pWriter2.flush();
 				pWriter2.close();	            
 				fileExists(file3);		        

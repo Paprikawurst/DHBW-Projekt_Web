@@ -10,7 +10,7 @@
 <!-- Titel -->
 <title>Contact Us</title>
 <!-- CSS -->
-<link href="Snake_CatchBlock.css" rel="stylesheet" type="text/css">
+<link href="PreScreen.css" rel="stylesheet" type="text/css">
 <!-- Header -->
 <jsp:include page="Header.jsp" />
 </head>
@@ -38,6 +38,7 @@
 		<!-- Weiterleitung zum Spiel  -->
 		<a href="Snake.jsp" id="startGame">Play</a>
 	</div>
+	
 </div>
 <!-- Footer  -->
 <jsp:include page="Footer.jsp" />

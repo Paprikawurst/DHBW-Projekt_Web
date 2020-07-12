@@ -142,7 +142,7 @@ public class Shop_Bean {
 		ArrayList<String> myBuys = myPurchases(username);
 		ArrayList<String> skins = new ArrayList<String>();
 		//Vorgebene Liste von Skins
-		String existingSkins []= {"Corona","Maske","LOL"};
+		String existingSkins []= {"Default","Biker","LOL"};
 		//Durch vorgebene Skins gehen
 		for (String skin : existingSkins ) {
 			//Wenn noch nicht vorhanden und noch nicht gekauft in Liste hinzufügen
@@ -164,6 +164,7 @@ public class Shop_Bean {
 				fileExists(file); 
 				PrintWriter pWriter2 = new PrintWriter(new FileWriter(file2, true), true);
 				pWriter.println(username + "||" + skin);
+				//Löschen und Neuanlegen, um Inhalt aktualisieren zu können
 				file2.delete();
 				fileExists(file2); 
 				//Durch Punkte interieren
@@ -257,6 +258,22 @@ public class Shop_Bean {
 		} catch (IOException e) {
 			System.out.println(e.getStackTrace());
 			back="Ändern nicht möglich!";
+		}
+		return back;
+	}
+	
+	public String readMyChossenSkin(String username,String game) {       
+		ArrayList<String> skins = readallchossenSkins();
+		String back="";
+		for(String activeskins: skins) {
+			//Wenn username aus Datei = username neuen gesetzen Skins setzen
+			String user2=activeskins.substring(0, activeskins.indexOf("|")).trim();
+			String game2=activeskins.substring((activeskins.indexOf('|') + 2),(activeskins.indexOf('/'))).trim();
+			String skin=activeskins.substring(activeskins.indexOf('/')+1);
+			if(user2.equals(username)&&game.equals(game2)) {
+				//Rückgabe des gesetzen Skins für das Spiel
+				back=skin;
+			}
 		}
 		return back;
 	}

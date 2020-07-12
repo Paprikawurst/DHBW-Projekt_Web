@@ -1,4 +1,5 @@
-            let app, player;
+function catchBlocken(username) {
+			let app, player;
             let data;
             let lives = 3;
             let objekts = [];
@@ -42,28 +43,32 @@
             window.addEventListener("keydown", keysDown);
             window.addEventListener("keyup", keysUp);
 
+            
 
             // preload assets
-            app.loader.baseUrl = "images";
+            app.loader.baseUrl = "images/CatchBlock";
             app.loader
                     
-                    .add("zwei", "Mundschutz.png" )
-                    .add("drei", "Klopapier.png" )
-                    .add("vier", "corona_bier.png" )
-                    .add("funf", "Desinfektionsmittel.png" )         
-                    .add("player", "player.png" )              
-                    .add("enemy", "corona.png" )
-                    .add("deadScreen", "deadScreen.png" )
-
-           
+            
+            .add("zwei", "Mundschutz.png" )
+            .add("drei", "Klopapier.png" )
+            .add("vier", "Corona_Bier.png" )
+            .add("funf", "Desinfektionsmittel.png" )                   
+            .add("enemy", "Corona.png" )
+            .add("deadScreen", "deadscreen.png" )
+            
+            if(username==="Default") {
+            	 app.loader.add("player", "player.png" )
+            } else {
+            	 app.loader.add("player", "player2.png" )
+            }
             app.loader.onComplete.add(doneLoading);
             app.loader.onError.add(reportError);
 
             app.loader.load();
-
+            }
             
-
-        }
+            
         function reportError(e){
             console.error("Error: " + e.message);
 
@@ -134,10 +139,6 @@
                     app.stage.removeChild(objekts[i]);
                     objekts.splice(i,1);
                 }
-                
-              
-
-             
             }
             for(let i = 0; i < objekts.length; i++){
                 
@@ -176,18 +177,13 @@
 
 
 
-        function keysDown(e){
-            
+        function keysDown(e){           
             keys[e.keyCode] = true;
-
-
         }
-        function keysUp(e){
-            
+        
+        function keysUp(e){           
             keys[e.keyCode] = false;
         }
-
-        
 
         function gameLoop(){
             counter++;
@@ -209,30 +205,22 @@
                 deadScreen.x = 400;   
                 deadScreen.y = 300;
                 app.stage.addChild(deadScreen);
+                data = new FormData()
+                data.set('Points',counter)
+                data.set('User',username)
+                data.set('Game','CatchBlock')
+
+                let request = new XMLHttpRequest();
+                request.open("POST", '/Projekt-WEB2/Points', true);
+                request.send(data)
 
             }
             updateObjects();
             
-
-
-            
-            //W
-            /*if(keys["87"]) {
-                player.y -= 3;
-            //S
-            }
-            if(keys["83"]){
-                player.y += 3;
-            //D
-            }*/
             if(keys["39"] || keys["68"]){
                 if(player.x <= 770){
                     player.x += 10;
                 }
-
-              
-
-            //A
             }
             if(keys["37"] || keys["65"]){
                 if(player.x >= 21){
@@ -240,3 +228,4 @@
                 }
             }
         }
+}
