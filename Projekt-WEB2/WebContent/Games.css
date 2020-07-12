@@ -6,39 +6,37 @@ html {
 }
 
 body {
+	height: auto;
+	margin: 0;
+    padding: 0;  
     font-family: "Open Sans", sans-serif;
     line-height: 1.6;
-    margin: 0;
-    padding: 0;
     list-style: none;
-    text-decoration: none;    
-    min-height: 100vh;
+    text-decoration: none;  
+    
 }
 
 h1 {
-    font-size: 1.2em;
+	margin-bottom: 1.5em;
     padding-left: 15px;
     padding-bottom: 5px;
     padding-right: 30px;
     border-left: 3px solid #fff;
     border-bottom: 3px solid #fff;
-    text-transform: uppercase;
-    margin-bottom: 1.5em;
-    letter-spacing: 3px;
+    font-size: 1.2em;
     font-weight: 600;
-}
+    text-transform: uppercase;
+    letter-spacing: 3px;    
+} 
 
-
-
-.mainpage{
+#mainpage{
 	position: relative;
     min-height: 100vh;
 	margin-top:50px;
 	width:100%;
 }
 
- /* Style the tab */
-.tab {
+#tab {
   overflow: hidden;
   border: 1px solid #ccc;
   background-color: #f1f1f1;
@@ -46,7 +44,6 @@ h1 {
   width:100%;
 }
 
-/* Style the buttons that are used to open the tab content */
 .tablinks  {
   background-color: inherit;
   float: left;
@@ -58,17 +55,14 @@ h1 {
   width:auto;
 }
 
-/* Change background color of buttons on hover */
 .tablinks:hover {
   background-color: #ddd;
 }
 
-/* Create an active/current tablink class */
 .tablinks .active {
   background-color: #ccc;
 }
 
-/* Style the tab content */
 .tabcontent {
   display: none;  
   padding-bottom:0;
@@ -76,7 +70,7 @@ h1 {
   height:100vh;
 } 
 
-.search {
+#search {
   width: 26%;
   position: relative;
   display: flex;
@@ -87,7 +81,7 @@ h1 {
   margin-right:30px;
 }
 
-.searchTerm {
+#searchTerm {
   width: 75%;
   border: 3px solid #00B4CC;
   border-right: none;
@@ -97,11 +91,11 @@ h1 {
   height:100%;
 }
 
-.searchTerm:focus{
+#searchTerm:focus{
   color: #00B4CC;
 }
 
-.searchButton {
+#searchButton {
   border: 3px solid #00B4CC;
   background-color: #00B4CC;
   text-align: center;
@@ -112,7 +106,6 @@ h1 {
   height:100%;
   width:20%;
 }
-
 
 .gamesWrapper {
 	height:100%;
@@ -127,7 +120,7 @@ h1 {
 	background-color: 
 	#e7e7e7; color: 
 	black;
-} /* Gray */
+} 
 
 .games{
     display: flex;
