@@ -40,7 +40,7 @@
 		<!-- Wrapper der Spiele -->
 		<div class="gamesWrapper">
 			<!-- Zelle1 -->
-			<div id="col1row1" class="games">
+			<div  class="games">
 				<!-- Zellen Inhalt Container -->
 				<div class="gameContainer">
 					<!-- Weiterleitung ans Spiel -->
@@ -50,7 +50,7 @@
 				</div>
 			</div>
 			<!-- Zelle2 -->
-			<div id="col1row2" class="games">
+			<div  class="games">
 				<!-- Zellen Inhalt Container -->
 				<div class="gameContainer">
 					<!-- Weiterleitung ans Spiel -->
@@ -60,7 +60,7 @@
 				</div>
 			</div>
 			<!-- Zelle3 -->
-			<div id="col1row3" class="games">
+			<div  class="games">
 				<!-- Zellen Inhalt Container -->
 				<div class="gameContainer">
 					<!-- Weiterleitung ans Spiel -->
@@ -70,7 +70,7 @@
 				</div>
 			</div>
 			<!-- Zelle4 -->
-			<div id="col2row1" class="games">
+			<div  class="games">
 				<!-- Zellen Inhalt Container -->
 				<div class="gameContainer">
 					<!-- Weiterleitung ans Spiel -->
@@ -80,7 +80,7 @@
 				</div>
 			</div>
 			<!-- Zelle5 -->
-			<div id="col2row2" class="games">
+			<div  class="games">
 				<!-- Zellen Inhalt Container -->
 				<div class="gameContainer">
 					<!-- Weiterleitung ans Spiel -->
@@ -90,7 +90,7 @@
 				</div>
 			</div>
 			<!-- Zelle6 -->
-			<div id="col2row3" class="games">
+			<div  class="games">
 				<!-- Zellen Inhalt Container -->
 				<div class="gameContainer">
 					<!-- Weiterleitung ans Spiel -->
@@ -100,7 +100,7 @@
 				</div>
 			</div>
 			<!-- Zelle7 -->
-			<div id="col3row1" class="games">
+			<div  class="games">
 				<!-- Zellen Inhalt Container -->
 				<div class="gameContainer">
 					<!-- Weiterleitung ans Spiel -->
@@ -110,7 +110,7 @@
 				</div>
 			</div>
 			<!-- Zelle8 -->
-			<div id="col3row2" class="games">
+			<div  class="games">
 				<!-- Zellen Inhalt Container -->
 				<div class="gameContainer">
 					<!-- Weiterleitung ans Spiel -->
@@ -120,7 +120,7 @@
 				</div>
 			</div>
 			<!-- Zelle9 -->
-			<div id="col3row3" class="games">
+			<div  class="games">
 				<!-- Zellen Inhalt Container -->
 				<div class="gameContainer">
 					<!-- Weiterleitung ans Spiel -->
@@ -136,7 +136,7 @@
 		<!-- Wrapper der Spiele -->
 		<div class="gamesWrapper">
 			<!-- Zelle1 -->
-			<div id="col1row1" class="games">
+			<div  class="games">
 				<div class="gameContainer">
 					<!-- Weiterleitung ans Spiel -->
 					<a href="#"><img src="images/JSP_Elemente/coming.jpg"
@@ -145,7 +145,7 @@
 				</div>
 			</div>
 			<!-- Zelle2 -->
-			<div id="col1row2" class="games">
+			<div  class="games">
 				<div class="gameContainer">
 					<!-- Weiterleitung ans Spiel -->
 					<a href="#"><img src="images/JSP_Elemente/coming.jpg"
@@ -154,7 +154,7 @@
 				</div>
 			</div>
 			<!-- Zelle3 -->
-			<div id="col1row3" class="games">
+			<div  class="games">
 				<div class="gameContainer">
 					<!-- Weiterleitung ans Spiel -->
 					<a href="#"><img src="images/JSP_Elemente/coming.jpg"
@@ -163,7 +163,7 @@
 				</div>
 			</div>
 			<!-- Zelle4 -->
-			<div id="col2row1" class="games">
+			<div  class="games">
 				<div class="gameContainer">
 					<!-- Weiterleitung ans Spiel -->
 					<a href="#"><img src="images/JSP_Elemente/coming.jpg"
@@ -172,7 +172,7 @@
 				</div>
 			</div>
 			<!-- Zelle5 -->
-			<div id="col2row2" class="games">
+			<div  class="games">
 				<div class="gameContainer">
 					<!-- Weiterleitung ans Spiel -->
 					<a href="#"><img src="images/JSP_Elemente/coming.jpg"
@@ -181,7 +181,7 @@
 				</div>
 			</div>
 			<!-- Zelle6 -->
-			<div id="col2row3" class="games">
+			<div  class="games">
 				<div class="gameContainer">
 					<!-- Weiterleitung ans Spiel -->
 					<a href="#"><img src="images/JSP_Elemente/coming.jpg"
@@ -190,7 +190,7 @@
 				</div>
 			</div>
 			<!-- Zelle7 -->
-			<div id="col3row1" class="games">
+			<div  class="games">
 				<div class="gameContainer">
 					<!-- Weiterleitung ans Spiel -->
 					<a href="#"><img src="images/JSP_Elemente/coming.jpg"
@@ -199,7 +199,7 @@
 				</div>
 			</div>
 			<!-- Zelle8 -->
-			<div id="col3row2" class="games">
+			<div  class="games">
 				<div class="gameContainer">
 					<!-- Weiterleitung ans Spiel -->
 					<a href="#"><img src="images/JSP_Elemente/coming.jpg"
@@ -208,7 +208,7 @@
 				</div>
 			</div>
 			<!-- Zelle9 -->
-			<div id="col3row3" class="games">
+			<div  class="games">
 				<div class="gameContainer">
 					<!-- Weiterleitung ans Spiel -->
 					<a href="#"><img src="images/JSP_Elemente/coming.jpg"
@@ -223,7 +223,7 @@
 		<!-- Wrapper der Spiele -->
 		<div class="gamesWrapper">
 			<!-- Zelle1 -->
-			<div id="col1row1" class="games">
+			<div  class="games">
 				<div class="gameContainer">
 					<!-- Weiterleitung ans Spiel -->
 					<a href="#"><img src="images/JSP_Elemente/coming.jpg"
@@ -232,7 +232,7 @@
 				</div>
 			</div>
 			<!-- Zelle2 -->
-			<div id="col1row2" class="games">
+			<div  class="games">
 				<div class="gameContainer">
 					<!-- Weiterleitung ans Spiel -->
 					<a href="#"><img src="images/JSP_Elemente/coming.jpg"
@@ -241,7 +241,7 @@
 				</div>
 			</div>
 			<!-- Zelle3 -->
-			<div id="col1row3" class="games">
+			<div  class="games">
 				<div class="gameContainer">
 					<!-- Weiterleitung ans Spiel -->
 					<a href="#"><img src="images/JSP_Elemente/coming.jpg"
@@ -250,7 +250,7 @@
 				</div>
 			</div>
 			<!-- Zelle4 -->
-			<div id="col2row1" class="games">
+			<div  class="games">
 				<div class="gameContainer">
 					<!-- Weiterleitung ans Spiel -->
 					<a href="#"><img src="images/JSP_Elemente/coming.jpg"
@@ -259,7 +259,7 @@
 				</div>
 			</div>
 			<!-- Zelle5 -->
-			<div id="col2row2" class="games">
+			<div  class="games">
 				<div class="gameContainer">
 					<!-- Weiterleitung ans Spiel -->
 					<a href="#"><img src="images/JSP_Elemente/coming.jpg"
@@ -268,7 +268,7 @@
 				</div>
 			</div>
 			<!-- Zelle6 -->
-			<div id="col2row3" class="games">
+			<div  class="games">
 				<div class="gameContainer">
 					<!-- Weiterleitung ans Spiel -->
 					<a href="#"><img src="images/JSP_Elemente/coming.jpg"
@@ -277,7 +277,7 @@
 				</div>
 			</div>
 			<!-- Zelle7 -->
-			<div id="col3row1" class="games">
+			<div  class="games">
 				<div class="gameContainer">
 					<!-- Weiterleitung ans Spiel -->
 					<a href="#"><img src="images/JSP_Elemente/coming.jpg"
@@ -286,7 +286,7 @@
 				</div>
 			</div>
 			<!-- Zelle8 -->
-			<div id="col3row2" class="games">
+			<div  class="games">
 				<div class="gameContainer">
 					<!-- Weiterleitung ans Spiel -->
 					<a href="#"><img src="images/JSP_Elemente/coming.jpg"
@@ -295,7 +295,7 @@
 				</div>
 			</div>
 			<!-- Zelle9 -->
-			<div id="col3row3" class="games">
+			<div  class="games">
 				<div class="gameContainer">
 					<!-- Weiterleitung ans Spiel -->
 					<a href="#"><img src="images/JSP_Elemente/coming.jpg"

@@ -179,6 +179,7 @@
 	</div>
 	<!-- Tab Inhalt Change-->
 	<div id="change" class="tabcontent">
+	<h1>Change Skin:</h1>
 		<!-- Container Formular -->
 		<div id="formContainer">
 			<h1>Choose a Skin to play with for Snake</h1>
