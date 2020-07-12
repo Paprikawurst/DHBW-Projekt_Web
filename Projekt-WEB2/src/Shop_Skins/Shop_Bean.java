@@ -136,6 +136,30 @@ public class Shop_Bean {
 		} 
 		return points;
 	}
+	
+	public void addPoints(String user,String username,String points) {
+		ArrayList<String> point = readallPoints();  
+		int npoints=0;
+		File file = new File("points.txt");
+		PrintWriter pWriter;
+		try {
+			pWriter = new PrintWriter(new FileWriter(file, true), true);
+			file.delete();
+			fileExists(file); 
+			for(String line:point) {
+			if(line.substring(0, line.indexOf('|')).trim().equals(username)) {
+				npoints=npoints+Integer.parseInt(points);
+				pWriter.println(username + "||" + npoints);
+			} else {
+				pWriter.println(line);
+			}
+		}
+		} catch (IOException e) {
+			System.out.println(e.getStackTrace());
+		}
+		
+		
+	}
 
 	public ArrayList<String> notBoughtSkins(String username)  {
 		//Käufe aus Liste holen
@@ -277,4 +301,6 @@ public class Shop_Bean {
 		}
 		return back;
 	}
+	
+	
 }
