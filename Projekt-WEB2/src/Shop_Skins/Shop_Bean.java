@@ -128,18 +128,19 @@ public class Shop_Bean {
 		ArrayList<String> point = readallPoints();
 		//Durch alle Punkte gehen
 		for (String line : point) {
-			//Wenn Eintrag = username
-			if(line.substring(0, line.indexOf('|')).trim().equals(username)) {
-				//Punkte festlegen
-				points=Integer.parseInt(line.substring(line.indexOf('|') + 2).trim());
-			} 
+			if(line.indexOf("|") != -1) {
+				//Wenn Eintrag = username
+				if(line.substring(0, line.indexOf('|')).trim().equals(username)) {
+					//Punkte festlegen
+					points=Integer.parseInt(line.substring(line.indexOf('|') + 2).trim());
+				}
+			}
 		} 
 		return points;
 	}
 	
-	public void addPoints(String user,String username,String points) {
+	public void addPoints(String user,String username,int points) {
 		ArrayList<String> point = readallPoints();  
-		int npoints=0;
 		File file = new File("points.txt");
 		PrintWriter pWriter;
 		try {
@@ -147,13 +148,14 @@ public class Shop_Bean {
 			file.delete();
 			fileExists(file); 
 			for(String line:point) {
-			if(line.substring(0, line.indexOf('|')).trim().equals(username)) {
-				npoints=npoints+Integer.parseInt(points);
-				pWriter.println(username + "||" + npoints);
-			} else {
-				pWriter.println(line);
+				System.out.println(line);
+				if(line.substring(0, line.indexOf('|')).trim().equals(username)) {
+					pWriter.println(username + "||" + points);
+					
+				} else {
+					pWriter.println(line);
+				}
 			}
-		}
 		} catch (IOException e) {
 			System.out.println(e.getStackTrace());
 		}
