@@ -183,11 +183,11 @@ public class Shop_Bean {
 		ArrayList<String> myBuys = myPurchases(username);
 		ArrayList<String> skins = new ArrayList<String>();
 		//Vorgebene Liste von Skins
-		String existingSkins []= {"Default","Biker","LOL"};
+		String existingSkins []= {"Default","Biker","PC","Robot","Girl","Robot"};
 		//Durch vorgebene Skins gehen
 		for (String skin : existingSkins ) {
 			//Wenn noch nicht vorhanden und noch nicht gekauft in Liste hinzufügen
-			if((myBuys.contains(("User: " + user + " bought the skin||") + skin))==false && (skins.contains(skin))==false) {
+			if((myBuys.contains("User: " + username + " bought the skin||" + skin))==false && (skins.contains(skin))==false && skin!="Default") {
 				skins.add(skin); 
 			}
 		}
@@ -203,7 +203,7 @@ public class Shop_Bean {
 				File file = new File("purchases.txt");
 				fileExists(file);
 				PrintWriter pWriter = new PrintWriter(new FileWriter(file, true), true);
-				pWriter.write(username + "|| " + skin);
+				pWriter.println(username + "||" + skin);
 				pWriter.flush();
 				pWriter.close();
 				File file2 = new File("points.txt");				 
