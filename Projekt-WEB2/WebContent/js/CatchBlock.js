@@ -54,7 +54,7 @@ function catchBlocken(username) {
             .add("zwei", "Mundschutz.png" )
             .add("drei", "Klopapier.png" )
             .add("vier", "Corona_Bier.png" )
-            .add("funf", "Desinfektionsmittel.png" )                   
+            .add("funf", "Desinfektionsmittel.png" )
             .add("enemy", "Corona.png" )
             .add("deadScreen", "deadscreen.png" )
             

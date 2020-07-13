@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/Projekt-WEB2/src/Login_Register/Login.java" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/Projekt-WEB2/src/Login_Register/Login_RegisterBean.java" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/Projekt-WEB2/src/Login_Register/Logout.java" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/Projekt-WEB2/src/Shop_Skins/Shop.java" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/Projekt-WEB2/src/Shop_Skins/Shop_Bean.java" charset="windows-1252" />
+  </component>
+</project>
