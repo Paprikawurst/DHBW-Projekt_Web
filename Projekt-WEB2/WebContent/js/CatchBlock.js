@@ -8,6 +8,7 @@ function catchBlocken(username) {
             let objekt;
             let counter = 0, objektBuildCounter = 80;
             let points = 0;
+            let user2=username;
 
             // load audio files
 
@@ -205,14 +206,22 @@ function catchBlocken(username) {
                 deadScreen.x = 400;   
                 deadScreen.y = 300;
                 app.stage.addChild(deadScreen);
-                data = new FormData()
-                data.set('Points',counter)
-                data.set('User',username)
-                data.set('Game','CatchBlock')
-
-                let request = new XMLHttpRequest();
-                request.open("POST", '/Projekt-WEB2/Points', true);
-                request.send(data)
+                
+                
+		
+                const xhr = new XMLHttpRequest(); 	
+                xhr.open('POST', 'http://localhost:8083/Projekt-WEB2//Points');
+                
+                const params = {
+                	Points:"+" + points + "-",
+                	User:"*" + 'Nigu' + "/",
+                	Game:'%CatchBlock='
+                }
+                
+                xhr.setRequestHeader('Content-Type', 'application/json');
+                
+                xhr.send(JSON.stringify(params));
+               
 
             }
             updateObjects();

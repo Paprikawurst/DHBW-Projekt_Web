@@ -1,11 +1,19 @@
 package Shop_Skins;
 
+import java.io.BufferedReader;
 import java.io.IOException;
+import java.lang.reflect.Array;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+
+import org.json.HTTP;
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
 
 /**
  * Servlet implementation class Points
@@ -27,16 +35,13 @@ public class Points extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		response.getWriter().append("Served at: ").append(request.getContextPath());
+		
 	}
 
 	/**
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		int points;
-		String name;
-		String game;
 		//ShopBean anlegen 
 		Shop_Bean shopBean = (Shop_Bean) request.getAttribute("shopBean");
 		//Testen ob leer wenn nicht neu anlegen
@@ -44,14 +49,26 @@ public class Points extends HttpServlet {
 			shopBean = new Shop_Bean();
 			request.setAttribute("registerBean", shopBean);
 		}
-		//Parameter Bean setzen
-		name=(request.getParameter("User"));
-		//points=shopBean.myPoints(name)+Integer.parseInt(request.getParameter("Points"));
-		System.out.println(name);
-		game=(request.getParameter("Game"));
-		points=0;
-		shopBean.addPoints(name, game, points);
-		response.sendRedirect("CatchBlock.jsp");
+		  StringBuffer jb = new StringBuffer();
+		  String line = null;
+		  try {
+		    BufferedReader reader = request.getReader();
+		    while ((line = reader.readLine()) != null)
+		      jb.append(line);
+		  } catch (Exception e) { /*report an error*/ }
+
+		  try {
+		    JSONObject jsonObject =  HTTP.toJSONObject(jb.toString());
+		  } catch (JSONException e) {
+		    // crash and burn
+		    throw new IOException("Error parsing JSON request string");
+		  }
+		  
+		  String game=jb.substring(jb.indexOf("*")+1,jb.indexOf("/"));
+		  String name=jb.substring(jb.indexOf("%")+1,jb.indexOf("="));
+		  int points=Integer.parseInt(jb.substring(jb.indexOf("+")+1,jb.indexOf("-")));
+		  points=points+shopBean.myPoints(name);
+		  shopBean.addPoints(game, name, points);
 	}
 
 }
