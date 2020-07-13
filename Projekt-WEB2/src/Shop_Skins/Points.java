@@ -2,7 +2,6 @@ package Shop_Skins;
 
 import java.io.BufferedReader;
 import java.io.IOException;
-import java.lang.reflect.Array;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -11,7 +10,6 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import org.json.HTTP;
-import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 

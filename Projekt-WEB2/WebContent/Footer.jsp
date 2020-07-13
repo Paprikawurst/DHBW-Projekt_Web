@@ -4,7 +4,7 @@
     <div id="innerFooter">
         <!-- Container Erstes Footer Element  -->
         <div id="firstInnerFooterChild">
-            <img style="width:100%"
+            <img style="width:20%"
                     src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Instagram_logo_2016.svg/1200px-Instagram_logo_2016.svg.png"
                     alt="">
         </div>

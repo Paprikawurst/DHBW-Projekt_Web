@@ -32,5 +32,6 @@
     <orderEntry type="library" exported="" name="javax.servlet:jstl:1.2" level="project" />
     <orderEntry type="library" name="jstl-1.2" level="project" />
     <orderEntry type="library" name="Java EE 6-Java EE 6 (2)" level="project" />
+    <orderEntry type="library" name="json-20200518" level="project" />
   </component>
 </module>

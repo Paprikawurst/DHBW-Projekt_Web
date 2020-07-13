@@ -69,66 +69,66 @@
 						class="other"> Coming Soon</label>
 				</div>
 			</div>
-			<!-- Zelle4 -->
-			<div  class="games">
-				<!-- Zellen Inhalt Container -->
-				<div class="gameContainer">
-					<!-- Weiterleitung ans Spiel -->
-					<a href="#"><img src="images/JSP_Elemente/coming.jpg"
-						alt="CatchBlock" width="100%" height="100%" /></a> <label
-						class="other"> Coming Soon</label>
-				</div>
-			</div>
-			<!-- Zelle5 -->
-			<div  class="games">
-				<!-- Zellen Inhalt Container -->
-				<div class="gameContainer">
-					<!-- Weiterleitung ans Spiel -->
-					<a href="#"><img src="images/JSP_Elemente/coming.jpg"
-						alt="CatchBlock" width="100%" height="100%" /></a> <label
-						class="other"> Coming Soon</label>
-				</div>
-			</div>
-			<!-- Zelle6 -->
-			<div  class="games">
-				<!-- Zellen Inhalt Container -->
-				<div class="gameContainer">
-					<!-- Weiterleitung ans Spiel -->
-					<a href="#"><img src="images/JSP_Elemente/coming.jpg"
-						alt="CatchBlock" width="100%" height="100%" /></a> <label
-						class="other"> Coming Soon</label>
-				</div>
-			</div>
-			<!-- Zelle7 -->
-			<div  class="games">
-				<!-- Zellen Inhalt Container -->
-				<div class="gameContainer">
-					<!-- Weiterleitung ans Spiel -->
-					<a href="#"><img src="images/JSP_Elemente/coming.jpg"
-						alt="CatchBlock" width="100%" height="100%" /></a> <label
-						class="other"> Coming Soon</label>
-				</div>
-			</div>
-			<!-- Zelle8 -->
-			<div  class="games">
-				<!-- Zellen Inhalt Container -->
-				<div class="gameContainer">
-					<!-- Weiterleitung ans Spiel -->
-					<a href="#"><img src="images/JSP_Elemente/coming.jpg"
-						alt="CatchBlock" width="100%" height="100%" /></a> <label
-						class="other"> Coming Soon</label>
-				</div>
-			</div>
-			<!-- Zelle9 -->
-			<div  class="games">
-				<!-- Zellen Inhalt Container -->
-				<div class="gameContainer">
-					<!-- Weiterleitung ans Spiel -->
-					<a href="#"><img src="images/JSP_Elemente/coming.jpg"
-						alt="CatchBlock" width="100%" height="100%" /></a> <label
-						class="other"> Coming Soon</label>
-				</div>
-			</div>
+<%--			<!-- Zelle4 -->--%>
+<%--			<div  class="games">--%>
+<%--				<!-- Zellen Inhalt Container -->--%>
+<%--				<div class="gameContainer">--%>
+<%--					<!-- Weiterleitung ans Spiel -->--%>
+<%--					<a href="#"><img src="images/JSP_Elemente/coming.jpg"--%>
+<%--						alt="CatchBlock" width="100%" height="100%" /></a> <label--%>
+<%--						class="other"> Coming Soon</label>--%>
+<%--				</div>--%>
+<%--			</div>--%>
+<%--			<!-- Zelle5 -->--%>
+<%--			<div  class="games">--%>
+<%--				<!-- Zellen Inhalt Container -->--%>
+<%--				<div class="gameContainer">--%>
+<%--					<!-- Weiterleitung ans Spiel -->--%>
+<%--					<a href="#"><img src="images/JSP_Elemente/coming.jpg"--%>
+<%--						alt="CatchBlock" width="100%" height="100%" /></a> <label--%>
+<%--						class="other"> Coming Soon</label>--%>
+<%--				</div>--%>
+<%--			</div>--%>
+<%--			<!-- Zelle6 -->--%>
+<%--			<div  class="games">--%>
+<%--				<!-- Zellen Inhalt Container -->--%>
+<%--				<div class="gameContainer">--%>
+<%--					<!-- Weiterleitung ans Spiel -->--%>
+<%--					<a href="#"><img src="images/JSP_Elemente/coming.jpg"--%>
+<%--						alt="CatchBlock" width="100%" height="100%" /></a> <label--%>
+<%--						class="other"> Coming Soon</label>--%>
+<%--				</div>--%>
+<%--			</div>--%>
+<%--			<!-- Zelle7 -->--%>
+<%--			<div  class="games">--%>
+<%--				<!-- Zellen Inhalt Container -->--%>
+<%--				<div class="gameContainer">--%>
+<%--					<!-- Weiterleitung ans Spiel -->--%>
+<%--					<a href="#"><img src="images/JSP_Elemente/coming.jpg"--%>
+<%--						alt="CatchBlock" width="100%" height="100%" /></a> <label--%>
+<%--						class="other"> Coming Soon</label>--%>
+<%--				</div>--%>
+<%--			</div>--%>
+<%--			<!-- Zelle8 -->--%>
+<%--			<div  class="games">--%>
+<%--				<!-- Zellen Inhalt Container -->--%>
+<%--				<div class="gameContainer">--%>
+<%--					<!-- Weiterleitung ans Spiel -->--%>
+<%--					<a href="#"><img src="images/JSP_Elemente/coming.jpg"--%>
+<%--						alt="CatchBlock" width="100%" height="100%" /></a> <label--%>
+<%--						class="other"> Coming Soon</label>--%>
+<%--				</div>--%>
+<%--			</div>--%>
+<%--			<!-- Zelle9 -->--%>
+<%--			<div  class="games">--%>
+<%--				<!-- Zellen Inhalt Container -->--%>
+<%--				<div class="gameContainer">--%>
+<%--					<!-- Weiterleitung ans Spiel -->--%>
+<%--					<a href="#"><img src="images/JSP_Elemente/coming.jpg"--%>
+<%--						alt="CatchBlock" width="100%" height="100%" /></a> <label--%>
+<%--						class="other"> Coming Soon</label>--%>
+<%--				</div>--%>
+<%--			</div>--%>
 		</div>
 	</div>
 	<!-- Tab HighScore-Games-->
