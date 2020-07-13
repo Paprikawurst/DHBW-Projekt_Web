@@ -30,6 +30,13 @@
 		der Spieler Punkte, die er im Shop gegen Skins eintauschen kann!
 		<hr>
 		Steuerung: Gesteuert wird mit Pfeiltasten
+		Corona-Bier = 1Pkt
+		Mundmaske = 3Pkte
+		Desinfektionsmittel = 5Pkte
+		Klopapier = 10Pkte
+
+		Unter 25Pkten zieht ein Coronavirus 3 Leben ab, sonst nur eines.
+
 		<hr>
 		<!-- Weiterleitung zum Spiel  -->
 		<a href="CatchBlock.jsp" id="startGame">Play</a>
