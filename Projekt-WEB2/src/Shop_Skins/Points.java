@@ -8,6 +8,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import org.json.HTTP;
 import org.json.JSONException;
@@ -62,11 +63,11 @@ public class Points extends HttpServlet {
 		    throw new IOException("Error parsing JSON request string");
 		  }
 		  
-		  String game=jb.substring(jb.indexOf("*")+1,jb.indexOf("/"));
-		  String name=jb.substring(jb.indexOf("%")+1,jb.indexOf("="));
-		  int points=Integer.parseInt(jb.substring(jb.indexOf("+")+1,jb.indexOf("-")));
-		  points=points+shopBean.myPoints(name);
-		  shopBean.addPoints(game, name, points);
+		  int points=Integer.parseInt(jb.substring(jb.indexOf(":")+1,jb.indexOf("}")));
+		  HttpSession session = request.getSession(true);
+		  points=points;
+		  String user=((String)session.getAttribute("email"));
+		  shopBean.addPoints(user, points);
 	}
 
 }

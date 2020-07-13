@@ -124,6 +124,7 @@ public class Shop_Bean {
 	}
 
 	public int myPoints(String username) {
+		System.out.println(username);
 		//Alle Punkte aus Liste holen
 		ArrayList<String> point = readallPoints();
 		//Durch alle Punkte gehen
@@ -132,14 +133,15 @@ public class Shop_Bean {
 				//Wenn Eintrag = username
 				if(line.substring(0, line.indexOf('|')).trim().equals(username)) {
 					//Punkte festlegen
+					System.out.println(point);
 					points=Integer.parseInt(line.substring(line.indexOf('|') + 2).trim());
 				}
 			}
 		} 
 		return points;
 	}
-	
-	public void addPoints(String user,String username,int points) {
+
+	public void addPoints(String username,int points) {
 		ArrayList<String> point = readallPoints();  
 		File file = new File("points.txt");
 		PrintWriter pWriter;
@@ -149,17 +151,21 @@ public class Shop_Bean {
 			fileExists(file); 
 			for(String line:point) {
 				if(line.substring(0, line.indexOf('|')).trim().equals(username)) {
-					pWriter.println(username + "||" + points);
-					
-				} else {
+					pWriter.println(username + "||" + (points+myPoints(username)));
+
+				} 
+				if((line.substring(0, line.indexOf('|')).trim().equals(username))==false){      
 					pWriter.println(line);
 				}
+				pWriter.flush();
+				pWriter.close();
 			}
+
 		} catch (IOException e) {
 			System.out.println(e.getStackTrace());
 		}
-		
-		
+
+
 	}
 
 	public ArrayList<String> notBoughtSkins(String username)  {
@@ -187,22 +193,28 @@ public class Shop_Bean {
 				PrintWriter pWriter = new PrintWriter(new FileWriter(file, true), true);
 				File file2 = new File("points.txt");
 				fileExists(file); 
-				PrintWriter pWriter2 = new PrintWriter(new FileWriter(file2, true), true);
-				pWriter.println(username + "||" + skin);
+				PrintWriter pWriter2 = new PrintWriter(new FileWriter(file2, true), true);							
+				ArrayList<String> del=new ArrayList<String>();
+				//Durch Punkte interieren
+				for (String line : point) {
+					if(line.indexOf("|") != -1) {
+						//Username aus Datei mit username abgleichen
+						if(line.substring(0, line.indexOf('|')).trim().equals(username)) {
+							del.add(line);	
+						}
+					}
+				} 
+				for(String delete:del ) {
+					point.remove(delete);
+				}
+
+				point.add(username + "||" + (points-1000));
 				//Löschen und Neuanlegen, um Inhalt aktualisieren zu können
 				file2.delete();
 				fileExists(file2); 
-				//Durch Punkte interieren
-				for (String line : point) {
-					//Username aus Datei mit username abgleichen
-					if(line.substring(0, line.indexOf('|')).trim().equals(username)) {
-						//Punkte abziehen und wieder reinschreiben
-						points=points-1000;
-						pWriter2.println(username + "||" + points);
-					} else {      
-						pWriter2.println(line);
-					}
-				}         
+				for(String line2:point) {		
+					pWriter2.println(line2);
+				}				
 				pWriter.flush();
 				pWriter.close();
 				pWriter2.flush();
@@ -286,7 +298,7 @@ public class Shop_Bean {
 		}
 		return back;
 	}
-	
+
 	public String readMyChossenSkin(String username,String game) {       
 		ArrayList<String> skins = readallchossenSkins();
 		String back="";
@@ -302,6 +314,6 @@ public class Shop_Bean {
 		}
 		return back;
 	}
-	
-	
+
+
 }
