@@ -21,8 +21,12 @@
 <!-- Container Hauptseite unter der Navigation-Leiste  -->
 <div id="mainpage">
 	<!-- Hier ist das Spiel drinnen  -->
+	<div id="data">
+        	
+
+    </div>
 	<div id="gameDiv"></div>
-	<script>catchBlocken("${shopBean.readMyChossenSkin(sessionScope['email'],'Snake')}")</script>
+	<script>catchBlocken("${shopBean.readMyChossenSkin(sessionScope['email'],'CatchBlock')}")</script>
 </div>
 <!-- Footer -->
 <jsp:include page="Footer.jsp" />
