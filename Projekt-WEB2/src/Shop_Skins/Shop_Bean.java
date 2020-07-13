@@ -141,32 +141,42 @@ public class Shop_Bean {
 		return points;
 	}
 
-	public void addPoints(String username,int points) {
+	public void addPoints(String username,int pointsPara) {
 		ArrayList<String> point = readallPoints();  
+		ArrayList<String> del=new ArrayList<String>();
 		File file = new File("points.txt");
 		PrintWriter pWriter;
 		try {
-			pWriter = new PrintWriter(new FileWriter(file, true), true);
+			//Löschen und Neuanlegen, um Inhalt aktualisieren zu können
 			file.delete();
-			fileExists(file); 
-			for(String line:point) {
-				if(line.substring(0, line.indexOf('|')).trim().equals(username)) {
-					pWriter.println(username + "||" + (points+myPoints(username)));
-
-				} 
-				if((line.substring(0, line.indexOf('|')).trim().equals(username))==false){      
-					pWriter.println(line);
+			fileExists(file); 	
+			pWriter = new PrintWriter(new FileWriter(file, true), true);		 													
+			//Durch Punkte interieren
+			for (String line : point) {
+				if(line.indexOf("|") != -1) {
+					//Username aus Datei mit username abgleichen
+					if(line.substring(0, line.indexOf('|')).trim().equals(username)) {
+						del.add(line);	
+					}
 				}
-				pWriter.flush();
-				pWriter.close();
+			} 
+			//Alte Werte löschen
+			for(String delete:del ) {
+				point.remove(delete);
 			}
-
+			//Neues in Liste packen
+			point.add(username + "||" + (points+pointsPara));	
+			//Neu Schreiben
+			for(String line2:point) {		
+				pWriter.println(line2);
+			}							
+			pWriter.flush();
+			pWriter.close(); 
 		} catch (IOException e) {
 			System.out.println(e.getStackTrace());
 		}
-
-
 	}
+
 
 	public ArrayList<String> notBoughtSkins(String username)  {
 		//Käufe aus Liste holen
@@ -189,12 +199,18 @@ public class Shop_Bean {
 			//Nur ausführen, wenn man 1000 Punkte oder mehr hat
 			if (points >= 1000) {
 				ArrayList<String> point = readallPoints();  
-				File file = new File("purchases.txt");
-				PrintWriter pWriter = new PrintWriter(new FileWriter(file, true), true);
-				File file2 = new File("points.txt");
-				fileExists(file); 
-				PrintWriter pWriter2 = new PrintWriter(new FileWriter(file2, true), true);							
 				ArrayList<String> del=new ArrayList<String>();
+				File file = new File("purchases.txt");
+				fileExists(file);
+				PrintWriter pWriter = new PrintWriter(new FileWriter(file, true), true);
+				pWriter.write(username + "|| " + skin);
+				pWriter.flush();
+				pWriter.close();
+				File file2 = new File("points.txt");				 
+				//Löschen und Neuanlegen, um Inhalt aktualisieren zu können
+				file2.delete();
+				fileExists(file2); 
+				PrintWriter pWriter2 = new PrintWriter(new FileWriter(file2, true), true);											
 				//Durch Punkte interieren
 				for (String line : point) {
 					if(line.indexOf("|") != -1) {
@@ -204,19 +220,16 @@ public class Shop_Bean {
 						}
 					}
 				} 
+				//Altes Löschen
 				for(String delete:del ) {
 					point.remove(delete);
 				}
-
+				//Neues in Liste packen
 				point.add(username + "||" + (points-1000));
-				//Löschen und Neuanlegen, um Inhalt aktualisieren zu können
-				file2.delete();
-				fileExists(file2); 
+				//Wieder in Datei schreiben
 				for(String line2:point) {		
 					pWriter2.println(line2);
-				}				
-				pWriter.flush();
-				pWriter.close();
+				}								
 				pWriter2.flush();
 				pWriter2.close();        
 				return "Erfolgreich eingetragen!";
