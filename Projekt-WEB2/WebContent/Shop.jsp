@@ -55,8 +55,8 @@
 				<!-- Container der Skins -->
 				<div class="skinContainer">
 					<!-- Skin austellen -->
-					<img src="images/CatchBlock/unknown.png" alt="Skin" width="100%"
-						height="100%" /> <label class="other"> Skin</label>
+					<img src="images/CatchBlock/Default.png" alt="Default" width="100%"
+						height="100%" /> <label class="other">Default</label>
 				</div>
 			</div>
 			<!-- Zelle2 -->
@@ -64,8 +64,8 @@
 				<!-- Container der Skins -->
 				<div class="skinContainer">
 					<!-- Skin austellen -->
-					<img src="images/JSP_Elemente/coming.jpg" alt="Skin" width="100%"
-						height="100%" /> <label class="other"> Coming Soon</label>
+					<img src="images/CatchBlock/Biker.png" alt="Biker" width="100%"
+						height="100%" /> <label class="other"> Biker</label>
 				</div>
 			</div>
 			<!-- Zelle3 -->
@@ -73,8 +73,8 @@
 				<!-- Container der Skins -->
 				<div class="skinContainer">
 					<!-- Skin austellen -->
-					<img src="images/JSP_Elemente/coming.jpg" alt="Skin" width="100%"
-						height="100%" /> <label class="other"> Coming Soon</label>
+					<img src="images/CatchBlock/Girl.png" alt="Girl" width="100%"
+						height="100%" /> <label class="other"> Girl</label>
 				</div>
 			</div>
 			<!-- Zelle4 -->
@@ -82,8 +82,8 @@
 				<!-- Container der Skins -->
 				<div class="skinContainer">
 					<!-- Skin austellen -->
-					<img src="images/JSP_Elemente/coming.jpg" alt="Skin" width="100%"
-						height="100%" /> <label class="other"> Coming Soon</label>
+					<img src="images/CatchBlock/PC.png" alt="PC" width="100%"
+						height="100%" /> <label class="other"> PC</label>
 				</div>
 			</div>
 			<!-- Zelle5 -->
@@ -91,8 +91,8 @@
 				<!-- Container der Skins -->
 				<div class="skinContainer">
 					<!-- Skin austellen -->
-					<img src="images/JSP_Elemente/coming.jpg" alt="Skin" width="100%"
-						height="100%" /> <label class="other"> Coming Soon</label>
+					<img src="images/CatchBlock/Robot.png" alt="Robot" width="100%"
+						height="100%" /> <label class="other"> Robot</label>
 				</div>
 			</div>
 			<!-- Zelle6 -->

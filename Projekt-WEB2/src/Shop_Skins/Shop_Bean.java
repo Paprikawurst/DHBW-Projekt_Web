@@ -183,7 +183,7 @@ public class Shop_Bean {
 		ArrayList<String> myBuys = myPurchases(username);
 		ArrayList<String> skins = new ArrayList<String>();
 		//Vorgebene Liste von Skins
-		String existingSkins []= {"Default","Biker","PC","Robot","Girl","Robot"};
+		String existingSkins []= {"Default","Biker","PC","Robot","Girl"};
 		//Durch vorgebene Skins gehen
 		for (String skin : existingSkins ) {
 			//Wenn noch nicht vorhanden und noch nicht gekauft in Liste hinzufügen
