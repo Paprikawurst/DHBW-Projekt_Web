@@ -25,8 +25,6 @@
 			src="images/CatchBlock/unknown.png" alt="CatchBlock" width="100%"
 			height="100%" /></a> <label class="other"> CatchBlock</label>
 	</div>
-	<!-- Zelle2 -->
-	<%--                <div class="games">--%>
 	<!-- Zellen Inhalt Container -->
 	<div class="box2">
 		<!-- Weiterleitung ans Spiel -->
