@@ -104,33 +104,6 @@
 						height="100%" /> <label class="other"> Coming Soon</label>
 				</div>
 			</div>
-			<%--			<!-- Zelle7 -->--%>
-			<%--			<div  class="skins">--%>
-			<%--				<!-- Container der Skins -->--%>
-			<%--				<div class="skinContainer">--%>
-			<%--					<!-- Skin austellen -->--%>
-			<%--					<img src="images/JSP_Elemente/coming.jpg" alt="Skin" width="100%" height="100%" />--%>
-			<%--					<label class="other"> Coming Soon</label>--%>
-			<%--				</div>--%>
-			<%--			</div>--%>
-			<%--			<!-- Zelle8 -->--%>
-			<%--			<div  class="skins">--%>
-			<%--				<!-- Container der Skins -->--%>
-			<%--				<div class="skinContainer">--%>
-			<%--					<!-- Skin austellen -->--%>
-			<%--					<img src="images/JSP_Elemente/coming.jpg" alt="Skin" width="100%" height="100%" />--%>
-			<%--					<label class="other"> Coming Soon</label>--%>
-			<%--				</div>--%>
-			<%--			</div>--%>
-			<%--			<!-- Zelle9 -->--%>
-			<%--			<div  class="skins">--%>
-			<%--				<!-- Container der Skins -->--%>
-			<%--				<div class="skinContainer">--%>
-			<%--					<!-- Skin austellen -->--%>
-			<%--					<img src="images/JSP_Elemente/coming.jpg" alt="Skin" width="100%" height="100%" />--%>
-			<%--					<label class="other"> Coming Soon</label>--%>
-			<%--				</div>--%>
-			<%--			</div>--%>
 		</div>
 		<!-- Container Kaufformular Skin -->
 		<div id="formContainer">
@@ -185,28 +158,6 @@
 	<!-- Tab Inhalt Change-->
 	<div id="change" class="tabcontent">
 		<h1>Change Skin:</h1>
-  				<!--  Container Formular  --> 
-  		  
-<!--   				<div id="formContainer">   -->
-<!--   					<h1>Choose a Skin to play with for Snake</h1>   -->
-<!--   					<h1>   -->
-<%--  						<span style="color: red">  JSTL Ausgabe  <c:out  --%>
-<%--  								value="${requestScope.MessageSnake}" /></span>  --%>
-<!--   					</h1>   -->
-<!--   					<form action="Skins" method="post">   -->
-<!--   						<select name="activeSkin" id="skins">   -->
-<!--   							 JSTL Schleife mit Auswahlliste  -->
-<%--  							<c:forEach var="entry"  --%>
-<%--  								items="${shopBean.chooseSkins(sessionScope['email'])}">  --%>
-<%--  								<option value="${entry}"><c:out value="${entry}" /></option>  --%>
-<%--  							</c:forEach>  --%>
-<!--   						</select>   -->
-<!--   						Leeres Feld zur Informationsweitergabe ans Servlet   -->
-<!--   						<input name="game" hidden="true" value="Snake" /> <input   -->
-<%--  							name="user" hidden="true" value="${sessionScope['email']}" /> <input  --%>
-<!--   							type="submit" value="Submit">   -->
-<!--   					</form>   -->
-<!--   				</div>   -->
   		<!--  Container Formular  -->
 		<div id="formContainer">
 			<h1>Choose a Skin to play with for CatchBlock</h1>

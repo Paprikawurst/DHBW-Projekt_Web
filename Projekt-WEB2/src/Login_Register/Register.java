@@ -44,7 +44,7 @@ public class Register extends HttpServlet {
 		//Testen ob leer wenn nicht neu anlegen
 		registerBean.setEmail(request.getParameter("username"));
 		registerBean.setPassword(request.getParameter("password"));
-		//User regestrieren
+		//User registrieren
 		if(registerBean.insertUser()) {
 			//Weiterleiten an Login mit Message Erfolg
 			request.setAttribute("Message", "You successfully registered!");

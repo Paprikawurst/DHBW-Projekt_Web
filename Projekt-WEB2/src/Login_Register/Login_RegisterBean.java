@@ -91,7 +91,7 @@ public class Login_RegisterBean implements Serializable {
 				pWriter.close();
 				return false;
 			} else {
-				//wenn nicht Nutzer regestrieren und Dateien vorbereiteb
+				//wenn nicht Nutzer registrieren und Dateien vorbereiten
 				File file2 = new File("points.txt");
 				PrintWriter pWriter2 = new PrintWriter(new FileWriter(file2, true), true);
 				File file3= new File("activeskins.txt");

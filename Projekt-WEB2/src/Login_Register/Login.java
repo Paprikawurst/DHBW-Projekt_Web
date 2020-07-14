@@ -46,7 +46,7 @@ public class Login extends HttpServlet {
 		//Parameter Bean setzen
 		loginBean.setEmail(request.getParameter("username"));
 		loginBean.setPassword(request.getParameter("password"));
-		//Sser Einloggen
+		//User Einloggen
 		if(loginBean.loginUser()) {
 			//Wenn Erfolg Session setzen
 			HttpSession session = request.getSession(true);
@@ -55,7 +55,7 @@ public class Login extends HttpServlet {
 			//Weiterleiten an neue Seite
 			response.sendRedirect("Games.jsp");
 		} else {
-			//Bei Fehler mti Meldung an Login zurück
+			//Bei Fehler mit Meldung an Login zurück
 			request.setAttribute("MessageLogin", "Wrong Username or Password!");
 			request.getRequestDispatcher("/Login.jsp").forward(request, response);
 		}		
