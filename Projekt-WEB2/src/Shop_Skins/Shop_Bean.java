@@ -133,7 +133,6 @@ public class Shop_Bean {
 				//Wenn Eintrag = username
 				if(line.substring(0, line.indexOf('|')).trim().equals(username)) {
 					//Punkte festlegen
-					System.out.println(point);
 					points=Integer.parseInt(line.substring(line.indexOf('|') + 2).trim());
 				}
 			}
@@ -290,18 +289,30 @@ public class Shop_Bean {
 			//Neu anlegen
 			fileExists(file);
 			PrintWriter pWriter = new PrintWriter(new FileWriter(file, true), true);
-			//Durch Liste aller Skins gehen
-			for(String activeskins: skins) {
-				//Wenn username aus Datei = username neuen gesetzen Skins setzen
-				if(activeskins.substring(0, activeskins.indexOf("|")).trim().equals(username)) {
-					pWriter.write(username + "||" + game + "/" + skin);
-					back="Erfolgreich geändert!";
-				} else {
-					//Wenn nicht einfach wieder in Datei schreiben
-					pWriter.write(activeskins);
+			
+			ArrayList<String> del=new ArrayList<String>();
+			for (String line : skins) {
+				if(line.indexOf("|") != -1) {
+					//Username aus Datei mit username abgleichen
+					if(line.substring(0, line.indexOf('|')).trim().equals(username)) {
+						del.add(line);	
+					}
 				}
-				pWriter.close();
-			}  
+			} 
+			//Altes Löschen
+			for(String delete:del ) {
+				skins.remove(delete);
+			}
+			//Neues in Liste packen
+			skins.add(username + "||" + game + "/" + skin);
+			back="Erfolgreich geändert!";
+			//Wieder in Datei schreiben
+			for(String line2:skins) {		
+				pWriter.println(line2);
+			}
+			pWriter.close();
+			
+			
 		} catch (FileNotFoundException e) { 
 			System.out.println("Es ist ein Fehler mit der Datei aufgetreten!");
 			back="Ändern nicht möglich!";

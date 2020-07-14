@@ -12,12 +12,12 @@ body {
     padding: 0;
     list-style: none;
     text-decoration: none;    
-    height: 100%;
 }
 img {
-	width: 300px;
+	width: 100%;
 	height: 300px;
 	object-fit: contain;
+	padding-right:20px;
 }
 
 #mainpage{
@@ -40,10 +40,11 @@ img {
 #GamesSitesContainer {
 	display:flex;
 	width:100vw;
-	height:100%;
+	height:100vh;
 	background-color:grey;
 	margin-top:50px;
 	bottom:0;
+	padding-right:15px;
 }
 
 #GamesContent{
@@ -54,6 +55,7 @@ img {
 	margin-left:30%;
 	margin-right:30%;
 	padding-left:20px;
+	padding-right:20px;
 }
 
 #games{
@@ -76,9 +78,10 @@ img {
 	padding:15px 76px;
 	text-decoration:none;
 	text-shadow:0px 0px 0px #e1e2ed;
-	width:98%;
+	width:100%;
 	text-align:center;
-	margin-right:15px;
+	padding-left:20px;
+	padding-right:30px;
 }
 #startGame:hover {
 	background:linear-gradient(to bottom, #bab1ba 5%, #ededed 100%);
@@ -88,3 +91,11 @@ img {
 	position:relative;
 	top:1px;
 }
+
+@media (max-width: 1000px) {
+	#GamesSitesContainer {	
+	height:auto;
+	}	
+}
+
+

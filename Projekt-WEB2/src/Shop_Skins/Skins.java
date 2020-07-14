@@ -13,14 +13,14 @@ import javax.servlet.http.HttpServletResponse;
 @WebServlet("/Skins")
 public class Skins extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-       
-    /**
-     * @see HttpServlet#HttpServlet()
-     */
-    public Skins() {
-        super();
-        // TODO Auto-generated constructor stub
-    }
+
+	/**
+	 * @see HttpServlet#HttpServlet()
+	 */
+	public Skins() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
 
 	/**
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
@@ -44,10 +44,13 @@ public class Skins extends HttpServlet {
 		//Parameter Bean setzen
 		shopBean.setUser(request.getParameter("user"));
 		shopBean.myPoints(request.getParameter("user"));
-		
 		//Weiterleiten zurück zum Shop mit Message 
-		request.setAttribute("Message"+request.getParameter("game"),shopBean.setSkin(request.getParameter("user"),request.getParameter("game"),request.getParameter("activeSkin")));
+		if(request.getParameter("user")!=null) {
+			shopBean.setSkin(request.getParameter("user"),request.getParameter("game"),request.getParameter("activeSkin"));
+		}
+				
 		request.getRequestDispatcher("/Shop.jsp").forward(request, response);
+
 	}
 
 }

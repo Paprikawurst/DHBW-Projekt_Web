@@ -49,7 +49,6 @@
                                 src="images/CatchBlock/unknown.png" alt="CatchBlock" width="100%"
                                 height="100%"/></a> <label class="other"> CatchBlock</label>
                     </div>
-                </div>
                 <!-- Zelle2 -->
 <%--                <div class="games">--%>
                     <!-- Zellen Inhalt Container -->
@@ -60,7 +59,6 @@
                             class="other">
                         Snake</label>
                     </div>
-                </div>
                 <!-- Zelle3 -->
 <%--                <div class="games">--%>
 <%--                    <!-- Zellen Inhalt Container -->--%>
@@ -330,8 +328,8 @@
 <%--                onLoading()--%>
 <%--            </script>--%>
 <%--        </div>--%>
-        <!-- Footer -->
-        <jsp:include page="Footer.jsp"/>
-    </div>
+ </div>
+        <!-- Footer -->       
+    <jsp:include page="Footer.jsp"/>
     </body>
 </html>

@@ -194,17 +194,27 @@ header nav ul li a.active {
 
 #innerFooter .otherInnerFooterChild a{
 	font-family:'arial';
-	font-size:18px;
+	font-size:30px;
 	color:white;
 	display: block;
 	font-weight:200;
 	width:100%;
 	padding-bottom:5px;	
 	text-decoration:none;
+	padding-top:30px;
+}
+
+
+
+#innerFooter .otherInnerFooterChild a:visited{
+	color:red;	
+}
+#innerFooter .otherInnerFooterChild a:hover{
+	color:green;	
 }
 
 /*Mediaquery Footer */
-@media (max-width: 1580px) {
+@media (max-width: 1580px) {	
 	#footer {
 		height:auto;
 	}

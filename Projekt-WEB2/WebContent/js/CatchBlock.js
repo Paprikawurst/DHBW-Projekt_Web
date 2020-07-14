@@ -55,7 +55,9 @@ function catchBlocken(skin) {
                     .add("enemy", "Corona.png" )
                     .add("deadScreen", "gameOver.png" )
                     .add("background", "Einkaufsregale.png")
-             var picture=skin + '.png'  
+             if(skin==="") {
+            	 skin="Default";
+             }
              app.loader.add("player", skin+".png")
             	 
             app.loader.onComplete.add(doneLoading);
