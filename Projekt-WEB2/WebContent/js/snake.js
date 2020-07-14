@@ -145,7 +145,7 @@ function draw(){
 		xhr.open('POST', '/Projekt-WEB2/Points');
 
 		const params = {
-				Points:points
+				Points:score
 		}
 
 		xhr.setRequestHeader('Content-Type', 'application/json');
