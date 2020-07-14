@@ -141,14 +141,11 @@ function draw(){
 	if(snakeX < box || snakeX > 17 * box || snakeY < 3*box || snakeY > 17*box || collision(newHead,snake)){
 		clearInterval(game);
 		dead.play();
-		const gameOver = new Image();
-		gameOver.src = "images/Snake/gameOver.png";
-		ctx.drawImage(gameOver,0,0);
 		const xhr = new XMLHttpRequest(); 	
-		xhr.open('POST', 'http://localhost:8083/Projekt-WEB2/Points');
+		xhr.open('POST', '/Projekt-WEB2/Points');
 
 		const params = {
-				Points:score
+				Points:points
 		}
 
 		xhr.setRequestHeader('Content-Type', 'application/json');
