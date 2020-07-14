@@ -1,4 +1,3 @@
-function snaken(skin) {
 	const cvs = document.getElementById("snake");
 	const ctx = cvs.getContext("2d");
 
@@ -170,7 +169,7 @@ function snaken(skin) {
 
 	let game = setInterval(draw,100);
 
-}
+
 
 
 

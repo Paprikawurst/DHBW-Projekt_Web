@@ -1,5 +1,5 @@
-function catchBlocken(username) {
-			let app, player;
+function catchBlocken(skin) {  
+			let app, player, back;
             let data;
             let lives = 3;
             let objekts = [];
@@ -8,7 +8,6 @@ function catchBlocken(username) {
             let objekt;
             let counter = 0, objektBuildCounter = 80;
             let points = 0;
-            let user2=username;
 
             // load audio files
 
@@ -44,32 +43,28 @@ function catchBlocken(username) {
             window.addEventListener("keydown", keysDown);
             window.addEventListener("keyup", keysUp);
 
-            
 
             // preload assets
-            app.loader.baseUrl = "images/CatchBlock";
+            app.loader.baseUrl = "images/CatchBlock/";
             app.loader
                     
-            
-            .add("zwei", "Mundschutz.png" )
-            .add("drei", "Klopapier.png" )
-            .add("vier", "Corona_Bier.png" )
-            .add("funf", "Desinfektionsmittel.png" )
-            .add("enemy", "Corona.png" )
-            .add("deadScreen", "deadscreen.png" )
-            
-            if(username==="Default") {
-            	 app.loader.add("player", "player.png" )
-            } else {
-            	 app.loader.add("player", "player2.png" )
-            }
+                    .add("zwei", "Mundschutz.png" )
+                    .add("drei", "Klopapier.png" )
+                    .add("vier", "Corona_Bier.png" )
+                    .add("funf", "Desinfektionsmittel.png" )                     
+                    .add("enemy", "Corona.png" )
+                    .add("deadScreen", "gameOver.png" )
+                    .add("background", "Einkaufsregale.png")
+             var picture=skin + '.png'  
+             app.loader.add("player", skin+".png")
+            	 
             app.loader.onComplete.add(doneLoading);
             app.loader.onError.add(reportError);
 
             app.loader.load();
-            }
-            
-            
+            }        
+
+        
         function reportError(e){
             console.error("Error: " + e.message);
 
@@ -80,9 +75,17 @@ function catchBlocken(username) {
             
             player.anchor.set(0.5);
             player.x = app.view.width /2;
-            player.y = 550;
-           
+            player.y = 500;
+
+            back = PIXI.Sprite.from(app.loader.resources.background.texture);
+            
+            
+            back.x = 0;
+            back.y = 0;
+
+            app.stage.addChild(back);
             app.stage.addChild(player);
+           
             
             app.ticker.add(gameLoop);
         }
@@ -140,6 +143,10 @@ function catchBlocken(username) {
                     app.stage.removeChild(objekts[i]);
                     objekts.splice(i,1);
                 }
+                
+              
+
+             
             }
             for(let i = 0; i < objekts.length; i++){
                 
@@ -178,13 +185,18 @@ function catchBlocken(username) {
 
 
 
-        function keysDown(e){           
+        function keysDown(e){
+            
             keys[e.keyCode] = true;
+
+
         }
-        
-        function keysUp(e){           
+        function keysUp(e){
+            
             keys[e.keyCode] = false;
         }
+
+        
 
         function gameLoop(){
             counter++;
@@ -206,30 +218,40 @@ function catchBlocken(username) {
                 deadScreen.x = 400;   
                 deadScreen.y = 300;
                 app.stage.addChild(deadScreen);
-                
-                
-		
                 const xhr = new XMLHttpRequest(); 	
-                xhr.open('POST', 'http://localhost:8083/Projekt-WEB2//Points');
+                xhr.open('POST', '/Projekt-WEB2/Points');
                 
                 const params = {
-                	Points:"+" + points + "-",
-                	User:"*" + 'Nigu' + "/",
-                	Game:'%CatchBlock='
+                	Points:points
                 }
                 
                 xhr.setRequestHeader('Content-Type', 'application/json');
                 
                 xhr.send(JSON.stringify(params));
-               
 
             }
             updateObjects();
             
+
+
+            
+            //W
+            /*if(keys["87"]) {
+                player.y -= 3;
+            //S
+            }
+            if(keys["83"]){
+                player.y += 3;
+            //D
+            }*/
             if(keys["39"] || keys["68"]){
                 if(player.x <= 770){
                     player.x += 10;
                 }
+
+              
+
+            //A
             }
             if(keys["37"] || keys["65"]){
                 if(player.x >= 21){
