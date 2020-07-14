@@ -36,7 +36,7 @@
 	</div>
 	<!-- Tab Inhalt Exchange-->
 	<div id="exchange" class="tabcontent">
-		<h1>Exchange:</h1>
+		<h1>Skin preview - scroll down to buy!</h1>
 		<!-- Punkteausgabe -->
 		<p id="points">
 			Welcome
@@ -103,33 +103,33 @@
 					<label class="other"> Coming Soon</label>
 				</div>
 			</div>
-			<!-- Zelle7 -->
-			<div  class="skins">
-				<!-- Container der Skins -->
-				<div class="skinContainer">
-					<!-- Skin austellen -->
-					<img src="images/JSP_Elemente/coming.jpg" alt="Skin" width="100%" height="100%" />
-					<label class="other"> Coming Soon</label>
-				</div>
-			</div>
-			<!-- Zelle8 -->
-			<div  class="skins">
-				<!-- Container der Skins -->
-				<div class="skinContainer">
-					<!-- Skin austellen -->
-					<img src="images/JSP_Elemente/coming.jpg" alt="Skin" width="100%" height="100%" />
-					<label class="other"> Coming Soon</label>
-				</div>
-			</div>
-			<!-- Zelle9 -->
-			<div  class="skins">
-				<!-- Container der Skins -->
-				<div class="skinContainer">
-					<!-- Skin austellen -->
-					<img src="images/JSP_Elemente/coming.jpg" alt="Skin" width="100%" height="100%" />
-					<label class="other"> Coming Soon</label>
-				</div>
-			</div>
+<%--			<!-- Zelle7 -->--%>
+<%--			<div  class="skins">--%>
+<%--				<!-- Container der Skins -->--%>
+<%--				<div class="skinContainer">--%>
+<%--					<!-- Skin austellen -->--%>
+<%--					<img src="images/JSP_Elemente/coming.jpg" alt="Skin" width="100%" height="100%" />--%>
+<%--					<label class="other"> Coming Soon</label>--%>
+<%--				</div>--%>
+<%--			</div>--%>
+<%--			<!-- Zelle8 -->--%>
+<%--			<div  class="skins">--%>
+<%--				<!-- Container der Skins -->--%>
+<%--				<div class="skinContainer">--%>
+<%--					<!-- Skin austellen -->--%>
+<%--					<img src="images/JSP_Elemente/coming.jpg" alt="Skin" width="100%" height="100%" />--%>
+<%--					<label class="other"> Coming Soon</label>--%>
+<%--				</div>--%>
+<%--			</div>--%>
+<%--			<!-- Zelle9 -->--%>
+<%--			<div  class="skins">--%>
+<%--				<!-- Container der Skins -->--%>
+<%--				<div class="skinContainer">--%>
+<%--					<!-- Skin austellen -->--%>
+<%--					<img src="images/JSP_Elemente/coming.jpg" alt="Skin" width="100%" height="100%" />--%>
+<%--					<label class="other"> Coming Soon</label>--%>
+<%--				</div>--%>
+<%--			</div>--%>
 		</div>
 		<!-- Container Kaufformular Skin -->
 		<div id="formContainer">

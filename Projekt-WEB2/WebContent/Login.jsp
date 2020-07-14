@@ -41,10 +41,10 @@
 	<div id="login-page">
 		<!-- Container Formular  -->
 		<div id="form">
-			<!-- Ausgabe Status Durchführung Regestrieren -->
+			<!-- Ausgabe Status Durchführung Registrieren -->
 			<span style="color: red"><c:out
 					value="${requestScope.MessageLogin}" /></span>
-			<!-- Formular Regestrieren  -->
+			<!-- Formular Registrieren  -->
 			<form id="register-form" action="Register" method="post">
 				<input name="username" type="email" placeholder="username" required>
 				<input name="password" type="password" placeholder="password"
