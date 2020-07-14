@@ -9,19 +9,20 @@
 		</div>
 		<!-- Container Restliche Footer Element  -->
 		<div class="otherInnerFooterChild">
-			<a href="Terms.jsp">Terms of use</a>
+			<a href="Terms.jsp" hreflang="de" target="_self">Terms of use</a>
 		</div>
 		<!-- Container Restliche Footer Element  -->
 		<div class="otherInnerFooterChild">
-			<a href="DataProtection.jsp">Data protection</a>
+			<a href="DataProtection.jsp" hreflang="de" target="_self">Data
+				protection</a>
 		</div>
 		<!-- Container Restliche Footer Element  -->
 		<div class="otherInnerFooterChild">
-			<a href="Contact.jsp">Contact us</a>
+			<a href="Contact.jsp" hreflang="de" target="_self">Contact us</a>
 		</div>
 		<!-- Container Restliche Footer Element  -->
 		<div class="otherInnerFooterChild">
-			<a href="Imprint.jsp">Imprint</a>
+			<a href="Imprint.jsp" hreflang="de" target="_self">Imprint</a>
 		</div>
 	</div>
 </div>
@@ -30,19 +31,19 @@
 	type="text/javascript"></script>
 <!-- Script anklicken Symbole von JQuery -->
 <script type="text/javascript">
-    $(document).ready(function () {
-        $('.menu-toggle').click(function () {
-            $('nav').toggleClass('active')
-        })
-        $('ul li').click(function () {
-            $(this).siblings().removeClass('active');
-            $(this).toggleClass('active');
-        })
-        $('.message a').click(function () {
-            $('form').animate({
-                height: "toggle",
-                opacity: "toggle"
-            }, "slow");
-        });
-    })
+	$(document).ready(function() {
+		$('.menu-toggle').click(function() {
+			$('nav').toggleClass('active')
+		})
+		$('ul li').click(function() {
+			$(this).siblings().removeClass('active');
+			$(this).toggleClass('active');
+		})
+		$('.message a').click(function() {
+			$('form').animate({
+				height : "toggle",
+				opacity : "toggle"
+			}, "slow");
+		});
+	})
 </script>

@@ -76,7 +76,8 @@
 			entfernen.</p>
 		<hr>
 		<p>
-			Quelle: <a href="https://www.e-recht24.de">https://www.e-recht24.de</a>
+			Quelle: <a href="https://www.e-recht24.de" hreflang="de"
+				target="_self">https://www.e-recht24.de</a>
 		</p>
 	</div>
 </div>

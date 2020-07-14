@@ -263,7 +263,8 @@
 		<hr>
 		<p>
 			Quelle: <a
-				href="https://www.e-recht24.de/muster-datenschutzerklaerung.html">https://www.e-recht24.de/muster-datenschutzerklaerung.html</a>
+				href="https://www.e-recht24.de/muster-datenschutzerklaerung.html"
+				target="_self" hreflang="de">https://www.e-recht24.de/muster-datenschutzerklaerung.html</a>
 		</p>
 	</div>
 </div>

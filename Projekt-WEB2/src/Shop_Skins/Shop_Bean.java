@@ -144,6 +144,7 @@ public class Shop_Bean {
 		ArrayList<String> del=new ArrayList<String>();
 		File file = new File("points.txt");
 		PrintWriter pWriter;
+		int mypoints=0;
 		try {
 			//Löschen und Neuanlegen, um Inhalt aktualisieren zu können
 			file.delete();
@@ -155,6 +156,7 @@ public class Shop_Bean {
 					//Username aus Datei mit username abgleichen
 					if(line.substring(0, line.indexOf('|')).trim().equals(username)) {
 						del.add(line);	
+						mypoints=Integer.parseInt(line.substring(line.indexOf('|')+2).trim());
 					}
 				}
 			} 
@@ -163,7 +165,7 @@ public class Shop_Bean {
 				point.remove(delete);
 			}
 			//Neues in Liste packen
-			point.add(username + "||" + (points+pointsPara));	
+			point.add(username + "||" + (mypoints+pointsPara));	
 			//Neu Schreiben
 			for(String line2:point) {		
 				pWriter.println(line2);

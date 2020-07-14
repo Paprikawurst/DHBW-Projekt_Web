@@ -1,10 +1,11 @@
+//canvas im div
 const cvs = document.getElementById("snake");
 const ctx = cvs.getContext("2d");
 
-
+//jede Box hat 32 px
 const box = 32;
 
-//load images
+//Bilder laden
 
 const ground = new Image();
 ground.src = "images/Snake/ground.png";
@@ -12,7 +13,7 @@ ground.src = "images/Snake/ground.png";
 const foodImg = new Image();
 foodImg.src = "images/Snake/food.png";
 
-//load audio files
+//Audios laden
 
 let dead = new Audio();
 let eat = new Audio();
@@ -29,16 +30,16 @@ left.src = "audio/left.mp3";
 down.src = "audio/down.mp3";
 
 
-
+//Schlange ist ein array. Für jedes Körperteil kommt ein Arrayeintrag dazu
 let snake = [];
-
+//Schlangenkof Startpunkt
 snake[0] = {
 		x : 9 * box,
 		y : 10 * box
 };
 
 
-
+//Münze position zufällig
 let food = {
 		x : Math.floor(Math.random()*17+1) * box,
 		y : Math.floor(Math.random()*15+3) * box
@@ -48,7 +49,7 @@ let food = {
 
 let score = 0;
 
-//control
+//Steuerung
 
 let d;
 
@@ -71,7 +72,7 @@ function direction(event){
 	}
 }
 
-//collision tail und head
+//Kollision der Schlange mit sich selbst
 function collision(head,array){
 	for(let i = 0; i < array.length; i++){
 		if(head.x == array[i].x && head.y == array[i].y){
@@ -81,14 +82,14 @@ function collision(head,array){
 	return false;
 }
 
-//draw everything to the canvas
+//Alle Grafiken auf Canvas anzeigen oder zeichnen
 
 function draw(){
 
 	ctx.drawImage(ground,0,0);
 
 	for( let i = 0; i < snake.length ; i++){
-		ctx.fillStyle = ( i == 0 )? "green" : " limegreen";
+		ctx.fillStyle = ( i == 0 )? "green" : " limegreen";   // Kopf und Körper unterschiedliche Farbe
 		ctx.fillRect(snake[i].x,snake[i].y,box,box);
 
 
@@ -114,7 +115,7 @@ function draw(){
 		snakeY += box;
 	} 
 
-	//collision of snake and food
+	//Kollision der Schlange mit der Münze
 	if(snakeX == food.x && snakeY == food.y){
 		score++;
 		eat.play();
@@ -135,13 +136,14 @@ function draw(){
 			y : snakeY
 	}
 
-	// game over
+	// game over , Rand oder mit sich selbst
 
 	if(snakeX < box || snakeX > 17 * box || snakeY < 3*box || snakeY > 17*box || collision(newHead,snake)){
 		clearInterval(game);
 		dead.play();
 		const gameOver = new Image();
-
+		gameOver.src = "images/Snake/gameOver.png";
+		ctx.drawImage(gameOver,0,0);
 		const xhr = new XMLHttpRequest(); 	
 		xhr.open('POST', 'http://localhost:8083/Projekt-WEB2/Points');
 
@@ -152,13 +154,14 @@ function draw(){
 		xhr.setRequestHeader('Content-Type', 'application/json');
 
 		xhr.send(JSON.stringify(params));
-		gameOver.src = "images/Snake/gameOver.png";
-		ctx.drawImage(gameOver,0,0);
+
 
 
 	}
 
 	snake.unshift(newHead);
+
+	// Punkteanzeige
 
 	ctx.fillStyle = "white";
 	ctx.font = "45px Changa one";
@@ -166,23 +169,6 @@ function draw(){
 }
 
 
+//Geschwindigkeit des Spiels
 
 let game = setInterval(draw,100);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

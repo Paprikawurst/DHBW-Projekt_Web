@@ -19,15 +19,21 @@
 	<div id="footerContent" class="contact">
 		<!-- Kontaktformular  -->
 		<h1>Kontaktiere uns</h1>
-		<form action="#">
+		<form action="#" method="post" autocomplete="on" target="_self"
+			spellcheck="true" enctype="application/x-www-form-urlencoded"
+			novalidate="novalidate">
 			<label for="fname">First Name</label> <input type="text" id="fname"
-				name="firstname" placeholder="Your name.."> <label
+				name="firstname" placeholder="Your name.." autofocus="autofocus"
+				maxlength="10" required="required" autocomplete="on"> <label
 				for="lname">Last Name</label> <input type="text" id="lname"
-				name="lastname" placeholder="Your last name.."> <label
-				for="subject">Subject</label>
+				name="lastname" placeholder="Your last name.." maxlength="10"
+				required="required" autocomplete="on"> <label for="subject">Subject</label>
 			<textarea id="subject" name="subject" placeholder="Write something.."
-				style="height: 200px" cols="" rows=""></textarea>
-			<input type="submit" value="Submit">
+				style="height: 200px" cols="" rows="" required="required"
+				wrap="soft" maxlength="1000"></textarea>
+			<input type="submit" value="Submit"
+				formenctype="application/x-www-form-urlencoded"
+				formnovalidate="formnovalidate">
 		</form>
 		<hr>
 		<h1>Or contact us personally</h1>
@@ -35,7 +41,8 @@
 		<h1>Telefon:</h1>
 		<h1>0934/1232</h1>
 		<h1>E-Mail:</h1>
-		<h1>max_mustermann@gmx.net</h1>
+		<h1>max@gmx.net</h1>
+		<br>
 	</div>
 </div>
 <!-- Footer  -->

@@ -3,25 +3,25 @@
 	pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
 <html>
+<head>
 <!-- Metadaten -->
 <meta name="viewport" content="width=device-width, initial-scale=1.0"
 	charset="utf-8" />
-<head>
+
 <!-- Titel -->
 <title>Play Snake!</title>
 <!-- CSS -->
 <link href="PreScreen.css" rel="stylesheet" type="text/css">
 <!-- Header -->
 <jsp:include page="Header.jsp" />
-</head>
 <!-- Inhaltscontainer unter der Nav-Leiste  -->
-<div id="GamesSitesContainer" id="games">
+<div id="GamesSitesContainer">
 	<!-- Container mit Inhalt der Beschreibung  -->
 	<div id="GamesContent">
 		<h1>Snake</h1>
 		<hr>
 		Screenshot:<br> <img src="images/Snake/SnakeScreenshot1.png"
-			alt="">
+			alt="Snake">
 		<hr>
 		Beschreibung: Snake ist ein Computerspielklassiker, bei dem eine sich
 		gerade oder rechtwinklig bewegende Schlange durch ein Spielfeld
@@ -36,7 +36,7 @@
 		Steuerung: Gesteuert wird mit WASD
 		<hr>
 		<!-- Weiterleitung zum Spiel  -->
-		<a href="Snake.jsp" id="startGame">Play</a>
+		<a href="Snake.jsp" hreflang="de" id="startGame">Play</a>
 	</div>
 
 </div>

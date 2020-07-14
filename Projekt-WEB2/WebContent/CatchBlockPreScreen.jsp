@@ -14,12 +14,12 @@
 <!-- Header  -->
 <jsp:include page="Header.jsp" />
 <!-- Inhaltscontainer unter der Nav-Leiste  -->
-<div id="GamesSitesContainer" id="games">
+<div id="GamesSitesContainer">
 	<!-- Container mit Inhalt der Beschreibung  -->
 	<div id="GamesContent">
 		<h1>CatchBlock</h1>
 		<hr>
-		Screenshots:<br> <img src="images/CatchBlock/unknown.png" alt=""
+		Screenshots:<br> <img src="images/CatchBlock/unknown.png" alt="CatchBlock"
 			width="auto">
 		<hr>
 		Beschreibung: "Catch the Blocks" ist ein Computerspielklassiker, bei
@@ -37,7 +37,7 @@
 
 		<hr>
 		<!-- Weiterleitung zum Spiel  -->
-		<a href="CatchBlock.jsp" id="startGame">Play</a>
+		<a href="CatchBlock.jsp" id="startGame" hreflang="de" target="_self">Play</a>
 	</div>
 </div>
 <!-- Footer  -->

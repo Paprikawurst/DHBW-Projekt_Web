@@ -89,7 +89,7 @@
 		<p>
 			1) Die Europäische Kommission stellt für die außergerichtliche
 			Online-Streitbeilegung eine Plattform bereit(OS-Plattform), die unter
-			<a href="http://ec.europa.eu/odr" target="_blank">http://ec.europa.eu/odr</a>
+			<a href="http://ec.europa.eu/odr" hreflang="de" target="_self">http://ec.europa.eu/odr</a>
 			abrufbar ist.
 		<p>
 		<hr>
@@ -140,8 +140,8 @@
 		<p>
 			<b>Quelle:</b> Diese AGB und Kundeninformationen für Onlineshops
 			wurden mit der Vorlage von <a
-				href="http://website-tutor.com/agb-muster/" target="_blank"
-				rel="nofollow">Website-Tutor.com</a> erstellt.
+				href="http://website-tutor.com/agb-muster/" target="_self"
+				rel="nofollow" hreflang="de">Website-Tutor.com</a> erstellt.
 		</p>
 	</div>
 </div>

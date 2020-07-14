@@ -29,10 +29,11 @@
 	<!-- Container Sidebar  -->
 	<div class="sidebar">
 		<a id="exchange2" onclick="openSide(event, 'exchange')"
-			class="tablinks">Exchange</a> <a id="purchases2"
-			onclick="openSide(event, 'purchases')" class="tablinks">Purchases</a>
-		<a id="change2" onclick="openSide(event, 'change')" class="tablinks">Change
-			Skin</a>
+			class="tablinks" hreflang="de" target="_self">Exchange</a> <a
+			id="purchases2" onclick="openSide(event, 'purchases')"
+			class="tablinks" hreflang="de" target="_self">Purchases</a> <a
+			id="change2" onclick="openSide(event, 'change')" class="tablinks"
+			hreflang="de" target="_self">Change Skin</a>
 	</div>
 	<!-- Tab Inhalt Exchange-->
 	<div id="exchange" class="tabcontent">
@@ -139,7 +140,9 @@
 						value="${requestScope.MessageShop}" /></span>
 			</h1>
 			<!-- Kaufformular -->
-			<form action="Shop" method="post">
+			<form action="Shop" method="post" autocomplete="on" target="_self"
+				spellcheck="true" enctype="application/x-www-form-urlencoded"
+				novalidate="novalidate">
 				<select name="unboughtSkins" id="skins">
 					<!-- JSTL Schleife mit Auswahlliste -->
 					<c:forEach var="entry"
@@ -150,8 +153,10 @@
 					</c:forEach>
 				</select>
 				<!-- Leeres Feld zur Informationsweitergabe ans Servlet -->
-				<input name="user" hidden="true" value="${sessionScope['email']}" />
-				<input type="submit" value="Submit">
+				<input name="user" hidden="true" readonly="readonly" value="${sessionScope['email']}" />
+				<input type="submit" value="Submit"
+					formenctype="application/x-www-form-urlencoded"
+					formnovalidate="formnovalidate">
 			</form>
 		</div>
 	</div>
@@ -180,29 +185,29 @@
 	<!-- Tab Inhalt Change-->
 	<div id="change" class="tabcontent">
 		<h1>Change Skin:</h1>
-		<!-- 		<!-- Container Formular -->
-		-->
-		<!-- 		<div id="formContainer"> -->
-		<!-- 			<h1>Choose a Skin to play with for Snake</h1> -->
-		<!-- 			<h1> -->
-		<%-- 				<span style="color: red"> <!-- JSTL Ausgabe --> <c:out --%>
-		<%-- 						value="${requestScope.MessageSnake}" /></span> --%>
-		<!-- 			</h1> -->
-		<!-- 			<form action="Skins" method="post"> -->
-		<!-- 				<select name="activeSkin" id="skins"> -->
-		<!-- 					JSTL Schleife mit Auswahlliste -->
-		<%-- 					<c:forEach var="entry" --%>
-		<%-- 						items="${shopBean.chooseSkins(sessionScope['email'])}"> --%>
-		<%-- 						<option value="${entry}"><c:out value="${entry}" /></option> --%>
-		<%-- 					</c:forEach> --%>
-		<!-- 				</select> -->
-		<!-- 				Leeres Feld zur Informationsweitergabe ans Servlet -->
-		<!-- 				<input name="game" hidden="true" value="Snake" /> <input -->
-		<%-- 					name="user" hidden="true" value="${sessionScope['email']}" /> <input --%>
-		<!-- 					type="submit" value="Submit"> -->
-		<!-- 			</form> -->
-		<!-- 		</div> -->
-		<!-- Container Formular -->
+  				<!--  Container Formular  --> 
+  		  
+<!--   				<div id="formContainer">   -->
+<!--   					<h1>Choose a Skin to play with for Snake</h1>   -->
+<!--   					<h1>   -->
+<%--  						<span style="color: red">  JSTL Ausgabe  <c:out  --%>
+<%--  								value="${requestScope.MessageSnake}" /></span>  --%>
+<!--   					</h1>   -->
+<!--   					<form action="Skins" method="post">   -->
+<!--   						<select name="activeSkin" id="skins">   -->
+<!--   							 JSTL Schleife mit Auswahlliste  -->
+<%--  							<c:forEach var="entry"  --%>
+<%--  								items="${shopBean.chooseSkins(sessionScope['email'])}">  --%>
+<%--  								<option value="${entry}"><c:out value="${entry}" /></option>  --%>
+<%--  							</c:forEach>  --%>
+<!--   						</select>   -->
+<!--   						Leeres Feld zur Informationsweitergabe ans Servlet   -->
+<!--   						<input name="game" hidden="true" value="Snake" /> <input   -->
+<%--  							name="user" hidden="true" value="${sessionScope['email']}" /> <input  --%>
+<!--   							type="submit" value="Submit">   -->
+<!--   					</form>   -->
+<!--   				</div>   -->
+  		<!--  Container Formular  -->
 		<div id="formContainer">
 			<h1>Choose a Skin to play with for CatchBlock</h1>
 			<h1>
@@ -210,7 +215,9 @@
 						value="${requestScope.MessageCatchBlock}" />
 				</span>
 			</h1>
-			<form action="Skins" method="post">
+			<form action="Skins" method="post" autocomplete="on" target="_self"
+				spellcheck="true" enctype="application/x-www-form-urlencoded"
+				novalidate="novalidate">
 				<select name="activeSkin" id="skins">
 					<!-- JSTL Schleife mit Auswahlliste -->
 					<c:forEach var="entry"
@@ -219,9 +226,11 @@
 					</c:forEach>
 				</select>
 				<!-- Leeres Feld zur Informationsweitergabe ans Servlet -->
-				<input name="game" hidden="true" value="CatchBlock" /> <input
+				<input name="game" hidden="true" value="CatchBlock" readonly/> <input
 					name="user" hidden="true" value="${sessionScope['email']}" /> <input
-					type="submit" value="Submit">
+					type="submit" value="Submit"
+					formenctype="application/x-www-form-urlencoded"
+					formnovalidate="formnovalidate">
 			</form>
 		</div>
 

@@ -26,11 +26,11 @@
 	<!-- Navigationsleiste Login  -->
 	<header>
 		<div>
-			<a class="logo" href="Start.jsp">Home</a>
+			<a class="logo" href="Start.jsp" hreflang="de" target="_self">Home</a>
 		</div>
 		<nav>
 			<ul>
-				<li><a href="Login.jsp">Login</a></li>
+				<li><a href="Login.jsp" hreflang="de" target="_self">Login</a></li>
 			</ul>
 		</nav>
 		<div class="menu-toggle">
@@ -45,28 +45,36 @@
 			<span style="color: red"><c:out
 					value="${requestScope.MessageLogin}" /></span>
 			<!-- Formular Registrieren  -->
-			<form id="register-form" action="Register" method="post">
-				<input name="username" type="email" placeholder="username" required>
-				<input name="password" type="password" placeholder="password"
-					required>
+			<form id="register-form" action="Register" method="post"
+				autocomplete="on" target="_self" spellcheck="true"
+				enctype="application/x-www-form-urlencoded" novalidate="novalidate">
+				<input name="username" type="email" placeholder="username"
+					autofocus="autofocus" maxlength="16" required="required"
+					autocomplete="on"> <input name="password" type="password"
+					placeholder="password" required="required">
 				<button>create</button>
 				<p class="message">
-					Already registered? <a href="#">Log In</a>
+					Already registered? <a href="#" hreflang="de" target="_self">Log
+						In</a>
 				</p>
 			</form>
 			<!-- Formular Login  -->
-			<form id="login-form" action="Login" method="post">
-				<input name="username" type="email" placeholder="Username" required>
-				<input name="password" type="password" placeholder="password"
-					required>
+			<form id="login-form" action="Login" method="post" autocomplete="on"
+				target="_self" spellcheck="true"
+				enctype="application/x-www-form-urlencoded" novalidate="novalidate">
+				<input name="username" type="email" placeholder="Username"
+					autofocus="autofocus" maxlength="16" required="required"
+					autocomplete="on"> <input name="password" type="password"
+					placeholder="password" required="required">
 				<button>login</button>
 				<p class="message">
-					Not registered yet? <a href="#">Create an account!</a>
+					Not registered yet? <a href="#" hreflang="de" target="_self">Create
+						an account!</a>
 				</p>
 			</form>
 		</div>
 	</div>
-</body>
+
 <!-- JQuery  -->
 <script src="https://code.jquery.com/jquery-3.3.1.js"
 	type="text/javascript"></script>
@@ -88,4 +96,5 @@
 		});
 	})
 </script>
+</body>
 </html>

@@ -28,7 +28,7 @@
 		<img src="./images/JSP_Elemente/welcome.png" alt=" Welcome...">
 	</div>
 	<!-- Button Weiterleitung -->
-	<a href="Games.jsp">
+	<a href="Games.jsp" hreflang="de" target="_self">
 		<button id="button">Play</button>
 	</a>
 	<!-- Container rechter Text unten -->

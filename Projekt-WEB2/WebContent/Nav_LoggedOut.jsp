@@ -1,16 +1,18 @@
 <header>
 	<div>
-		<a class="logo" href="Games.jsp">Home</a>
+		<a class="logo" href="Games.jsp" hreflang="de" target="_self">Home</a>
 	</div>
 	<!-- Navigationsleiste -->
 	<nav>
 		<ul>
-			<li class="sub-menu"><a href="Games.jsp">Games</a>
+			<li class="sub-menu"><a href="Start.jsp" hreflang="de"
+				target="_self">Games</a>
 				<ul>
-					<li><a href="SnakePreScreen.jsp">Snake</a></li>
-					<li><a href="CatchBlockPreScreen.jsp">CatchBlock</a></li>
+					<li><a href="SnakePreScreen.jsp" hreflang="de" target="_self">Snake</a></li>
+					<li><a href="CatchBlockPreScreen.jsp" hreflang="de"
+						target="_self">CatchBlock</a></li>
 				</ul></li>
-			<li><a href="Login.jsp">Login</a></li>
+			<li><a href="Login.jsp" hreflang="de" target="_self">Login</a></li>
 		</ul>
 	</nav>
 	<div class="menu-toggle">

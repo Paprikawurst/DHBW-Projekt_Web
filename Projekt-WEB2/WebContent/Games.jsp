@@ -45,7 +45,7 @@
 	<%--                    <!-- Zellen Inhalt Container -->--%>
 	<div class="box1">
 		<!-- Weiterleitung ans Spiel -->
-		<a href="CatchBlockPreScreen.jsp"><img
+		<a href="CatchBlockPreScreen.jsp" hreflang="de" target="_self"><img
 			src="images/CatchBlock/unknown.png" alt="CatchBlock" width="100%"
 			height="100%" /></a> <label class="other"> CatchBlock</label>
 	</div>
@@ -54,9 +54,9 @@
 	<!-- Zellen Inhalt Container -->
 	<div class="box2">
 		<!-- Weiterleitung ans Spiel -->
-		<a href="SnakePreScreen.jsp"><img src="images/Snake/ground.png"
-			alt="Snake" width="100%" height="100%" /></a> <label class="other">
-			Snake</label>
+		<a href="SnakePreScreen.jsp" hreflang="de" target="_self"><img
+			src="images/Snake/ground.png" alt="Snake" width="100%" height="100%" /></a>
+		<label class="other"> Snake</label>
 	</div>
 	<!-- Zelle3 -->
 	<%--                <div class="games">--%>
