@@ -15,14 +15,14 @@ import javax.servlet.http.HttpServletResponse;
 @WebServlet("/Register")
 public class Register extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-       
-    /**
-     * @see HttpServlet#HttpServlet()
-     */
-    public Register() {
-        super();
 
-    }
+	/**
+	 * @see HttpServlet#HttpServlet()
+	 */
+	public Register() {
+		super();
+
+	}
 
 	/**
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
@@ -52,9 +52,9 @@ public class Register extends HttpServlet {
 		} else {
 			//Weiterleiten an Login mit Message Fehlschlag
 			request.setAttribute("Message", "User already exists!");
-            request.getRequestDispatcher("/Login.jsp").forward(request, response);
+			request.getRequestDispatcher("/Login.jsp").forward(request, response);
 		}
-		
+
 	}
 
 }

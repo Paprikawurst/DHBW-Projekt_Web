@@ -17,35 +17,35 @@ public class Login_RegisterBean implements Serializable {
 	private String password;
 
 	public Login_RegisterBean() {
-		
+
 	}
-	
+
 	public Login_RegisterBean(String email, String password) {
 		this.email = email;
 		this.password = password;
 	}
-	
+
 	public String getEmail() {
 		return email;
 	}
-	
+
 	public void setEmail(String email) {
 		this.email = email;
 	}
-	
+
 	public String getPassword() {
 		return password;
 	}
-	
+
 	public void setPassword(String password) {
 		this.password = password;
 	}
-	
+
 	public String hash() {
 		//Nutzer Passwort hashen
 		return  BCrypt.hashpw(password);
 	}
-	
+
 	public void fileExists(File file)  {
 		try {
 			//Testen ob Datei existiert
@@ -58,7 +58,7 @@ public class Login_RegisterBean implements Serializable {
 			System.out.println("Es ist ein Fehler mit der Datei aufgetreten!");
 		}
 	}
-	
+
 	public HashMap<String, String> readUser() {
 		HashMap<String, String> user = new HashMap<String, String>();
 		try {
@@ -78,7 +78,7 @@ public class Login_RegisterBean implements Serializable {
 		}
 		return user;
 	}
-	
+
 	public boolean insertUser()  {
 		HashMap<String, String> user;
 		try {
@@ -125,7 +125,7 @@ public class Login_RegisterBean implements Serializable {
 		}
 
 	}   
-	
+
 	public boolean loginUser()  {
 		HashMap<String, String> user;
 		//Alle Nutzer in HashMap legen

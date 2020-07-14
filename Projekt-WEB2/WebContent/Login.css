@@ -1,82 +1,85 @@
-@import url(https://fonts.googleapis.com/css?family=Roboto:300);
+@import url("https://fonts.googleapis.com/css?family=Roboto:300");
 
 body {
-    background: #2012b8; 
-    font-family: "Roboto", sans-serif;
-    }
+	background: #2012b8;
+	font-family: "Roboto", sans-serif;
+}
 
 .showMenu a {
-    border: 1px solid grey;
-    margin-left: 10px;
-    background-color: black;
-    color: white;
-    font-size: 30px;
-    text-decoration: none;
+	border: 1px solid grey;
+	margin-left: 10px;
+	background-color: black;
+	color: white;
+	font-size: 30px;
+	text-decoration: none;
 }
 
 .showMenu a:hover {
-    color: green;
+	color: green;
 }
 
 #login-page {
-    width: 360px;
-    padding: 8% 0 0;
-    margin: auto;
+	width: 360px;
+	padding: 8% 0 0;
+	margin: auto;
 }
 
 .menu-toggle {
-    color: #fff;
-    float: right;
-    line-height: 50px;
-    font-size: 24px;
-    cursor: pointer;
-    display: none;
+	color: #fff;
+	float: right;
+	line-height: 50px;
+	font-size: 24px;
+	cursor: pointer;
+	display: none;
 }
 
 #form {
-    position: relative;
-    z-index: 1;
-    background: #FFFFFF;
-    max-width: 360px;
-    margin: 0 auto 100px;
-    padding: 45px;
-    text-align: center;
-    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+	position: relative;
+	z-index: 1;
+	background: #FFFFFF;
+	max-width: 360px;
+	margin: 0 auto 100px;
+	padding: 45px;
+	text-align: center;
+	box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0
+		rgba(0, 0, 0, 0.24);
 }
+
 #form input {
-    font-family: "Roboto", sans-serif;
-    outline: 0;
-    background: #f2f2f2;
-    width: 100%;
-    border: 0;
-    margin: 0 0 15px;
-    padding: 15px;
-    box-sizing: border-box;
-    font-size: 14px;
+	font-family: "Roboto", sans-serif;
+	outline: 0;
+	background: #f2f2f2;
+	width: 100%;
+	border: 0;
+	margin: 0 0 15px;
+	padding: 15px;
+	box-sizing: border-box;
+	font-size: 14px;
 }
 
 #form button {
-    font-family: "Roboto", sans-serif;
-    text-transform: uppercase;
-    outline: 0;
-    background: #2012b8;
-    width: 100%;
-    border: 0;
-    padding: 15px;
-    color: #FFFFFF;
-    font-size: 14px;
-    cursor: pointer;
+	font-family: "Roboto", sans-serif;
+	text-transform: uppercase;
+	outline: 0;
+	background: #2012b8;
+	width: 100%;
+	border: 0;
+	padding: 15px;
+	color: #FFFFFF;
+	font-size: 14px;
+	cursor: pointer;
 }
 
 #form button:hover, #form button:active, #form button:focus {
-    background: black;
+	background: black;
 }
 
 #form #register-form {
-    display: none;
+	display: none;
 }
-@media (max-width: 1000px) {
+
+@media ( max-width : 1000px) {
 	#login-page {
-		margin-top:200px;
-	}	
+		margin-top: 200px;
+	}
 }

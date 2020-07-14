@@ -1,7 +1,6 @@
 <!-- JSP -->
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -11,7 +10,7 @@
 <!-- Titel -->
 <title>CatchBlock</title>
 <!-- Scripte  -->
-<script src="js/pixi.min.js"></script>
+<script src="js/pixi.min.js" type="text/javascript"></script>
 <script src="js/CatchBlock.js" type="text/javascript"></script>
 <!-- CSS -->
 <link href="Snake_CatchBlock.css" rel="stylesheet" type="text/css">
@@ -21,12 +20,11 @@
 <!-- Container Hauptseite unter der Navigation-Leiste  -->
 <div id="mainpage">
 	<!-- Hier ist das Spiel drinnen  -->
-	<div id="data">
-        	
-
-    </div>
+	<div id="data"></div>
 	<div id="gameDiv"></div>
-	<script>catchBlocken("${shopBean.readMyChossenSkin(sessionScope['email'],'CatchBlock')}")</script>
+	<script type="text/javascript">
+		catchBlocken("${shopBean.readMyChossenSkin(sessionScope['email'],'CatchBlock')}")
+	</script>
 </div>
 <!-- Footer -->
 <jsp:include page="Footer.jsp" />

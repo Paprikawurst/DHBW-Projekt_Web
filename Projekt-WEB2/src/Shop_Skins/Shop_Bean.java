@@ -124,7 +124,6 @@ public class Shop_Bean {
 	}
 
 	public int myPoints(String username) {
-		System.out.println(username);
 		//Alle Punkte aus Liste holen
 		ArrayList<String> point = readallPoints();
 		//Durch alle Punkte gehen
@@ -289,7 +288,7 @@ public class Shop_Bean {
 			//Neu anlegen
 			fileExists(file);
 			PrintWriter pWriter = new PrintWriter(new FileWriter(file, true), true);
-			
+
 			ArrayList<String> del=new ArrayList<String>();
 			for (String line : skins) {
 				if(line.indexOf("|") != -1) {
@@ -311,8 +310,8 @@ public class Shop_Bean {
 				pWriter.println(line2);
 			}
 			pWriter.close();
-			
-			
+
+
 		} catch (FileNotFoundException e) { 
 			System.out.println("Es ist ein Fehler mit der Datei aufgetreten!");
 			back="Ändern nicht möglich!";

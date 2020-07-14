@@ -19,23 +19,21 @@
 	<div id="GamesContent">
 		<h1>CatchBlock</h1>
 		<hr>
-		Screenshots:<br> <img src="images/CatchBlock/unknown.png" alt="" width="auto">
+		Screenshots:<br> <img src="images/CatchBlock/unknown.png" alt=""
+			width="auto">
 		<hr>
-		Beschreibung: "Catch the Blocks" ist ein Computerspielklassiker, bei dem eine Figur
-		gesteuert wird um die fallenden Objekte einzusammeln. <b>Ziel des
-			Spieles</b> ist, die herunterfallenden Objekte einzusammeln. Verschiedene
-		Sachen geben verschiedene Punkte. Jedoch muss man aufpassen, denn sammelt
-		man ein negatives Objekt ein, bekommt man 1 von 3 Leben abgezogen.
-		Wenn man keine Leben mehr hat ist das Spiel beendet. Pro Objekt bekommt
-		der Spieler Punkte, die er im Shop gegen Skins eintauschen kann!
+		Beschreibung: "Catch the Blocks" ist ein Computerspielklassiker, bei
+		dem eine Figur gesteuert wird um die fallenden Objekte einzusammeln. <b>Ziel
+			des Spieles</b> ist, die herunterfallenden Objekte einzusammeln.
+		Verschiedene Sachen geben verschiedene Punkte. Jedoch muss man
+		aufpassen, denn sammelt man ein negatives Objekt ein, bekommt man 1
+		von 3 Leben abgezogen. Wenn man keine Leben mehr hat ist das Spiel
+		beendet. Pro Objekt bekommt der Spieler Punkte, die er im Shop gegen
+		Skins eintauschen kann!
 		<hr>
-		Steuerung: Gesteuert wird mit Pfeiltasten
-		Corona-Bier = 1Pkt
-		Mundmaske = 3Pkte
-		Desinfektionsmittel = 5Pkte
-		Klopapier = 10Pkte
-
-		Unter 25Pkten zieht ein Coronavirus 3 Leben ab, sonst nur eines.
+		Steuerung: Gesteuert wird mit Pfeiltasten Corona-Bier = 1Pkt Mundmaske
+		= 3Pkte Desinfektionsmittel = 5Pkte Klopapier = 10Pkte Unter 25Pkten
+		zieht ein Coronavirus 3 Leben ab, sonst nur eines.
 
 		<hr>
 		<!-- Weiterleitung zum Spiel  -->

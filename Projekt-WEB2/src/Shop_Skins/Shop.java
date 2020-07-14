@@ -13,13 +13,13 @@ import javax.servlet.http.HttpServletResponse;
 @WebServlet("/Shop")
 public class Shop extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-       
-    /**
-     * @see HttpServlet#HttpServlet()
-     */
-    public Shop() {
-        super();
-    }
+
+	/**
+	 * @see HttpServlet#HttpServlet()
+	 */
+	public Shop() {
+		super();
+	}
 
 	/**
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
@@ -49,9 +49,9 @@ public class Shop extends HttpServlet {
 		} else {
 			//Weiterleiten zurück zum Shop mit Message Fehlschlag
 			request.setAttribute("MessageShop", "Zu wenige Punkte!");
-            request.getRequestDispatcher("/Shop.jsp").forward(request, response);
+			request.getRequestDispatcher("/Shop.jsp").forward(request, response);
 		}
-		
+
 	}
 
 }

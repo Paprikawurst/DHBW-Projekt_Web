@@ -48,7 +48,7 @@ public class Skins extends HttpServlet {
 		if(request.getParameter("user")!=null) {
 			shopBean.setSkin(request.getParameter("user"),request.getParameter("game"),request.getParameter("activeSkin"));
 		}
-				
+
 		request.getRequestDispatcher("/Shop.jsp").forward(request, response);
 
 	}

@@ -15,14 +15,14 @@ import javax.servlet.http.HttpSession;
 @WebServlet("/Logout")
 public class Logout extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-       
-    /**
-     * @see HttpServlet#HttpServlet()
-     */
-    public Logout() {
-        super();
 
-    }
+	/**
+	 * @see HttpServlet#HttpServlet()
+	 */
+	public Logout() {
+		super();
+
+	}
 
 	/**
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
@@ -30,12 +30,12 @@ public class Logout extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		//Session holen und Werte setzen
 		HttpSession session = request.getSession(true);
-	    session.setAttribute("email", null);
-	    session.removeAttribute("email");
-	    session.getMaxInactiveInterval();
-	    //Mit Message zurück zur Games Seite
-	    request.setAttribute("Message", "Logout successful!");
-        request.getRequestDispatcher("/Start.jsp").forward(request, response);
+		session.setAttribute("email", null);
+		session.removeAttribute("email");
+		session.getMaxInactiveInterval();
+		//Mit Message zurück zur Games Seite
+		request.setAttribute("Message", "Logout successful!");
+		request.getRequestDispatcher("/Start.jsp").forward(request, response);
 	}
 
 	/**
@@ -43,6 +43,6 @@ public class Logout extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
-		
+
 	}
 }

@@ -20,21 +20,21 @@ import org.json.JSONObject;
 @WebServlet("/Points")
 public class Points extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-       
-    /**
-     * @see HttpServlet#HttpServlet()
-     */
-    public Points() {
-        super();
-        // TODO Auto-generated constructor stub
-    }
+
+	/**
+	 * @see HttpServlet#HttpServlet()
+	 */
+	public Points() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
 
 	/**
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		
+
 	}
 
 	/**
@@ -48,26 +48,26 @@ public class Points extends HttpServlet {
 			shopBean = new Shop_Bean();
 			request.setAttribute("registerBean", shopBean);
 		}
-		  StringBuffer jb = new StringBuffer();
-		  String line = null;
-		  try {
-		    BufferedReader reader = request.getReader();
-		    while ((line = reader.readLine()) != null)
-		      jb.append(line);
-		  } catch (Exception e) { /*report an error*/ }
+		StringBuffer jb = new StringBuffer();
+		String line = null;
+		try {
+			BufferedReader reader = request.getReader();
+			while ((line = reader.readLine()) != null)
+				jb.append(line);
+		} catch (Exception e) { /*report an error*/ }
 
-		  try {
-		    JSONObject jsonObject =  HTTP.toJSONObject(jb.toString());
-		  } catch (JSONException e) {
-		    // crash and burn
-		    throw new IOException("Error parsing JSON request string");
-		  }
-		  
-		  int points=Integer.parseInt(jb.substring(jb.indexOf(":")+1,jb.indexOf("}")));
-		  HttpSession session = request.getSession(true);
-		  points=points;
-		  String user=((String)session.getAttribute("email"));
-		  shopBean.addPoints(user, points);
+		try {
+			JSONObject jsonObject =  HTTP.toJSONObject(jb.toString());
+		} catch (JSONException e) {
+			// crash and burn
+			throw new IOException("Error parsing JSON request string");
+		}
+
+		int points=Integer.parseInt(jb.substring(jb.indexOf(":")+1,jb.indexOf("}")));
+		HttpSession session = request.getSession(true);
+		points=points;
+		String user=((String)session.getAttribute("email"));
+		shopBean.addPoints(user, points);
 	}
 
 }
