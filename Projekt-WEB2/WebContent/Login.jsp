@@ -58,6 +58,8 @@
 						In</a>
 				</p>
 			</form>
+			<span style="color: red"><c:out
+					value="${requestScope.MessageRegister}" /></span>
 			<!-- Formular Login  -->
 			<form id="login-form" action="Login" method="post" autocomplete="on"
 				target="_self" spellcheck="true"

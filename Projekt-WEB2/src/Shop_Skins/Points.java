@@ -65,7 +65,6 @@ public class Points extends HttpServlet {
 
 		int points=Integer.parseInt(jb.substring(jb.indexOf(":")+1,jb.indexOf("}")));
 		HttpSession session = request.getSession(true);
-		points=points;
 		String user=((String)session.getAttribute("email"));
 		shopBean.addPoints(user, points);
 	}
