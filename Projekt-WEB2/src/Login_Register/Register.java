@@ -51,7 +51,7 @@ public class Register extends HttpServlet {
 			request.getRequestDispatcher("/Login.jsp").forward(request, response);
 		} else {
 			//Weiterleiten an Login mit Message Fehlschlag
-			request.setAttribute("MessageRegister", "User already exists!");
+			request.setAttribute("MessageLoginRegister", "User already exists!");
 			request.getRequestDispatcher("/Login.jsp").forward(request, response);
 		}
 

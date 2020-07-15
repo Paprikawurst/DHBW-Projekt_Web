@@ -107,7 +107,7 @@
 		</div>
 		<!-- Container Kaufformular Skin -->
 		<div id="formContainer">
-			<h1>Choose a Skin to buy</h1>
+			<h1>Choose a Skin to buy. (1000 Points needed)</h1>
 			<h1>
 				<span style="color: red"><c:out
 						value="${requestScope.MessageShop}" /></span>

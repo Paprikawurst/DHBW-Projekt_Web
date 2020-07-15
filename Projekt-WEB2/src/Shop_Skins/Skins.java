@@ -45,9 +45,7 @@ public class Skins extends HttpServlet {
 		shopBean.setUser(request.getParameter("user"));
 		shopBean.myPoints(request.getParameter("user"));
 		//Weiterleiten zurück zum Shop mit Message 
-		if(request.getParameter("user")!=null) {
 			shopBean.setSkin(request.getParameter("user"),request.getParameter("game"),request.getParameter("activeSkin"));
-		}
 
 		request.getRequestDispatcher("/Shop.jsp").forward(request, response);
 

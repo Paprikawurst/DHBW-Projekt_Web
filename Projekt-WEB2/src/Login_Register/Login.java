@@ -56,7 +56,7 @@ public class Login extends HttpServlet {
 			response.sendRedirect("Games.jsp");
 		} else {
 			//Bei Fehler mit Meldung an Login zurück
-			request.setAttribute("MessageLogin", "Wrong Username or Password!");
+			request.setAttribute("MessageLoginRegister", "Wrong Username or Password!");
 			request.getRequestDispatcher("/Login.jsp").forward(request, response);
 		}		
 	}
